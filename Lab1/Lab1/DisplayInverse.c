@@ -9,7 +9,6 @@
 int main(void) {
     int En_Value = 0xFFFF;
     int switch_values;
-    int i;
 
     WRITE_GPIO(GPIO_INOUT, En_Value);                           // Set LEDs as GPIO outputs
 

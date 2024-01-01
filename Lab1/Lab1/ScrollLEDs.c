@@ -6,6 +6,8 @@
 #define READ_GPIO(dir) (*(volatile unsigned *) dir)
 #define WRITE_GPIO(dir, value) { (*(volatile unsigned *)dir) = (value); }
 
+#define DELAY 1000000
+
 int main(void) {
     int En_Value = 0xFFFF;
     volatile int value;
@@ -21,13 +23,13 @@ int main(void) {
             for (j = 0; j < 16-i; j++) {
                 value = LED_bits[i] << j;
                 WRITE_GPIO(GPIO_LEDs, value);
-                for (d = 0; d < 1000000; d++);
+                for (d = 0; d < DELAY; d++);                  // Delay 
             }
             // right to left
-            for (j = 14-i; j >= 0; j--) {
+            for (j = 15-i; j >= 0; j--) {
                 value = LED_bits[i] << j;
                 WRITE_GPIO(GPIO_LEDs, value);
-                for (d = 0; d < 1000000; d++);
+                for (d = 0; d < DELAY; d++);                   // Delay 
             }
         }
     }
