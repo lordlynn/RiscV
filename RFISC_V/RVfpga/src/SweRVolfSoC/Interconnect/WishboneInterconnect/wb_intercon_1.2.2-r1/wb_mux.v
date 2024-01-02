@@ -45,7 +45,7 @@
 module wb_mux
   #(parameter dw = 32,        // Data width
     parameter aw = 32,        // Address width
-    parameter num_slaves = 2, // Number of slaves
+    parameter num_slaves = 3, // Number of slaves
     parameter [num_slaves*aw-1:0] MATCH_ADDR = 0,
     parameter [num_slaves*aw-1:0] MATCH_MASK = 0)
 

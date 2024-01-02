@@ -33,7 +33,17 @@ module rvfpgasim
    input wire  i_jtag_trst_n,
    output wire o_jtag_tdo,
    output wire o_uart_tx,
-   output wire o_gpio
+   output wire o_gpio,
+
+  
+  //  // Added - Test
+  //  output wire o_gpio2,
+
+   // Added 
+   input wire i_sw0,
+   
+   // Added to simulate buttons
+   input wire i_BTNC, i_BTNU, i_BTNL, i_BTNR, i_BTND
    )
 `endif
   ;
@@ -46,6 +56,10 @@ module rvfpgasim
    always #10 clk <= !clk;
    initial #100 rst <= 1'b0;
    wire  o_gpio;
+
+  //  // Added - Test
+  //  wire  o_gpio2;
+
    wire i_jtag_tck = 1'b0;
    wire i_jtag_tms = 1'b0;
    wire i_jtag_tdi = 1'b0;
@@ -78,7 +92,14 @@ module rvfpgasim
    end
 
    wire [15:0]  i_sw;
-   assign  i_sw = 16'hFE34;
+  //  assign  i_sw = 16'hFE34;
+
+  // Added
+  assign i_sw = {15'b111111100011010, i_sw0};
+  
+  wire [4:0]btns;
+  assign btns = {i_BTNC, i_BTNU, i_BTNL, i_BTNR, i_BTND};
+
 
    wire [5:0]  ram_awid;
    wire [31:0] ram_awaddr;
@@ -245,6 +266,8 @@ module rvfpgasim
       .o_ram_rready        (ram_rready),
       .i_ram_init_done     (1'b1),
       .i_ram_init_error    (1'b0),
-      .io_data             ({i_sw,16'bz}));
+      .io_data             ({i_sw,16'bz}),
+      .io_data2            ({btns, 27'b000_0000_0000_0000_0000_0000_0000})
+      );
 
 endmodule

@@ -83,7 +83,10 @@ module swervolf_core
     output wire        o_accel_sclk,
     output wire        o_accel_cs_n,
     output wire        o_accel_mosi,
-    input wire         i_accel_miso);
+    input wire         i_accel_miso,
+
+    // Added for second GPIO module
+    inout wire [31:0] io_data2);
 
    localparam BOOTROM_SIZE = 32'h1000;
 
@@ -352,6 +355,67 @@ module swervolf_core
         .ext_pad_i     (i_gpio[31:0]),
         .ext_pad_o     (o_gpio[31:0]),
         .ext_padoe_o   (en_gpio));
+
+
+    // GPIO 2 - Buttons - ADDED
+    wire [31:0] en_gpio2;
+    wire        gpio2_irq;
+    wire [31:0] i_gpio2;
+    wire [31:0] o_gpio2;
+
+    bidirec gpio32  (.oe(en_gpio2[0] ), .inp(o_gpio2[0] ), .outp(i_gpio2[0] ), .bidir(io_data2[0] ));
+    bidirec gpio33  (.oe(en_gpio2[1] ), .inp(o_gpio2[1] ), .outp(i_gpio2[1] ), .bidir(io_data2[1] ));
+    bidirec gpio34  (.oe(en_gpio2[2] ), .inp(o_gpio2[2] ), .outp(i_gpio2[2] ), .bidir(io_data2[2] ));
+    bidirec gpio35  (.oe(en_gpio2[3] ), .inp(o_gpio2[3] ), .outp(i_gpio2[3] ), .bidir(io_data2[3] ));
+    bidirec gpio36  (.oe(en_gpio2[4] ), .inp(o_gpio2[4] ), .outp(i_gpio2[4] ), .bidir(io_data2[4] ));
+    bidirec gpio37  (.oe(en_gpio2[5] ), .inp(o_gpio2[5] ), .outp(i_gpio2[5] ), .bidir(io_data2[5] ));
+    bidirec gpio38  (.oe(en_gpio2[6] ), .inp(o_gpio2[6] ), .outp(i_gpio2[6] ), .bidir(io_data2[6] ));
+    bidirec gpio39  (.oe(en_gpio2[7] ), .inp(o_gpio2[7] ), .outp(i_gpio2[7] ), .bidir(io_data2[7] ));
+    bidirec gpio40  (.oe(en_gpio2[8] ), .inp(o_gpio2[8] ), .outp(i_gpio2[8] ), .bidir(io_data2[8] ));
+    bidirec gpio41  (.oe(en_gpio2[9] ), .inp(o_gpio2[9] ), .outp(i_gpio2[9] ), .bidir(io_data2[9] ));
+    bidirec gpio42 (.oe(en_gpio2[10]), .inp(o_gpio2[10]), .outp(i_gpio2[10]), .bidir(io_data2[10]));
+    bidirec gpio43 (.oe(en_gpio2[11]), .inp(o_gpio2[11]), .outp(i_gpio2[11]), .bidir(io_data2[11]));
+    bidirec gpio44 (.oe(en_gpio2[12]), .inp(o_gpio2[12]), .outp(i_gpio2[12]), .bidir(io_data2[12]));
+    bidirec gpio45 (.oe(en_gpio2[13]), .inp(o_gpio2[13]), .outp(i_gpio2[13]), .bidir(io_data2[13]));
+    bidirec gpio46 (.oe(en_gpio2[14]), .inp(o_gpio2[14]), .outp(i_gpio2[14]), .bidir(io_data2[14]));
+    bidirec gpio47 (.oe(en_gpio2[15]), .inp(o_gpio2[15]), .outp(i_gpio2[15]), .bidir(io_data2[15]));
+    bidirec gpio48 (.oe(en_gpio2[16]), .inp(o_gpio2[16]), .outp(i_gpio2[16]), .bidir(io_data2[16]));
+    bidirec gpio49 (.oe(en_gpio2[17]), .inp(o_gpio2[17]), .outp(i_gpio2[17]), .bidir(io_data2[17]));
+    bidirec gpio50 (.oe(en_gpio2[18]), .inp(o_gpio2[18]), .outp(i_gpio2[18]), .bidir(io_data2[18]));
+    bidirec gpio51 (.oe(en_gpio2[19]), .inp(o_gpio2[19]), .outp(i_gpio2[19]), .bidir(io_data2[19]));
+    bidirec gpio52 (.oe(en_gpio2[20]), .inp(o_gpio2[20]), .outp(i_gpio2[20]), .bidir(io_data2[20]));
+    bidirec gpio53 (.oe(en_gpio2[21]), .inp(o_gpio2[21]), .outp(i_gpio2[21]), .bidir(io_data2[21]));
+    bidirec gpio54 (.oe(en_gpio2[22]), .inp(o_gpio2[22]), .outp(i_gpio2[22]), .bidir(io_data2[22]));
+    bidirec gpio55 (.oe(en_gpio2[23]), .inp(o_gpio2[23]), .outp(i_gpio2[23]), .bidir(io_data2[23]));
+    bidirec gpio56 (.oe(en_gpio2[24]), .inp(o_gpio2[24]), .outp(i_gpio2[24]), .bidir(io_data2[24]));
+    bidirec gpio57 (.oe(en_gpio2[25]), .inp(o_gpio2[25]), .outp(i_gpio2[25]), .bidir(io_data2[25]));
+    bidirec gpio58 (.oe(en_gpio2[26]), .inp(o_gpio2[26]), .outp(i_gpio2[26]), .bidir(io_data2[26]));
+    bidirec gpio59 (.oe(en_gpio2[27]), .inp(o_gpio2[27]), .outp(i_gpio2[27]), .bidir(io_data2[27]));
+    bidirec gpio60 (.oe(en_gpio2[28]), .inp(o_gpio2[28]), .outp(i_gpio2[28]), .bidir(io_data2[28]));
+    bidirec gpio61 (.oe(en_gpio2[29]), .inp(o_gpio2[29]), .outp(i_gpio2[29]), .bidir(io_data2[29]));
+    bidirec gpio62 (.oe(en_gpio2[30]), .inp(o_gpio2[30]), .outp(i_gpio2[30]), .bidir(io_data2[30]));
+    bidirec gpio63 (.oe(en_gpio2[31]), .inp(o_gpio2[31]), .outp(i_gpio2[31]), .bidir(io_data2[31]));
+
+    gpio_top gpio_module2(
+          .wb_clk_i     (clk), 
+          .wb_rst_i     (wb_rst), 
+          .wb_cyc_i     (wb_m2s_gpio2_cyc), 
+          .wb_adr_i     ({2'b0,wb_m2s_gpio2_adr[5:2],2'b0}), 
+          .wb_dat_i     (wb_m2s_gpio2_dat), 
+          .wb_sel_i     (4'b1111),
+          .wb_we_i      (wb_m2s_gpio2_we), 
+          .wb_stb_i     (wb_m2s_gpio2_stb), 
+          .wb_dat_o     (wb_s2m_gpio2_dat),
+          .wb_ack_o     (wb_s2m_gpio2_ack), 
+          .wb_err_o     (wb_s2m_gpio2_err),
+          .wb_inta_o    (gpio2_irq),
+          // External GPIO Interface
+          .ext_pad_i     (i_gpio2[31:0]),
+          .ext_pad_o     (o_gpio2[31:0]),
+          .ext_padoe_o   (en_gpio2));
+
+
+
 
 
 

@@ -73,6 +73,23 @@ wire        wb_s2m_gpio_ack;
 wire        wb_s2m_gpio_err;
 wire        wb_s2m_gpio_rty;
 
+
+// GPIO2 - Added
+wire [31:0] wb_m2s_gpio2_adr;
+wire [31:0] wb_m2s_gpio2_dat;
+wire  [3:0] wb_m2s_gpio2_sel;
+wire        wb_m2s_gpio2_we;
+wire        wb_m2s_gpio2_cyc;
+wire        wb_m2s_gpio2_stb;
+wire  [2:0] wb_m2s_gpio2_cti;
+wire  [1:0] wb_m2s_gpio2_bte;
+wire [31:0] wb_s2m_gpio2_dat;
+wire        wb_s2m_gpio2_ack;
+wire        wb_s2m_gpio2_err;
+wire        wb_s2m_gpio2_rty;
+
+
+
 // PTC
 wire [31:0] wb_m2s_ptc_adr;
 wire [31:0] wb_m2s_ptc_dat;
@@ -177,6 +194,23 @@ wb_intercon wb_intercon0
     .wb_gpio_ack_i      (wb_s2m_gpio_ack),
     .wb_gpio_err_i      (wb_s2m_gpio_err),
     .wb_gpio_rty_i      (wb_s2m_gpio_rty),
+
+
+// GPIO2 - ADDED
+    .wb_gpio2_adr_o      (wb_m2s_gpio2_adr),
+    .wb_gpio2_dat_o      (wb_m2s_gpio2_dat),
+    .wb_gpio2_sel_o      (wb_m2s_gpio2_sel),
+    .wb_gpio2_we_o       (wb_m2s_gpio2_we),
+    .wb_gpio2_cyc_o      (wb_m2s_gpio2_cyc),
+    .wb_gpio2_stb_o      (wb_m2s_gpio2_stb),
+    .wb_gpio2_cti_o      (wb_m2s_gpio2_cti),
+    .wb_gpio2_bte_o      (wb_m2s_gpio2_bte),
+    .wb_gpio2_dat_i      (wb_s2m_gpio2_dat),
+    .wb_gpio2_ack_i      (wb_s2m_gpio2_ack),
+    .wb_gpio2_err_i      (wb_s2m_gpio2_err),
+    .wb_gpio2_rty_i      (wb_s2m_gpio2_rty),
+
+
 // PTC
     .wb_ptc_adr_o      (wb_m2s_ptc_adr),
     .wb_ptc_dat_o      (wb_m2s_ptc_dat),

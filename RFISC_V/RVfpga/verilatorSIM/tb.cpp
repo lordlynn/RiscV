@@ -135,6 +135,17 @@ int main(int argc, char **argv, char **env)
 
   top->clk = 1;
   top->rst = 1;
+
+  // Added
+  top->i_sw0 = 0;
+
+  // Added for Button testing
+  top->i_BTNC = 0;
+  top->i_BTNU = 0;
+  top->i_BTNR = 0;
+  top->i_BTNL = 0;
+  top->i_BTND = 0;
+
   while (!(done || Verilated::gotFinish())) {
     if (main_time == 100) {
       printf("Releasing reset\n");
@@ -142,6 +153,25 @@ int main(int argc, char **argv, char **env)
     }
     if (main_time == 200)
       top->i_jtag_trst_n = true;
+
+    // Added 
+    if (main_time == 30000)
+      top->i_sw0 = 1;
+
+
+    // Added for button testing 
+    if (main_time == 10000)
+      top->i_BTNC = 1;
+    if (main_time == 20000)
+      top->i_BTNU = 1;
+    if (main_time == 30000)
+      top->i_BTNL = 1;
+    if (main_time == 40000)
+      top->i_BTNR = 1;
+    if (main_time == 50000)
+      top->i_BTND = 1;
+
+
 
     top->eval();
     if (tfp)
