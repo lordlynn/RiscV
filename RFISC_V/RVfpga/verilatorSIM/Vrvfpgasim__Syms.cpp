@@ -5,14 +5,14 @@
 #include "Vrvfpgasim.h"
 #include "Vrvfpgasim_rvfpgasim.h"
 #include "Vrvfpgasim___024unit.h"
-#include "Vrvfpgasim_swervolf_core__B0.h"
+#include "Vrvfpgasim_swervolf_core__Bz1.h"
 #include "Vrvfpgasim_axi_mem_wrapper__I6_M10000.h"
-#include "Vrvfpgasim_wb_mem_wrapper__M1000_I0.h"
-#include "Vrvfpgasim_dpram64__S1000_MB0.h"
-#include "Vrvfpgasim_dpram64__S10000_MB0.h"
-#include "Vrvfpgasim_axi_demux__pi3.h"
-#include "Vrvfpgasim_axi_mux__pi5.h"
-#include "Vrvfpgasim_axi_demux_id_counters__pi6.h"
+#include "Vrvfpgasim_wb_mem_wrapper__M1000_Iz1.h"
+#include "Vrvfpgasim_dpram64__S1000_MBz1.h"
+#include "Vrvfpgasim_dpram64__S10000_MBz1.h"
+#include "Vrvfpgasim_axi_demux__pi2.h"
+#include "Vrvfpgasim_axi_mux__pi4.h"
+#include "Vrvfpgasim_axi_demux_id_counters__pi5.h"
 
 
 
@@ -21,6 +21,7 @@ Vrvfpgasim__Syms::Vrvfpgasim__Syms(Vrvfpgasim* topp, const char* namep)
     // Setup locals
     : __Vm_namep(namep)
     , __Vm_activity(false)
+    , __Vm_baseCode(0)
     , __Vm_didInit(false)
     // Setup submodule names
     , TOP__rvfpgasim(Verilated::catName(topp->name(), "rvfpgasim"))
@@ -81,11 +82,11 @@ Vrvfpgasim__Syms::Vrvfpgasim__Syms(Vrvfpgasim* topp, const char* namep)
     TOP__rvfpgasim__swervolf__bootrom.__Vconfigure(this, true);
     TOP__rvfpgasim__swervolf__bootrom__ram.__Vconfigure(this, true);
     // Setup scopes
-    __Vscope_rvfpgasim__ram__ram.configure(this, name(), "rvfpgasim.ram.ram", "ram", VerilatedScope::SCOPE_OTHER);
-    __Vscope_rvfpgasim__swervolf__bootrom__ram.configure(this, name(), "rvfpgasim.swervolf.bootrom.ram", "ram", VerilatedScope::SCOPE_OTHER);
+    __Vscope_rvfpgasim__ram__ram.configure(this, name(), "rvfpgasim.ram.ram", "ram", 0, VerilatedScope::SCOPE_OTHER);
+    __Vscope_rvfpgasim__swervolf__bootrom__ram.configure(this, name(), "rvfpgasim.swervolf.bootrom.ram", "ram", 0, VerilatedScope::SCOPE_OTHER);
     // Setup export functions
     for (int __Vfinal=0; __Vfinal<2; __Vfinal++) {
-        __Vscope_rvfpgasim__ram__ram.varInsert(__Vfinal,"mem", &(TOP__rvfpgasim__ram__ram.mem), VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,2 ,63,0 ,8191,0);
-        __Vscope_rvfpgasim__swervolf__bootrom__ram.varInsert(__Vfinal,"mem", &(TOP__rvfpgasim__swervolf__bootrom__ram.mem), VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,2 ,63,0 ,511,0);
+        __Vscope_rvfpgasim__ram__ram.varInsert(__Vfinal,"mem", &(TOP__rvfpgasim__ram__ram.mem), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,2 ,63,0 ,8191,0);
+        __Vscope_rvfpgasim__swervolf__bootrom__ram.varInsert(__Vfinal,"mem", &(TOP__rvfpgasim__swervolf__bootrom__ram.mem), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,2 ,63,0 ,511,0);
     }
 }

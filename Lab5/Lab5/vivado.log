@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Jan  1 19:34:03 2024
+# Process ID: 17656
+# Current directory: D:/RVfpga/RiscV/Lab5/Lab5
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15664 D:\RVfpga\RiscV\Lab5\Lab5\Lab5.xpr
+# Log file: D:/RVfpga/RiscV/Lab5/Lab5/vivado.log
+# Journal file: D:/RVfpga/RiscV/Lab5/Lab5\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/RVfpga/RiscV/Lab5/Lab5/Lab5.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2019.2/data/ip'.
+CRITICAL WARNING: [Common 17-1649] The Vivado message database 'D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/synth_1/vivado.pb' contains 20454 messages. Restoring all messages from this message database will impact Vivado performance, so only WARNING, CRITICAL WARNING, and ERROR messages will be restored. To restore all messages from this file use the tcl command 'set_param messaging.loadPbLimit 20455' and re-open the project.
+open_project: Time (s): cpu = 00:00:31 ; elapsed = 00:00:53 . Memory (MB): peak = 1134.016 ; gain = 507.645
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Mon Jan  1 19:43:49 2024] Launched synth_1...
+Run output will be captured here: D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/synth_1/runme.log
+[Mon Jan  1 19:43:49 2024] Launched impl_1...
+Run output will be captured here: D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/impl_1/runme.log
+CRITICAL WARNING: [Common 17-1649] The Vivado message database 'D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/synth_1/vivado.pb' contains 20491 messages. Restoring all messages from this message database will impact Vivado performance, so only WARNING, CRITICAL WARNING, and ERROR messages will be restored. To restore all messages from this file use the tcl command 'set_param messaging.loadPbLimit 20492' and re-open the project.

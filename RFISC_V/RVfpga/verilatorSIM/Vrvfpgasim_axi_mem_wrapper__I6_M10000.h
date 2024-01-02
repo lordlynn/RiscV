@@ -12,7 +12,7 @@
 
 class Vrvfpgasim__Syms;
 class Vrvfpgasim_VerilatedVcd;
-class Vrvfpgasim_dpram64__S10000_MB0;
+class Vrvfpgasim_dpram64__S10000_MBz1;
 
 
 //----------
@@ -20,7 +20,7 @@ class Vrvfpgasim_dpram64__S10000_MB0;
 VL_MODULE(Vrvfpgasim_axi_mem_wrapper__I6_M10000) {
   public:
     // CELLS
-    Vrvfpgasim_dpram64__S10000_MB0* ram;
+    Vrvfpgasim_dpram64__S10000_MBz1* ram;
     
     // PORTS
     VL_IN8(__PVT__clk,0,0);
@@ -101,9 +101,8 @@ VL_MODULE(Vrvfpgasim_axi_mem_wrapper__I6_M10000) {
     static void _sequent__TOP__rvfpgasim__ram__3(Vrvfpgasim__Syms* __restrict vlSymsp);
     static void _sequent__TOP__rvfpgasim__ram__4(Vrvfpgasim__Syms* __restrict vlSymsp);
     static void _settle__TOP__rvfpgasim__ram__2(Vrvfpgasim__Syms* __restrict vlSymsp) VL_ATTR_COLD;
-    static void traceInit(VerilatedVcd* vcdp, void* userthis, uint32_t code);
-    static void traceFull(VerilatedVcd* vcdp, void* userthis, uint32_t code);
-    static void traceChg(VerilatedVcd* vcdp, void* userthis, uint32_t code);
+  private:
+    static void traceInit(void* userp, VerilatedVcd* tracep, uint32_t code) VL_ATTR_COLD;
 } VL_ATTR_ALIGNED(VL_CACHE_LINE_BYTES);
 
 //----------

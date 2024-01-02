@@ -55,7 +55,7 @@ module rvfpganexys
     output wire        accel_sclk,
     
     // Button inputs - Added
-    input wire          i_BTNC, i_BTNU, i_BTNL, i_BTNR, i_BTND
+    inout wire          i_BTNC, i_BTNU, i_BTNL, i_BTNR, i_BTND
     );
 
    wire [15:0] 	       gpio_out;
