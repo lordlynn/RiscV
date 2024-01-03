@@ -32,3 +32,1932 @@ Run output will be captured here: D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/synth_1/ru
 [Mon Jan  1 19:43:49 2024] Launched impl_1...
 Run output will be captured here: D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/impl_1/runme.log
 CRITICAL WARNING: [Common 17-1649] The Vivado message database 'D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/synth_1/vivado.pb' contains 20491 messages. Restoring all messages from this message database will impact Vivado performance, so only WARNING, CRITICAL WARNING, and ERROR messages will be restored. To restore all messages from this file use the tcl command 'set_param messaging.loadPbLimit 20492' and re-open the project.
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: rvfpganexys
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+WARNING: [Synth 8-1921] elaboration system task error violates IEEE 1800 syntax [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/lib/beh_lib.sv:230]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axi2wb with formal parameter declaration list [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiToWb/axi2wb.v:83]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axi2wb with formal parameter declaration list [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiToWb/axi2wb.v:93]
+WARNING: [Synth 8-6901] identifier 'Enables_Reg' is used before its declaration [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:220]
+WARNING: [Synth 8-6901] identifier 'Digits_Reg' is used before its declaration [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:223]
+WARNING: [Synth 8-6901] identifier 'Digits_Reg' is used before its declaration [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:224]
+WARNING: [Synth 8-6901] identifier 'Digits_Reg' is used before its declaration [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:225]
+WARNING: [Synth 8-6901] identifier 'Digits_Reg' is used before its declaration [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:226]
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:295]
+WARNING: [Synth 8-2369] multiple packed dimensions are not allowed in this mode of verilog [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:319]
+WARNING: [Synth 8-2369] multiple packed dimensions are not allowed in this mode of verilog [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:343]
+WARNING: [Synth 8-2507] parameter declaration becomes local in wb_mux with formal parameter declaration list [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon_1.2.2-r1/wb_mux.v:87]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1835.410 ; gain = 228.738
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'rvfpganexys' [D:/RVfpga/RFISC_V/RVfpga/src/rvfpganexys.sv:25]
+	Parameter bootrom_file bound to: boot_main.mem - type: string 
+	Parameter RAM_SIZE bound to: 65536 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'clk_gen_nexys' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/clk_gen_nexys.v:24]
+INFO: [Synth 8-6157] synthesizing module 'PLLE2_BASE' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:61495]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT bound to: 16 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE bound to: 32 - type: integer 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: double 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'PLLE2_BASE' (1#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:61495]
+INFO: [Synth 8-6155] done synthesizing module 'clk_gen_nexys' (2#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/clk_gen_nexys.v:24]
+INFO: [Synth 8-6157] synthesizing module 'AXI_BUS' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_intf.sv:20]
+	Parameter AXI_ADDR_WIDTH bound to: 32'b00000000000000000000000000100000 
+	Parameter AXI_DATA_WIDTH bound to: 32'b00000000000000000000000001000000 
+	Parameter AXI_ID_WIDTH bound to: 32'b00000000000000000000000000000110 
+	Parameter AXI_USER_WIDTH bound to: 32'b00000000000000000000000000000001 
+	Parameter AXI_STRB_WIDTH bound to: 32'b00000000000000000000000000001000 
+INFO: [Synth 8-6155] done synthesizing module 'AXI_BUS' (2#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_intf.sv:20]
+INFO: [Synth 8-6157] synthesizing module 'AXI_BUS' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_intf.sv:20]
+	Parameter AXI_ADDR_WIDTH bound to: 32'b00000000000000000000000000100000 
+	Parameter AXI_DATA_WIDTH bound to: 32'b00000000000000000000000001000000 
+	Parameter AXI_ID_WIDTH bound to: 32'b00000000000000000000000000000110 
+	Parameter AXI_USER_WIDTH bound to: 32'b00000000000000000000000000000001 
+	Parameter AXI_STRB_WIDTH bound to: 32'b00000000000000000000000000001000 
+INFO: [Synth 8-6155] done synthesizing module 'AXI_BUS' (2#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_intf.sv:20]
+INFO: [Synth 8-6157] synthesizing module 'axi_cdc_intf' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_cdc.sv:133]
+	Parameter AXI_ID_WIDTH bound to: 32'b00000000000000000000000000000110 
+	Parameter AXI_ADDR_WIDTH bound to: 32'b00000000000000000000000000100000 
+	Parameter AXI_DATA_WIDTH bound to: 32'b00000000000000000000000001000000 
+	Parameter AXI_USER_WIDTH bound to: 32'b00000000000000000000000000000001 
+	Parameter LOG_DEPTH bound to: 32'b00000000000000000000000000000001 
+INFO: [Synth 8-6157] synthesizing module 'axi_cdc' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_cdc.sv:23]
+	Parameter LogDepth bound to: 32'b00000000000000000000000000000001 
+INFO: [Synth 8-6157] synthesizing module 'cdc_fifo_gray' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:81]
+	Parameter WIDTH bound to: 32'b00000000000000000000000001001010 
+	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001 
+	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010 
+INFO: [Synth 8-6157] synthesizing module 'cdc_fifo_gray_src' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:151]
+	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001 
+	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010 
+	Parameter PtrWidth bound to: 32'sb00000000000000000000000000000010 
+	Parameter PtrFull bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'sync' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/sync.sv:15]
+	Parameter STAGES bound to: 32'b00000000000000000000000000000010 
+INFO: [Synth 8-6155] done synthesizing module 'sync' (3#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/sync.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'gray_to_binary' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/gray_to_binary.sv:15]
+	Parameter N bound to: 32'sb00000000000000000000000000000010 
+INFO: [Synth 8-6155] done synthesizing module 'gray_to_binary' (4#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/gray_to_binary.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'binary_to_gray' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/binary_to_gray.sv:15]
+	Parameter N bound to: 32'sb00000000000000000000000000000010 
+INFO: [Synth 8-6155] done synthesizing module 'binary_to_gray' (5#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/binary_to_gray.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray_src' (6#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:151]
+INFO: [Synth 8-6157] synthesizing module 'cdc_fifo_gray_dst' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:209]
+	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001 
+	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010 
+	Parameter PtrWidth bound to: 32'sb00000000000000000000000000000010 
+	Parameter PtrEmpty bound to: 2'b00 
+INFO: [Synth 8-6157] synthesizing module 'spill_register' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+	Parameter Bypass bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'spill_register' (7#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray_dst' (8#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:209]
+INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray' (9#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:81]
+INFO: [Synth 8-6157] synthesizing module 'cdc_fifo_gray__parameterized0' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:81]
+	Parameter WIDTH bound to: 32'b00000000000000000000000000001001 
+	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001 
+	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010 
+INFO: [Synth 8-6157] synthesizing module 'cdc_fifo_gray_src__parameterized0' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:151]
+	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001 
+	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010 
+	Parameter PtrWidth bound to: 32'sb00000000000000000000000000000010 
+	Parameter PtrFull bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray_src__parameterized0' (9#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:151]
+INFO: [Synth 8-6157] synthesizing module 'cdc_fifo_gray_dst__parameterized0' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:209]
+	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001 
+	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010 
+	Parameter PtrWidth bound to: 32'sb00000000000000000000000000000010 
+	Parameter PtrEmpty bound to: 2'b00 
+INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized0' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+	Parameter Bypass bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized0' (9#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray_dst__parameterized0' (9#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:209]
+INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray__parameterized0' (9#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:81]
+INFO: [Synth 8-6157] synthesizing module 'cdc_fifo_gray__parameterized1' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:81]
+	Parameter WIDTH bound to: 32'b00000000000000000000000001000100 
+	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001 
+	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010 
+INFO: [Synth 8-6157] synthesizing module 'cdc_fifo_gray_src__parameterized1' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:151]
+	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001 
+	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010 
+	Parameter PtrWidth bound to: 32'sb00000000000000000000000000000010 
+	Parameter PtrFull bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray_src__parameterized1' (9#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:151]
+INFO: [Synth 8-6157] synthesizing module 'cdc_fifo_gray_dst__parameterized1' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:209]
+	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001 
+	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010 
+	Parameter PtrWidth bound to: 32'sb00000000000000000000000000000010 
+	Parameter PtrEmpty bound to: 2'b00 
+INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized1' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+	Parameter Bypass bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized1' (9#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray_dst__parameterized1' (9#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:209]
+INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray__parameterized1' (9#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:81]
+INFO: [Synth 8-6155] done synthesizing module 'axi_cdc' (10#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_cdc.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'axi_cdc_intf' (11#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_cdc.sv:133]
+INFO: [Synth 8-6157] synthesizing module 'litedram_top' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_top.v:27]
+	Parameter ID_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'litedram_core' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:4]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:962]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:965]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:967]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1044]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1047]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1049]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1126]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1129]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1131]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1208]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1211]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1213]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1290]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1293]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1295]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1372]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1375]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1377]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1454]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1457]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1459]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1536]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1539]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1541]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1591]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1593]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1595]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:1598]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2519]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2519]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2520]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2520]
+INFO: [Synth 8-3876] $readmem data file 'litedram_core.init' is read successfully [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16699]
+INFO: [Synth 8-3876] $readmem data file 'mem_1.init' is read successfully [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16719]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15886]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15955]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16023]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16171]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (12#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16776]
+INFO: [Synth 8-6157] synthesizing module 'IDELAYCTRL' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:35014]
+	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IDELAYCTRL' (13#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:35014]
+WARNING: [Synth 8-7023] instance 'IDELAYCTRL' of module 'IDELAYCTRL' has 3 connections declared, but only 2 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16776]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:50288]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: BUF - type: string 
+	Parameter DATA_WIDTH bound to: 4 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (14#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:50288]
+WARNING: [Synth 8-7023] instance 'OSERDESE2' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16787]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:46225]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (15#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:46225]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_1' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16815]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_2' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16837]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_3' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16859]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_4' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16881]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_5' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16903]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_6' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16925]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_7' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16947]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_8' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16969]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_9' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16991]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_10' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17013]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_11' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17035]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_12' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17057]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_13' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17079]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_14' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17101]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_15' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17123]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_16' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17145]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_17' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17167]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_18' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17189]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_19' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17211]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_20' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17233]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_21' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17255]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_22' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17277]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_23' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17299]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_24' of module 'OSERDESE2' has 27 connections declared, but only 17 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17321]
+INFO: [Synth 8-6157] synthesizing module 'IOBUFDS' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:36213]
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUFDS' (16#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:36213]
+WARNING: [Synth 8-7023] instance 'IOBUFDS' of module 'IOBUFDS' has 5 connections declared, but only 4 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17341]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_25' of module 'OSERDESE2' has 27 connections declared, but only 17 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17354]
+WARNING: [Synth 8-7023] instance 'IOBUFDS_1' of module 'IOBUFDS' has 5 connections declared, but only 4 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17374]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_26' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17387]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_27' of module 'OSERDESE2' has 27 connections declared, but only 13 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17409]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_28' of module 'OSERDESE2' has 27 connections declared, but only 16 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17431]
+INFO: [Synth 8-6157] synthesizing module 'ISERDESE2' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:38572]
+	Parameter DATA_RATE bound to: DDR - type: string 
+	Parameter DATA_WIDTH bound to: 4 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: IFD - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 1 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'ISERDESE2' (17#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:38572]
+WARNING: [Synth 8-7023] instance 'ISERDESE2' of module 'ISERDESE2' has 28 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17457]
+INFO: [Synth 8-6157] synthesizing module 'IDELAYE2' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:35027]
+	Parameter CINVCTRL_SEL bound to: FALSE - type: string 
+	Parameter DELAY_SRC bound to: IDATAIN - type: string 
+	Parameter HIGH_PERFORMANCE_MODE bound to: TRUE - type: string 
+	Parameter IDELAY_TYPE bound to: VARIABLE - type: string 
+	Parameter IDELAY_VALUE bound to: 0 - type: integer 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_DATAIN_INVERTED bound to: 1'b0 
+	Parameter IS_IDATAIN_INVERTED bound to: 1'b0 
+	Parameter PIPE_SEL bound to: FALSE - type: string 
+	Parameter REFCLK_FREQUENCY bound to: 200.000000 - type: double 
+	Parameter SIGNAL_PATTERN bound to: DATA - type: string 
+	Parameter SIM_DELAY_D bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'IDELAYE2' (18#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:35027]
+WARNING: [Synth 8-7023] instance 'IDELAYE2' of module 'IDELAYE2' has 12 connections declared, but only 7 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17484]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:36196]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (19#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:36196]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_29' of module 'OSERDESE2' has 27 connections declared, but only 16 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17507]
+WARNING: [Synth 8-7023] instance 'ISERDESE2_1' of module 'ISERDESE2' has 28 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17533]
+WARNING: [Synth 8-7023] instance 'IDELAYE2_1' of module 'IDELAYE2' has 12 connections declared, but only 7 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17560]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_30' of module 'OSERDESE2' has 27 connections declared, but only 16 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17583]
+WARNING: [Synth 8-7023] instance 'ISERDESE2_2' of module 'ISERDESE2' has 28 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17609]
+WARNING: [Synth 8-7023] instance 'IDELAYE2_2' of module 'IDELAYE2' has 12 connections declared, but only 7 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17636]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_31' of module 'OSERDESE2' has 27 connections declared, but only 16 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17659]
+WARNING: [Synth 8-7023] instance 'ISERDESE2_3' of module 'ISERDESE2' has 28 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17685]
+WARNING: [Synth 8-7023] instance 'IDELAYE2_3' of module 'IDELAYE2' has 12 connections declared, but only 7 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17712]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_32' of module 'OSERDESE2' has 27 connections declared, but only 16 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17735]
+WARNING: [Synth 8-7023] instance 'ISERDESE2_4' of module 'ISERDESE2' has 28 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17761]
+WARNING: [Synth 8-7023] instance 'IDELAYE2_4' of module 'IDELAYE2' has 12 connections declared, but only 7 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17788]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_33' of module 'OSERDESE2' has 27 connections declared, but only 16 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17811]
+WARNING: [Synth 8-7023] instance 'ISERDESE2_5' of module 'ISERDESE2' has 28 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17837]
+WARNING: [Synth 8-7023] instance 'IDELAYE2_5' of module 'IDELAYE2' has 12 connections declared, but only 7 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17864]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_34' of module 'OSERDESE2' has 27 connections declared, but only 16 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17887]
+WARNING: [Synth 8-7023] instance 'ISERDESE2_6' of module 'ISERDESE2' has 28 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17913]
+WARNING: [Synth 8-7023] instance 'IDELAYE2_6' of module 'IDELAYE2' has 12 connections declared, but only 7 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17940]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_35' of module 'OSERDESE2' has 27 connections declared, but only 16 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17963]
+WARNING: [Synth 8-7023] instance 'ISERDESE2_7' of module 'ISERDESE2' has 28 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:17989]
+WARNING: [Synth 8-7023] instance 'IDELAYE2_7' of module 'IDELAYE2' has 12 connections declared, but only 7 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18016]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_36' of module 'OSERDESE2' has 27 connections declared, but only 16 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18039]
+WARNING: [Synth 8-7023] instance 'ISERDESE2_8' of module 'ISERDESE2' has 28 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18065]
+WARNING: [Synth 8-7023] instance 'IDELAYE2_8' of module 'IDELAYE2' has 12 connections declared, but only 7 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18092]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_37' of module 'OSERDESE2' has 27 connections declared, but only 16 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18115]
+WARNING: [Synth 8-7023] instance 'ISERDESE2_9' of module 'ISERDESE2' has 28 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18141]
+WARNING: [Synth 8-7023] instance 'IDELAYE2_9' of module 'IDELAYE2' has 12 connections declared, but only 7 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18168]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_38' of module 'OSERDESE2' has 27 connections declared, but only 16 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18191]
+WARNING: [Synth 8-7023] instance 'ISERDESE2_10' of module 'ISERDESE2' has 28 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18217]
+WARNING: [Synth 8-7023] instance 'IDELAYE2_10' of module 'IDELAYE2' has 12 connections declared, but only 7 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18244]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_39' of module 'OSERDESE2' has 27 connections declared, but only 16 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18267]
+WARNING: [Synth 8-7023] instance 'ISERDESE2_11' of module 'ISERDESE2' has 28 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18293]
+WARNING: [Synth 8-7023] instance 'IDELAYE2_11' of module 'IDELAYE2' has 12 connections declared, but only 7 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18320]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_40' of module 'OSERDESE2' has 27 connections declared, but only 16 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18343]
+WARNING: [Synth 8-7023] instance 'ISERDESE2_12' of module 'ISERDESE2' has 28 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18369]
+WARNING: [Synth 8-7023] instance 'IDELAYE2_12' of module 'IDELAYE2' has 12 connections declared, but only 7 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18396]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_41' of module 'OSERDESE2' has 27 connections declared, but only 16 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18419]
+WARNING: [Synth 8-7023] instance 'ISERDESE2_13' of module 'ISERDESE2' has 28 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18445]
+WARNING: [Synth 8-7023] instance 'IDELAYE2_13' of module 'IDELAYE2' has 12 connections declared, but only 7 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18472]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_42' of module 'OSERDESE2' has 27 connections declared, but only 16 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18495]
+WARNING: [Synth 8-7023] instance 'ISERDESE2_14' of module 'ISERDESE2' has 28 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18521]
+WARNING: [Synth 8-7023] instance 'IDELAYE2_14' of module 'IDELAYE2' has 12 connections declared, but only 7 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18548]
+WARNING: [Synth 8-7023] instance 'OSERDESE2_43' of module 'OSERDESE2' has 27 connections declared, but only 16 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18571]
+WARNING: [Synth 8-7023] instance 'ISERDESE2_15' of module 'ISERDESE2' has 28 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18597]
+WARNING: [Synth 8-7023] instance 'IDELAYE2_15' of module 'IDELAYE2' has 12 connections declared, but only 7 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18624]
+INFO: [Synth 8-6157] synthesizing module 'serv_rf_top' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_rf_top.v:3]
+	Parameter RESET_PC bound to: 1'b0 
+	Parameter WITH_CSR bound to: 1 - type: integer 
+	Parameter RF_WIDTH bound to: 2 - type: integer 
+	Parameter RF_L2D bound to: 10 - type: integer 
+	Parameter CSR_REGS bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'serv_rf_ram_if' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_rf_ram_if.v:2]
+	Parameter width bound to: 2 - type: integer 
+	Parameter csr_regs bound to: 4 - type: integer 
+	Parameter depth bound to: 576 - type: integer 
+	Parameter l2w bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'serv_rf_ram_if' (20#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_rf_ram_if.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_rf_ram' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_rf_ram.v:1]
+	Parameter width bound to: 2 - type: integer 
+	Parameter csr_regs bound to: 4 - type: integer 
+	Parameter depth bound to: 576 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'serv_rf_ram' (21#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_rf_ram.v:1]
+INFO: [Synth 8-6157] synthesizing module 'serv_top' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_top.v:3]
+	Parameter WITH_CSR bound to: 1 - type: integer 
+	Parameter RESET_PC bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'serv_csr' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_csr.v:2]
+	Parameter CSR_SOURCE_CSR bound to: 2'b00 
+	Parameter CSR_SOURCE_EXT bound to: 2'b01 
+	Parameter CSR_SOURCE_SET bound to: 2'b10 
+	Parameter CSR_SOURCE_CLR bound to: 2'b11 
+	Parameter CSR_MSCRATCH bound to: 2'b00 
+	Parameter CSR_MTVEC bound to: 2'b01 
+	Parameter CSR_MEPC bound to: 2'b10 
+	Parameter CSR_MTVAL bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'serv_csr' (22#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_csr.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_state' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_state.v:1]
+	Parameter WITH_CSR bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'serv_state' (23#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_state.v:1]
+INFO: [Synth 8-6157] synthesizing module 'serv_decode' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_decode.v:2]
+	Parameter CSR_SOURCE_CSR bound to: 2'b00 
+	Parameter CSR_SOURCE_EXT bound to: 2'b01 
+	Parameter CSR_SOURCE_SET bound to: 2'b10 
+	Parameter CSR_SOURCE_CLR bound to: 2'b11 
+	Parameter CSR_MSCRATCH bound to: 2'b00 
+	Parameter CSR_MTVEC bound to: 2'b01 
+	Parameter CSR_MEPC bound to: 2'b10 
+	Parameter CSR_MTVAL bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'serv_decode' (24#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_decode.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_bufreg' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_bufreg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'serv_bufreg' (25#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_bufreg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'serv_ctrl' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_ctrl.v:2]
+	Parameter RESET_PC bound to: 1'b0 
+	Parameter WITH_CSR bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'serv_ctrl' (26#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_ctrl.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_alu' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_alu.v:2]
+	Parameter BOOL_LUT bound to: 16'b1000111010010110 
+INFO: [Synth 8-6157] synthesizing module 'serv_shift' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_shift.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'serv_shift' (27#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_shift.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'serv_alu' (28#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_alu.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_rf_if' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_rf_if.v:2]
+	Parameter WITH_CSR bound to: 1 - type: integer 
+	Parameter CSR_SOURCE_CSR bound to: 2'b00 
+	Parameter CSR_SOURCE_EXT bound to: 2'b01 
+	Parameter CSR_SOURCE_SET bound to: 2'b10 
+	Parameter CSR_SOURCE_CLR bound to: 2'b11 
+	Parameter CSR_MSCRATCH bound to: 2'b00 
+	Parameter CSR_MTVEC bound to: 2'b01 
+	Parameter CSR_MEPC bound to: 2'b10 
+	Parameter CSR_MTVAL bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'serv_rf_if' (29#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_rf_if.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_mem_if' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_mem_if.v:2]
+	Parameter WITH_CSR bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'serv_mem_if' (30#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_mem_if.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'serv_top' (31#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'serv_rf_top' (32#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_rf_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'FD' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13467]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'FD' (33#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13467]
+INFO: [Synth 8-6157] synthesizing module 'PLLE2_ADV' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:61416]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT bound to: 16 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE bound to: 8 - type: integer 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT2_DIVIDE bound to: 8 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT3_DIVIDE bound to: 8 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT3_PHASE bound to: 90.000000 - type: double 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: double 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: double 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'PLLE2_ADV' (34#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:61416]
+WARNING: [Synth 8-7023] instance 'PLLE2_ADV' of module 'PLLE2_ADV' has 21 connections declared, but only 9 given [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18920]
+INFO: [Synth 8-6157] synthesizing module 'FDPE' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13648]
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'FDPE' (35#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13648]
+WARNING: [Synth 8-6014] Unused sequential element sdram_bankmachine0_cmd_buffer_source_first_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:14657]
+WARNING: [Synth 8-6014] Unused sequential element sdram_bankmachine0_cmd_buffer_source_last_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:14658]
+WARNING: [Synth 8-6014] Unused sequential element sdram_bankmachine1_cmd_buffer_source_first_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:14703]
+WARNING: [Synth 8-6014] Unused sequential element sdram_bankmachine1_cmd_buffer_source_last_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:14704]
+WARNING: [Synth 8-6014] Unused sequential element sdram_bankmachine2_cmd_buffer_source_first_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:14749]
+WARNING: [Synth 8-6014] Unused sequential element sdram_bankmachine2_cmd_buffer_source_last_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:14750]
+WARNING: [Synth 8-6014] Unused sequential element sdram_bankmachine3_cmd_buffer_source_first_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:14795]
+WARNING: [Synth 8-6014] Unused sequential element sdram_bankmachine3_cmd_buffer_source_last_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:14796]
+WARNING: [Synth 8-6014] Unused sequential element sdram_bankmachine4_cmd_buffer_source_first_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:14841]
+WARNING: [Synth 8-6014] Unused sequential element sdram_bankmachine4_cmd_buffer_source_last_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:14842]
+WARNING: [Synth 8-6014] Unused sequential element sdram_bankmachine5_cmd_buffer_source_first_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:14887]
+WARNING: [Synth 8-6014] Unused sequential element sdram_bankmachine5_cmd_buffer_source_last_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:14888]
+WARNING: [Synth 8-6014] Unused sequential element sdram_bankmachine6_cmd_buffer_source_first_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:14933]
+WARNING: [Synth 8-6014] Unused sequential element sdram_bankmachine6_cmd_buffer_source_last_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:14934]
+WARNING: [Synth 8-6014] Unused sequential element sdram_bankmachine7_cmd_buffer_source_first_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:14979]
+WARNING: [Synth 8-6014] Unused sequential element sdram_bankmachine7_cmd_buffer_source_last_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:14980]
+WARNING: [Synth 8-6014] Unused sequential element write_aw_buffer_source_first_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15680]
+WARNING: [Synth 8-6014] Unused sequential element write_aw_buffer_source_last_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15681]
+WARNING: [Synth 8-6014] Unused sequential element write_aw_buffer_source_payload_lock_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15686]
+WARNING: [Synth 8-6014] Unused sequential element write_aw_buffer_source_payload_prot_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15687]
+WARNING: [Synth 8-6014] Unused sequential element write_aw_buffer_source_payload_cache_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15688]
+WARNING: [Synth 8-6014] Unused sequential element write_aw_buffer_source_payload_qos_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15689]
+WARNING: [Synth 8-6014] Unused sequential element read_ar_buffer_source_first_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15771]
+WARNING: [Synth 8-6014] Unused sequential element read_ar_buffer_source_last_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15772]
+WARNING: [Synth 8-6014] Unused sequential element read_ar_buffer_source_payload_lock_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15777]
+WARNING: [Synth 8-6014] Unused sequential element read_ar_buffer_source_payload_prot_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15778]
+WARNING: [Synth 8-6014] Unused sequential element read_ar_buffer_source_payload_cache_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15779]
+WARNING: [Synth 8-6014] Unused sequential element read_ar_buffer_source_payload_qos_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15780]
+WARNING: [Synth 8-6014] Unused sequential element soccontroller_scratch_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15932]
+WARNING: [Synth 8-6014] Unused sequential element soccontroller_bus_errors_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15933]
+WARNING: [Synth 8-6014] Unused sequential element init_done_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15948]
+WARNING: [Synth 8-6014] Unused sequential element init_error_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:15952]
+WARNING: [Synth 8-6014] Unused sequential element a7ddrphy_rst_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16000]
+WARNING: [Synth 8-6014] Unused sequential element a7ddrphy_half_sys8x_taps_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16004]
+WARNING: [Synth 8-6014] Unused sequential element a7ddrphy_wlevel_en_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16008]
+WARNING: [Synth 8-6014] Unused sequential element a7ddrphy_dly_sel_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16012]
+WARNING: [Synth 8-6014] Unused sequential element a7ddrphy_rdphase_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16016]
+WARNING: [Synth 8-6014] Unused sequential element a7ddrphy_wrphase_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16020]
+WARNING: [Synth 8-6014] Unused sequential element sdram_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16110]
+WARNING: [Synth 8-6014] Unused sequential element sdram_phaseinjector0_command_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16114]
+WARNING: [Synth 8-6014] Unused sequential element sdram_phaseinjector0_address_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16121]
+WARNING: [Synth 8-6014] Unused sequential element sdram_phaseinjector0_baddress_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16125]
+WARNING: [Synth 8-6014] Unused sequential element sdram_phaseinjector0_wrdata_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16138]
+WARNING: [Synth 8-6014] Unused sequential element sdram_phaseinjector0_rddata_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16139]
+WARNING: [Synth 8-6014] Unused sequential element sdram_phaseinjector1_command_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16143]
+WARNING: [Synth 8-6014] Unused sequential element sdram_phaseinjector1_address_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16150]
+WARNING: [Synth 8-6014] Unused sequential element sdram_phaseinjector1_baddress_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16154]
+WARNING: [Synth 8-6014] Unused sequential element sdram_phaseinjector1_wrdata_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16167]
+WARNING: [Synth 8-6014] Unused sequential element sdram_phaseinjector1_rddata_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16168]
+WARNING: [Synth 8-6014] Unused sequential element timer_load_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16237]
+WARNING: [Synth 8-6014] Unused sequential element timer_reload_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16250]
+WARNING: [Synth 8-6014] Unused sequential element timer_en_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16254]
+WARNING: [Synth 8-6014] Unused sequential element timer_value_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16259]
+WARNING: [Synth 8-6014] Unused sequential element timer_status_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16260]
+WARNING: [Synth 8-6014] Unused sequential element timer_enable_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16268]
+WARNING: [Synth 8-6014] Unused sequential element uart_txfull_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16298]
+WARNING: [Synth 8-6014] Unused sequential element uart_rxempty_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16299]
+WARNING: [Synth 8-6014] Unused sequential element uart_status_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16300]
+WARNING: [Synth 8-6014] Unused sequential element uart_enable_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16308]
+WARNING: [Synth 8-6014] Unused sequential element uart_txempty_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16309]
+WARNING: [Synth 8-6014] Unused sequential element uart_rxfull_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16310]
+WARNING: [Synth 8-6014] Unused sequential element uart_phy_re_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16340]
+WARNING: [Synth 8-6014] Unused sequential element memdat_1_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16728]
+WARNING: [Synth 8-6014] Unused sequential element memdat_3_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:16745]
+WARNING: [Synth 8-6014] Unused sequential element memdat_5_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18646]
+WARNING: [Synth 8-6014] Unused sequential element memdat_6_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18660]
+WARNING: [Synth 8-6014] Unused sequential element memdat_7_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18674]
+WARNING: [Synth 8-6014] Unused sequential element memdat_8_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18688]
+WARNING: [Synth 8-6014] Unused sequential element memdat_9_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18702]
+WARNING: [Synth 8-6014] Unused sequential element memdat_10_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18716]
+WARNING: [Synth 8-6014] Unused sequential element memdat_11_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18730]
+WARNING: [Synth 8-6014] Unused sequential element memdat_12_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18744]
+WARNING: [Synth 8-6014] Unused sequential element memdat_13_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18769]
+WARNING: [Synth 8-6014] Unused sequential element memdat_15_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18785]
+WARNING: [Synth 8-6014] Unused sequential element memdat_16_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18799]
+WARNING: [Synth 8-6014] Unused sequential element memdat_17_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18814]
+WARNING: [Synth 8-6014] Unused sequential element memdat_19_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18830]
+INFO: [Synth 8-4471] merging register 'memadr_3_reg[0:0]' into 'memadr_2_reg[0:0]' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18947]
+INFO: [Synth 8-4471] merging register 'memadr_4_reg[0:0]' into 'memadr_2_reg[0:0]' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18957]
+INFO: [Synth 8-4471] merging register 'memadr_5_reg[0:0]' into 'memadr_2_reg[0:0]' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18967]
+INFO: [Synth 8-4471] merging register 'memadr_6_reg[0:0]' into 'memadr_2_reg[0:0]' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18977]
+INFO: [Synth 8-4471] merging register 'memadr_7_reg[0:0]' into 'memadr_2_reg[0:0]' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18987]
+INFO: [Synth 8-4471] merging register 'memadr_8_reg[0:0]' into 'memadr_2_reg[0:0]' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18997]
+INFO: [Synth 8-4471] merging register 'memadr_9_reg[0:0]' into 'memadr_2_reg[0:0]' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:19007]
+WARNING: [Synth 8-6014] Unused sequential element memadr_3_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18947]
+WARNING: [Synth 8-6014] Unused sequential element memadr_4_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18957]
+WARNING: [Synth 8-6014] Unused sequential element memadr_5_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18967]
+WARNING: [Synth 8-6014] Unused sequential element memadr_6_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18977]
+WARNING: [Synth 8-6014] Unused sequential element memadr_7_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18987]
+WARNING: [Synth 8-6014] Unused sequential element memadr_8_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18997]
+WARNING: [Synth 8-6014] Unused sequential element memadr_9_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:19007]
+WARNING: [Synth 8-3936] Found unconnected internal register 'a7ddrphy_bitslip142_reg' and it is trimmed from '8' to '4' bits. [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2839]
+WARNING: [Synth 8-3936] Found unconnected internal register 'a7ddrphy_bitslip132_reg' and it is trimmed from '8' to '4' bits. [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2837]
+WARNING: [Synth 8-3936] Found unconnected internal register 'a7ddrphy_bitslip122_reg' and it is trimmed from '8' to '4' bits. [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2835]
+WARNING: [Synth 8-3936] Found unconnected internal register 'a7ddrphy_bitslip112_reg' and it is trimmed from '8' to '4' bits. [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2833]
+WARNING: [Synth 8-3936] Found unconnected internal register 'a7ddrphy_bitslip102_reg' and it is trimmed from '8' to '4' bits. [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2831]
+WARNING: [Synth 8-3936] Found unconnected internal register 'a7ddrphy_bitslip92_reg' and it is trimmed from '8' to '4' bits. [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2829]
+WARNING: [Synth 8-3936] Found unconnected internal register 'a7ddrphy_bitslip82_reg' and it is trimmed from '8' to '4' bits. [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2827]
+WARNING: [Synth 8-3936] Found unconnected internal register 'a7ddrphy_bitslip72_reg' and it is trimmed from '8' to '4' bits. [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2825]
+WARNING: [Synth 8-3936] Found unconnected internal register 'a7ddrphy_bitslip62_reg' and it is trimmed from '8' to '4' bits. [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2823]
+WARNING: [Synth 8-3936] Found unconnected internal register 'a7ddrphy_bitslip52_reg' and it is trimmed from '8' to '4' bits. [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2821]
+WARNING: [Synth 8-3936] Found unconnected internal register 'a7ddrphy_bitslip42_reg' and it is trimmed from '8' to '4' bits. [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2819]
+WARNING: [Synth 8-3936] Found unconnected internal register 'a7ddrphy_bitslip32_reg' and it is trimmed from '8' to '4' bits. [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2817]
+WARNING: [Synth 8-3936] Found unconnected internal register 'a7ddrphy_bitslip22_reg' and it is trimmed from '8' to '4' bits. [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2815]
+WARNING: [Synth 8-3936] Found unconnected internal register 'a7ddrphy_bitslip14_reg' and it is trimmed from '8' to '4' bits. [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2813]
+WARNING: [Synth 8-3936] Found unconnected internal register 'a7ddrphy_bitslip04_reg' and it is trimmed from '8' to '4' bits. [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2811]
+WARNING: [Synth 8-3936] Found unconnected internal register 'a7ddrphy_bitslip152_reg' and it is trimmed from '8' to '4' bits. [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:2841]
+INFO: [Synth 8-4471] merging register 'memadr_1_reg[0:0]' into 'memadr_2_reg[0:0]' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18758]
+INFO: [Synth 8-4471] merging register 'sdram_dfi_p1_cs_n_reg' into 'sdram_dfi_p0_cs_n_reg' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:4323]
+WARNING: [Synth 8-6014] Unused sequential element sdram_dfi_p1_cs_n_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:4323]
+WARNING: [Synth 8-6014] Unused sequential element memadr_1_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18758]
+INFO: [Synth 8-6155] done synthesizing module 'litedram_core' (36#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'litedram_top' (37#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_top.v:27]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/RVfpga/RFISC_V/RVfpga/src/rvfpganexys.sv:174]
+INFO: [Synth 8-6157] synthesizing module 'STARTUPE2' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:78135]
+	Parameter PROG_USR bound to: FALSE - type: string 
+	Parameter SIM_CCLK_FREQ bound to: 0.000000 - type: double 
+INFO: [Synth 8-6155] done synthesizing module 'STARTUPE2' (38#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:78135]
+INFO: [Synth 8-6157] synthesizing module 'bscan_tap' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/bscan_tap.sv:16]
+	Parameter AWIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'BSCANE2' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:876]
+	Parameter DISABLE_JTAG bound to: FALSE - type: string 
+	Parameter JTAG_CHAIN bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BSCANE2' (39#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:876]
+INFO: [Synth 8-6157] synthesizing module 'BSCANE2__parameterized0' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:876]
+	Parameter DISABLE_JTAG bound to: FALSE - type: string 
+	Parameter JTAG_CHAIN bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BSCANE2__parameterized0' (39#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:876]
+INFO: [Synth 8-6157] synthesizing module 'BSCANE2__parameterized1' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:876]
+	Parameter DISABLE_JTAG bound to: FALSE - type: string 
+	Parameter JTAG_CHAIN bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BSCANE2__parameterized1' (39#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:876]
+INFO: [Synth 8-6155] done synthesizing module 'bscan_tap' (40#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/bscan_tap.sv:16]
+INFO: [Synth 8-6157] synthesizing module 'swervolf_core' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/swervolf_core.v:22]
+	Parameter bootrom_file bound to: boot_main.mem - type: string 
+	Parameter clk_freq_hz bound to: 50000000 - type: integer 
+	Parameter BOOTROM_SIZE bound to: 4096 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axi_intercon' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/axi_intercon.sv:7]
+	Parameter NoMasters bound to: 3 - type: integer 
+	Parameter NoSlaves bound to: 2 - type: integer 
+	Parameter AxiIdWidthMasters bound to: 4 - type: integer 
+	Parameter AxiIdUsed bound to: 4 - type: integer 
+	Parameter AxiIdWidthSlaves bound to: 32'b00000000000000000000000000000110 
+	Parameter AxiAddrWidth bound to: 32 - type: integer 
+	Parameter AxiDataWidth bound to: 64 - type: integer 
+	Parameter AxiStrbWidth bound to: 32'b00000000000000000000000000001000 
+	Parameter AxiUserWidth bound to: 32'b00000000000000000000000000000001 
+	Parameter xbar_cfg[NoSlvPorts] bound to: 3 - type: integer 
+	Parameter xbar_cfg[NoMstPorts] bound to: 2 - type: integer 
+	Parameter xbar_cfg[MaxMstTrans] bound to: 10 - type: integer 
+	Parameter xbar_cfg[MaxSlvTrans] bound to: 6 - type: integer 
+	Parameter xbar_cfg[FallThrough] bound to: 1'b0 
+	Parameter xbar_cfg[LatencyMode] bound to: 10'b1001010010 
+	Parameter xbar_cfg[AxiIdWidthSlvPorts] bound to: 4 - type: integer 
+	Parameter xbar_cfg[AxiIdUsedSlvPorts] bound to: 4 - type: integer 
+	Parameter xbar_cfg[AxiAddrWidth] bound to: 32 - type: integer 
+	Parameter xbar_cfg[AxiDataWidth] bound to: 64 - type: integer 
+	Parameter xbar_cfg[NoAddrRules] bound to: 2 - type: integer 
+	Parameter AddrMap bound to: 192'b000000000000000000000000000000001000000000000000000000000000000010000000000000000100000000000000000000000000000000000000000000010000000000000000000000000000000000001000000000000000000000000000 
+INFO: [Synth 8-6157] synthesizing module 'axi_xbar' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_xbar.sv:15]
+	Parameter Cfg[NoSlvPorts] bound to: 3 - type: integer 
+	Parameter Cfg[NoMstPorts] bound to: 2 - type: integer 
+	Parameter Cfg[MaxMstTrans] bound to: 10 - type: integer 
+	Parameter Cfg[MaxSlvTrans] bound to: 6 - type: integer 
+	Parameter Cfg[FallThrough] bound to: 1'b0 
+	Parameter Cfg[LatencyMode] bound to: 10'b1001010010 
+	Parameter Cfg[AxiIdWidthSlvPorts] bound to: 4 - type: integer 
+	Parameter Cfg[AxiIdUsedSlvPorts] bound to: 4 - type: integer 
+	Parameter Cfg[AxiAddrWidth] bound to: 32 - type: integer 
+	Parameter Cfg[AxiDataWidth] bound to: 64 - type: integer 
+	Parameter Cfg[NoAddrRules] bound to: 2 - type: integer 
+	Parameter ATOPs bound to: 1'b0 
+	Parameter cfg_NoMstPorts bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'addr_decode' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/addr_decode.sv:30]
+	Parameter NoIndices bound to: 2 - type: integer 
+	Parameter NoRules bound to: 2 - type: integer 
+	Parameter IdxWidth bound to: 32'b00000000000000000000000000000001 
+INFO: [Synth 8-6155] done synthesizing module 'addr_decode' (41#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/addr_decode.sv:30]
+INFO: [Synth 8-6157] synthesizing module 'axi_demux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:17]
+	Parameter AxiIdWidth bound to: 4 - type: integer 
+	Parameter NoMstPorts bound to: 32'b00000000000000000000000000000011 
+	Parameter MaxTrans bound to: 10 - type: integer 
+	Parameter AxiLookBits bound to: 4 - type: integer 
+	Parameter FallThrough bound to: 1'b0 
+	Parameter SpillAw bound to: 1'b1 
+	Parameter SpillW bound to: 1'b0 
+	Parameter SpillB bound to: 1'b0 
+	Parameter SpillAr bound to: 1'b1 
+	Parameter SpillR bound to: 1'b0 
+	Parameter SelectWidth bound to: 32'b00000000000000000000000000000010 
+	Parameter IdCounterWidth bound to: 32'b00000000000000000000000000000100 
+INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized2' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+	Parameter Bypass bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized2' (41#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'axi_demux_id_counters' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:538]
+	Parameter AxiIdBits bound to: 4 - type: integer 
+	Parameter CounterWidth bound to: 32'b00000000000000000000000000000100 
+	Parameter NoCounters bound to: 32'b00000000000000000000000000010000 
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:588]
+INFO: [Synth 8-6157] synthesizing module 'delta_counter' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv:13]
+	Parameter WIDTH bound to: 32'b00000000000000000000000000000100 
+	Parameter STICKY_OVERFLOW bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'delta_counter' (42#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv:13]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:588]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:588]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:588]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:588]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:588]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:588]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:588]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:588]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:588]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:588]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:588]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:588]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:588]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:588]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:588]
+INFO: [Synth 8-6155] done synthesizing module 'axi_demux_id_counters' (43#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:538]
+INFO: [Synth 8-6157] synthesizing module 'fifo_v3' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13]
+	Parameter FALL_THROUGH bound to: 1'b0 
+	Parameter DATA_WIDTH bound to: 32'b00000000000000000000000000100000 
+	Parameter DEPTH bound to: 10 - type: integer 
+	Parameter ADDR_DEPTH bound to: 32'b00000000000000000000000000000100 
+	Parameter FifoDepth bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_v3' (44#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized3' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+	Parameter Bypass bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized3' (44#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized4' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+	Parameter Bypass bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized4' (44#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'rr_arb_tree' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv:47]
+	Parameter NumIn bound to: 32'b00000000000000000000000000000011 
+	Parameter DataWidth bound to: 32'b00000000000000000000000000100000 
+	Parameter ExtPrio bound to: 1'b0 
+	Parameter AxiVldRdy bound to: 1'b1 
+	Parameter LockIn bound to: 1'b1 
+	Parameter FairArb bound to: 1'b1 
+	Parameter IdxWidth bound to: 32'b00000000000000000000000000000010 
+INFO: [Synth 8-6157] synthesizing module 'lzc' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/lzc.sv:25]
+	Parameter WIDTH bound to: 32'b00000000000000000000000000000011 
+	Parameter MODE bound to: 1'b0 
+	Parameter CNT_WIDTH bound to: 32'b00000000000000000000000000000010 
+INFO: [Synth 8-6155] done synthesizing module 'lzc' (45#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/lzc.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'rr_arb_tree' (46#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv:47]
+INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized5' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+	Parameter Bypass bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized5' (46#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized6' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+	Parameter Bypass bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized6' (46#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'rr_arb_tree__parameterized0' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv:47]
+	Parameter NumIn bound to: 32'b00000000000000000000000000000011 
+	Parameter DataWidth bound to: 32'b00000000000000000000000000100000 
+	Parameter ExtPrio bound to: 1'b0 
+	Parameter AxiVldRdy bound to: 1'b1 
+	Parameter LockIn bound to: 1'b1 
+	Parameter FairArb bound to: 1'b1 
+	Parameter IdxWidth bound to: 32'b00000000000000000000000000000010 
+INFO: [Synth 8-6155] done synthesizing module 'rr_arb_tree__parameterized0' (46#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv:47]
+WARNING: [Synth 8-5858] RAM mst_reqs_o_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-6155] done synthesizing module 'axi_demux' (47#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'axi_err_slv' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_err_slv.sv:16]
+	Parameter AxiIdWidth bound to: 4 - type: integer 
+	Parameter Resp bound to: 2'b11 
+	Parameter RespWidth bound to: 64 - type: integer 
+	Parameter RespData bound to: 64'b1100101000010001101010110001111010111010110111001010101100011110 
+	Parameter ATOPs bound to: 1'b0 
+	Parameter MaxTrans bound to: 32'b00000000000000000000000000000100 
+INFO: [Synth 8-6157] synthesizing module 'fifo_v3__parameterized0' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13]
+	Parameter FALL_THROUGH bound to: 1'b1 
+	Parameter DATA_WIDTH bound to: 32'b00000000000000000000000000100000 
+	Parameter DEPTH bound to: 32'b00000000000000000000000000000100 
+	Parameter ADDR_DEPTH bound to: 32'b00000000000000000000000000000010 
+	Parameter FifoDepth bound to: 32'b00000000000000000000000000000100 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_v3__parameterized0' (47#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'fifo_v3__parameterized1' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13]
+	Parameter FALL_THROUGH bound to: 1'b0 
+	Parameter DATA_WIDTH bound to: 32'b00000000000000000000000000100000 
+	Parameter DEPTH bound to: 32'b00000000000000000000000000000010 
+	Parameter ADDR_DEPTH bound to: 32'b00000000000000000000000000000001 
+	Parameter FifoDepth bound to: 32'b00000000000000000000000000000010 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_v3__parameterized1' (47#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'fifo_v3__parameterized2' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13]
+	Parameter FALL_THROUGH bound to: 1'b0 
+	Parameter DATA_WIDTH bound to: 32'b00000000000000000000000000100000 
+	Parameter DEPTH bound to: 32'b00000000000000000000000000000100 
+	Parameter ADDR_DEPTH bound to: 32'b00000000000000000000000000000010 
+	Parameter FifoDepth bound to: 32'b00000000000000000000000000000100 
+WARNING: [Synth 8-5858] RAM mem_n_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5858] RAM mem_q_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-6155] done synthesizing module 'fifo_v3__parameterized2' (47#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'counter' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/counter.sv:14]
+	Parameter WIDTH bound to: 32'b00000000000000000000000000001000 
+	Parameter STICKY_OVERFLOW bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'delta_counter__parameterized0' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv:13]
+	Parameter WIDTH bound to: 32'b00000000000000000000000000001000 
+	Parameter STICKY_OVERFLOW bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'delta_counter__parameterized0' (47#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (48#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/counter.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'axi_err_slv' (49#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_err_slv.sv:16]
+INFO: [Synth 8-6157] synthesizing module 'axi_mux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_mux.sv:25]
+	Parameter SlvAxiIDWidth bound to: 4 - type: integer 
+	Parameter NoSlvPorts bound to: 3 - type: integer 
+	Parameter MaxWTrans bound to: 6 - type: integer 
+	Parameter FallThrough bound to: 1'b0 
+	Parameter SpillAw bound to: 1'b1 
+	Parameter SpillW bound to: 1'b0 
+	Parameter SpillB bound to: 1'b0 
+	Parameter SpillAr bound to: 1'b1 
+	Parameter SpillR bound to: 1'b0 
+	Parameter MstIdxBits bound to: 32'b00000000000000000000000000000010 
+	Parameter MstAxiIDWidth bound to: 32'b00000000000000000000000000000110 
+INFO: [Synth 8-6157] synthesizing module 'axi_id_prepend' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_id_prepend.sv:16]
+	Parameter NoBus bound to: 1 - type: integer 
+	Parameter AxiIdWidthSlvPort bound to: 4 - type: integer 
+	Parameter AxiIdWidthMstPort bound to: 32'b00000000000000000000000000000110 
+	Parameter PreIdWidth bound to: 32'b00000000000000000000000000000010 
+WARNING: [Synth 8-5858] RAM mst_aw_chans_o_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5858] RAM mst_ar_chans_o_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-6155] done synthesizing module 'axi_id_prepend' (50#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_id_prepend.sv:16]
+INFO: [Synth 8-6157] synthesizing module 'rr_arb_tree__parameterized1' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv:47]
+	Parameter NumIn bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 32'b00000000000000000000000000100000 
+	Parameter ExtPrio bound to: 1'b0 
+	Parameter AxiVldRdy bound to: 1'b1 
+	Parameter LockIn bound to: 1'b1 
+	Parameter FairArb bound to: 1'b1 
+	Parameter IdxWidth bound to: 32'b00000000000000000000000000000010 
+INFO: [Synth 8-6155] done synthesizing module 'rr_arb_tree__parameterized1' (50#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv:47]
+INFO: [Synth 8-6157] synthesizing module 'fifo_v3__parameterized3' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13]
+	Parameter FALL_THROUGH bound to: 1'b0 
+	Parameter DATA_WIDTH bound to: 32'b00000000000000000000000000100000 
+	Parameter DEPTH bound to: 6 - type: integer 
+	Parameter ADDR_DEPTH bound to: 32'b00000000000000000000000000000011 
+	Parameter FifoDepth bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_v3__parameterized3' (50#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized7' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+	Parameter Bypass bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized7' (50#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized8' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+	Parameter Bypass bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized8' (50#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'rr_arb_tree__parameterized2' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv:47]
+	Parameter NumIn bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 32'b00000000000000000000000000100000 
+	Parameter ExtPrio bound to: 1'b0 
+	Parameter AxiVldRdy bound to: 1'b1 
+	Parameter LockIn bound to: 1'b1 
+	Parameter FairArb bound to: 1'b1 
+	Parameter IdxWidth bound to: 32'b00000000000000000000000000000010 
+INFO: [Synth 8-6155] done synthesizing module 'rr_arb_tree__parameterized2' (50#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv:47]
+INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized9' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+	Parameter Bypass bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized9' (50#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized10' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+	Parameter Bypass bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized10' (50#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'axi_mux' (51#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_mux.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'axi_xbar' (52#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_xbar.sv:15]
+WARNING: [Synth 8-3848] Net masters_req[2][aw][user] in module/entity axi_intercon does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/axi_intercon.sv:239]
+WARNING: [Synth 8-3848] Net masters_req[2][w][user] in module/entity axi_intercon does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/axi_intercon.sv:239]
+WARNING: [Synth 8-3848] Net masters_req[2][ar][user] in module/entity axi_intercon does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/axi_intercon.sv:239]
+WARNING: [Synth 8-3848] Net masters_req[1][aw][user] in module/entity axi_intercon does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/axi_intercon.sv:239]
+WARNING: [Synth 8-3848] Net masters_req[1][w][user] in module/entity axi_intercon does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/axi_intercon.sv:239]
+WARNING: [Synth 8-3848] Net masters_req[1][ar][user] in module/entity axi_intercon does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/axi_intercon.sv:239]
+WARNING: [Synth 8-3848] Net masters_req[0][aw][user] in module/entity axi_intercon does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/axi_intercon.sv:239]
+WARNING: [Synth 8-3848] Net masters_req[0][w][user] in module/entity axi_intercon does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/axi_intercon.sv:239]
+WARNING: [Synth 8-3848] Net masters_req[0][ar][user] in module/entity axi_intercon does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/axi_intercon.sv:239]
+WARNING: [Synth 8-3848] Net slaves_resp[1][b][user] in module/entity axi_intercon does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/axi_intercon.sv:242]
+WARNING: [Synth 8-3848] Net slaves_resp[1][r][user] in module/entity axi_intercon does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/axi_intercon.sv:242]
+WARNING: [Synth 8-3848] Net slaves_resp[0][b][user] in module/entity axi_intercon does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/axi_intercon.sv:242]
+WARNING: [Synth 8-3848] Net slaves_resp[0][r][user] in module/entity axi_intercon does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/axi_intercon.sv:242]
+INFO: [Synth 8-6155] done synthesizing module 'axi_intercon' (53#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/axi_intercon.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'wb_intercon' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.v:1]
+INFO: [Synth 8-6157] synthesizing module 'wb_mux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon_1.2.2-r1/wb_mux.v:45]
+	Parameter dw bound to: 32 - type: integer 
+	Parameter aw bound to: 32 - type: integer 
+	Parameter num_slaves bound to: 7 - type: integer 
+	Parameter MATCH_ADDR bound to: 224'b00000000000000000001000000000000000000000000000000010000010000000000000000000000000100010000000000000000000000000001001000000000000000000000000000010100000000000000000000000000000110000000000000000000000000000010000000000000 
+	Parameter MATCH_MASK bound to: 224'b11111111111111111111111111000000111111111111111111111111110000001111111111111111111111111100000011111111111111111111111111000000111111111111111111111111110000001111111111111111111111110000000011111111111111111111000000000000 
+	Parameter slave_sel_bits bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'wb_mux' (54#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon_1.2.2-r1/wb_mux.v:45]
+WARNING: [Synth 8-689] width (256) of port connection 'wbs_adr_o' does not match port width (224) of module 'wb_mux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.v:144]
+WARNING: [Synth 8-689] width (256) of port connection 'wbs_dat_o' does not match port width (224) of module 'wb_mux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.v:145]
+WARNING: [Synth 8-689] width (32) of port connection 'wbs_sel_o' does not match port width (28) of module 'wb_mux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.v:146]
+WARNING: [Synth 8-689] width (8) of port connection 'wbs_we_o' does not match port width (7) of module 'wb_mux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.v:147]
+WARNING: [Synth 8-689] width (8) of port connection 'wbs_cyc_o' does not match port width (7) of module 'wb_mux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.v:148]
+WARNING: [Synth 8-689] width (8) of port connection 'wbs_stb_o' does not match port width (7) of module 'wb_mux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.v:149]
+WARNING: [Synth 8-689] width (24) of port connection 'wbs_cti_o' does not match port width (21) of module 'wb_mux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.v:150]
+WARNING: [Synth 8-689] width (16) of port connection 'wbs_bte_o' does not match port width (14) of module 'wb_mux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.v:151]
+WARNING: [Synth 8-689] width (256) of port connection 'wbs_dat_i' does not match port width (224) of module 'wb_mux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.v:152]
+WARNING: [Synth 8-689] width (8) of port connection 'wbs_ack_i' does not match port width (7) of module 'wb_mux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.v:153]
+WARNING: [Synth 8-689] width (8) of port connection 'wbs_err_i' does not match port width (7) of module 'wb_mux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.v:154]
+WARNING: [Synth 8-689] width (8) of port connection 'wbs_rty_i' does not match port width (7) of module 'wb_mux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.v:155]
+INFO: [Synth 8-6155] done synthesizing module 'wb_intercon' (55#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.v:1]
+INFO: [Synth 8-6157] synthesizing module 'axi2wb' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiToWb/axi2wb.v:25]
+	Parameter AW bound to: 16 - type: integer 
+	Parameter IW bound to: 6 - type: integer 
+	Parameter STATESIZE bound to: 4 - type: integer 
+	Parameter IDLE bound to: 4'b0000 
+	Parameter AWACK bound to: 4'b0001 
+	Parameter WBWACK bound to: 4'b0010 
+	Parameter WBRACK1 bound to: 4'b0011 
+	Parameter WBR2 bound to: 4'b0100 
+	Parameter WBRACK2 bound to: 4'b0101 
+	Parameter BAXI bound to: 4'b0110 
+	Parameter RRAXI bound to: 4'b0111 
+WARNING: [Synth 8-6014] Unused sequential element aw_req_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiToWb/axi2wb.v:130]
+WARNING: [Synth 8-6014] Unused sequential element w_req_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiToWb/axi2wb.v:131]
+WARNING: [Synth 8-6014] Unused sequential element ar_req_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiToWb/axi2wb.v:132]
+WARNING: [Synth 8-6014] Unused sequential element hi_32b_w_reg was removed.  [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiToWb/axi2wb.v:171]
+INFO: [Synth 8-6155] done synthesizing module 'axi2wb' (56#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiToWb/axi2wb.v:25]
+INFO: [Synth 8-6157] synthesizing module 'wb_mem_wrapper' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/BootROM/wb_mem_wrapper.v:25]
+	Parameter MEM_SIZE bound to: 4096 - type: integer 
+	Parameter mem_clear bound to: 0 - type: integer 
+	Parameter INIT_FILE bound to: boot_main.mem - type: string 
+INFO: [Synth 8-6157] synthesizing module 'dpram64' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/BootROM/dpram64.v:24]
+	Parameter SIZE bound to: 4096 - type: integer 
+	Parameter mem_clear bound to: 0 - type: integer 
+	Parameter memfile bound to: boot_main.mem - type: string 
+	Parameter AW bound to: 12 - type: integer 
+INFO: [Synth 8-251] Preloading  from boot_main.mem [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/BootROM/dpram64.v:60]
+INFO: [Synth 8-3876] $readmem data file 'boot_main.mem' is read successfully [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/BootROM/dpram64.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'dpram64' (57#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/BootROM/dpram64.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'wb_mem_wrapper' (58#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/BootROM/wb_mem_wrapper.v:25]
+INFO: [Synth 8-6157] synthesizing module 'swervolf_syscon' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:26]
+	Parameter clk_freq_hz bound to: 50000000 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:163]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:230]
+INFO: [Synth 8-6157] synthesizing module 'SevSegDisplays_Controller' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:297]
+INFO: [Synth 8-6157] synthesizing module 'SevenSegDecoder' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:370]
+INFO: [Synth 8-226] default block is never used [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:373]
+INFO: [Synth 8-6155] done synthesizing module 'SevenSegDecoder' (59#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:370]
+INFO: [Synth 8-6157] synthesizing module 'counter__parameterized0' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/counter.sv:14]
+	Parameter WIDTH bound to: 32'b00000000000000000000000000010100 
+	Parameter STICKY_OVERFLOW bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'delta_counter__parameterized1' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv:13]
+	Parameter WIDTH bound to: 32'b00000000000000000000000000010100 
+	Parameter STICKY_OVERFLOW bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'delta_counter__parameterized1' (59#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'counter__parameterized0' (59#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/counter.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'SevSegMux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:398]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter N_IN bound to: 8 - type: integer 
+	Parameter SEL_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'SevSegMux' (60#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:398]
+INFO: [Synth 8-6157] synthesizing module 'SevSegMux__parameterized0' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:398]
+	Parameter DATA_WIDTH bound to: 4 - type: integer 
+	Parameter N_IN bound to: 8 - type: integer 
+	Parameter SEL_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'SevSegMux__parameterized0' (60#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:398]
+INFO: [Synth 8-6155] done synthesizing module 'SevSegDisplays_Controller' (61#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:297]
+INFO: [Synth 8-6155] done synthesizing module 'swervolf_syscon' (62#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:26]
+INFO: [Synth 8-6157] synthesizing module 'simple_spi' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:69]
+	Parameter SS_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:147]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:147]
+INFO: [Synth 8-6157] synthesizing module 'fifo4' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/spi/fifo4.v:54]
+	Parameter dw bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fifo4' (63#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/spi/fifo4.v:54]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:244]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:244]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:279]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:279]
+INFO: [Synth 8-6155] done synthesizing module 'simple_spi' (64#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:69]
+INFO: [Synth 8-6157] synthesizing module 'uart_top' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/uart/uart_top.v:137]
+	Parameter SIM bound to: 0 - type: integer 
+	Parameter debug bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_wb' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/uart/uart_wb.v:139]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'uart_wb' (65#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/uart/uart_wb.v:139]
+	Parameter SIM bound to: 0 - type: integer 
+	Parameter SIM bound to: 0 - type: integer 
+	Parameter s_idle bound to: 3'b000 
+	Parameter s_send_start bound to: 3'b001 
+	Parameter s_send_byte bound to: 3'b010 
+	Parameter s_send_parity bound to: 3'b011 
+	Parameter s_send_stop bound to: 3'b100 
+	Parameter s_pop_byte bound to: 3'b101 
+	Parameter fifo_width bound to: 8 - type: integer 
+	Parameter fifo_depth bound to: 16 - type: integer 
+	Parameter fifo_pointer_w bound to: 4 - type: integer 
+	Parameter fifo_counter_w bound to: 5 - type: integer 
+	Parameter addr_width bound to: 4 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter depth bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'raminfr' (66#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/uart/raminfr.v:83]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tfifo' (67#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/uart/uart_tfifo.v:140]
+INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (68#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/uart/uart_transmitter.v:150]
+INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+	Parameter width bound to: 1 - type: integer 
+	Parameter init_value bound to: 1'b1 
+	Parameter sr_idle bound to: 4'b0000 
+	Parameter sr_rec_start bound to: 4'b0001 
+	Parameter sr_rec_bit bound to: 4'b0010 
+	Parameter sr_rec_parity bound to: 4'b0011 
+	Parameter sr_rec_stop bound to: 4'b0100 
+	Parameter sr_check_parity bound to: 4'b0101 
+	Parameter sr_rec_prepare bound to: 4'b0110 
+	Parameter sr_end_bit bound to: 4'b0111 
+	Parameter sr_ca_lc_parity bound to: 4'b1000 
+	Parameter sr_wait1 bound to: 4'b1001 
+	Parameter sr_push bound to: 4'b1010 
+	Parameter fifo_width bound to: 11 - type: integer 
+	Parameter fifo_depth bound to: 16 - type: integer 
+	Parameter fifo_pointer_w bound to: 4 - type: integer 
+	Parameter fifo_counter_w bound to: 5 - type: integer 
+	Parameter dw bound to: 32 - type: integer 
+	Parameter aw bound to: 8 - type: integer 
+	Parameter gw bound to: 32 - type: integer 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/gpio/gpio_top.v:987]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/gpio/gpio_top.v:987]
+WARNING: [Synth 8-7023] instance 'gpio_module' of module 'gpio_top' has 17 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/swervolf_core.v:341]
+WARNING: [Synth 8-7023] instance 'gpio_module2' of module 'gpio_top' has 17 connections declared, but only 15 given [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/swervolf_core.v:399]
+	Parameter dw bound to: 32 - type: integer 
+	Parameter aw bound to: 16 - type: integer 
+	Parameter cw bound to: 32 - type: integer 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/ptc/ptc_top.v:311]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/ptc/ptc_top.v:311]
+WARNING: [Synth 8-693] zero replication count - replication ignored [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/ptc/ptc_top.v:313]
+WARNING: [Synth 8-693] zero replication count - replication ignored [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/ptc/ptc_top.v:314]
+WARNING: [Synth 8-693] zero replication count - replication ignored [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/ptc/ptc_top.v:317]
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter ICCM_ENABLE bound to: 1'b0 
+	Parameter DCCM_ENABLE bound to: 1'b1 
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter WIDTH bound to: 5 - type: integer 
+	Parameter WIDTH bound to: 5 - type: integer 
+	Parameter WIDTH bound to: 3 - type: integer 
+	Parameter WIDTH bound to: 3 - type: integer 
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter WIDTH bound to: 2 - type: integer 
+	Parameter WIDTH bound to: 2 - type: integer 
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter WIDTH bound to: 2 - type: integer 
+WARNING: [Synth 8-3848] Net bus_clk in module/entity dbg does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/dbg/dbg.sv:279]
+	Parameter TAGWIDTH bound to: 2 - type: integer 
+	Parameter IDWIDTH bound to: 2 - type: integer 
+	Parameter WIDTH bound to: 31 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 31 - type: integer 
+	Parameter WIDTH bound to: 31 - type: integer 
+	Parameter PC4 bound to: 4 - type: integer 
+	Parameter BOFF bound to: 3 - type: integer 
+	Parameter CALL bound to: 2 - type: integer 
+	Parameter RET bound to: 1 - type: integer 
+	Parameter BV bound to: 0 - type: integer 
+	Parameter LRU_SIZE bound to: 4 - type: integer 
+	Parameter NUM_BHT_LOOP bound to: 16 - type: integer 
+	Parameter NUM_BHT_LOOP_INNER_HI bound to: 7 - type: integer 
+	Parameter NUM_BHT_LOOP_OUTER_LO bound to: 4 - type: integer 
+	Parameter BHT_NO_ADDR_MATCH bound to: 1'b1 
+	Parameter WIDTH bound to: 26 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 26 - type: integer 
+	Parameter WIDTH bound to: 26 - type: integer 
+	Parameter WIDTH bound to: 2 - type: integer 
+	Parameter WIDTH bound to: 13 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/ifu/ifu_bp_ctl.sv:1075]
+	Parameter WIDTH bound to: 28 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 28 - type: integer 
+	Parameter WIDTH bound to: 28 - type: integer 
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter MHI bound to: 50 - type: integer 
+	Parameter MSIZE bound to: 51 - type: integer 
+	Parameter BRDATA_SIZE bound to: 64 - type: integer 
+	Parameter BRDATA_WIDTH bound to: 8 - type: integer 
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter WIDTH bound to: 51 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 51 - type: integer 
+	Parameter WIDTH bound to: 51 - type: integer 
+	Parameter WIDTH bound to: 64 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 64 - type: integer 
+	Parameter WIDTH bound to: 64 - type: integer 
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter WIDTH bound to: 128 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 128 - type: integer 
+	Parameter WIDTH bound to: 128 - type: integer 
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter NUM_OF_BEATS bound to: 8 - type: integer 
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter WIDTH bound to: 3 - type: integer 
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter WIDTH bound to: 3 - type: integer 
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter WIDTH bound to: 11 - type: integer 
+	Parameter WIDTH bound to: 11 - type: integer 
+	Parameter WIDTH bound to: 64 - type: integer 
+	Parameter WIDTH bound to: 6 - type: integer 
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 9 - type: integer 
+	Parameter WIDTH bound to: 34 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 34 - type: integer 
+	Parameter WIDTH bound to: 34 - type: integer 
+WARNING: [Synth 8-3848] Net axiclk in module/entity ifu_mem_ctl does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/ifu/ifu_mem_ctl.sv:940]
+WARNING: [Synth 8-3848] Net fetch_f1_f2_c1_clk in module/entity ifu_mem_ctl does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/ifu/ifu_mem_ctl.sv:289]
+WARNING: [Synth 8-3848] Net axiclk_reset in module/entity ifu_mem_ctl does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/ifu/ifu_mem_ctl.sv:941]
+WARNING: [Synth 8-3848] Net tag_valid_w0_clk in module/entity ifu_mem_ctl does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/ifu/ifu_mem_ctl.sv:1288]
+WARNING: [Synth 8-3848] Net tag_valid_w1_clk in module/entity ifu_mem_ctl does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/ifu/ifu_mem_ctl.sv:1289]
+WARNING: [Synth 8-3848] Net tag_valid_w2_clk in module/entity ifu_mem_ctl does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/ifu/ifu_mem_ctl.sv:1290]
+WARNING: [Synth 8-3848] Net tag_valid_w3_clk in module/entity ifu_mem_ctl does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/ifu/ifu_mem_ctl.sv:1291]
+WARNING: [Synth 8-3848] Net way_status_clk in module/entity ifu_mem_ctl does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/ifu/ifu_mem_ctl.sv:1230]
+	Parameter GPR_BANKS bound to: 1 - type: integer 
+	Parameter GPR_BANKS_LOG2 bound to: 1 - type: integer 
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter WIDTH bound to: 37 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 37 - type: integer 
+	Parameter WIDTH bound to: 37 - type: integer 
+	Parameter WIDTH bound to: 68 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 68 - type: integer 
+	Parameter WIDTH bound to: 68 - type: integer 
+	Parameter NBLOAD_SIZE bound to: 8 - type: integer 
+	Parameter NBLOAD_SIZE_MSB bound to: 7 - type: integer 
+	Parameter NBLOAD_TAG_MSB bound to: 2 - type: integer 
+	Parameter WIDTH bound to: 10 - type: integer 
+	Parameter WIDTH bound to: 67 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 67 - type: integer 
+	Parameter WIDTH bound to: 67 - type: integer 
+	Parameter WIDTH bound to: 12 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 12 - type: integer 
+	Parameter WIDTH bound to: 12 - type: integer 
+WARNING: [Synth 8-5858] RAM cam_in_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+	Parameter WIDTH bound to: 6 - type: integer 
+	Parameter WIDTH bound to: 22 - type: integer 
+	Parameter WIDTH bound to: 39 - type: integer 
+	Parameter WIDTH bound to: 18 - type: integer 
+	Parameter WIDTH bound to: 15 - type: integer 
+	Parameter WIDTH bound to: 14 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 14 - type: integer 
+	Parameter WIDTH bound to: 14 - type: integer 
+	Parameter WIDTH bound to: 22 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 22 - type: integer 
+	Parameter WIDTH bound to: 17 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 17 - type: integer 
+	Parameter WIDTH bound to: 17 - type: integer 
+	Parameter WIDTH bound to: 6 - type: integer 
+	Parameter GPR_BANKS bound to: 1 - type: integer 
+	Parameter GPR_BANKS_LOG2 bound to: 1 - type: integer 
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter WIDTH bound to: 33 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 33 - type: integer 
+	Parameter WIDTH bound to: 33 - type: integer 
+WARNING: [Synth 8-3848] Net exu_mul_c1_e3_clk in module/entity exu_mul_ctl does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/exu/exu_mul_ctl.sv:43]
+WARNING: [Synth 8-3848] Net exu_mul_c1_e2_clk in module/entity exu_mul_ctl does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/exu/exu_mul_ctl.sv:43]
+WARNING: [Synth 8-3848] Net exu_mul_c1_e1_clk in module/entity exu_mul_ctl does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/exu/exu_mul_ctl.sv:43]
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter WIDTH bound to: 74 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 74 - type: integer 
+	Parameter WIDTH bound to: 74 - type: integer 
+	Parameter WIDTH bound to: 20 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 20 - type: integer 
+	Parameter WIDTH bound to: 20 - type: integer 
+	Parameter WIDTH bound to: 76 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 76 - type: integer 
+	Parameter WIDTH bound to: 76 - type: integer 
+	Parameter WIDTH bound to: 63 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 63 - type: integer 
+	Parameter WIDTH bound to: 63 - type: integer 
+WARNING: [Synth 8-3848] Net exu_mp_pkt[valid] in module/entity exu does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/exu/exu.sv:159]
+WARNING: [Synth 8-3848] Net exu_mp_pkt[br_error] in module/entity exu does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/exu/exu.sv:159]
+WARNING: [Synth 8-3848] Net exu_mp_pkt[br_start_error] in module/entity exu does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/exu/exu.sv:159]
+WARNING: [Synth 8-3848] Net exu_mp_pkt[prett] in module/entity exu does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/exu/exu.sv:159]
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter DCCM_REGION bound to: 4'b1111 
+	Parameter PIC_REGION bound to: 4'b1111 
+	Parameter ICCM_REGION bound to: 4'b1110 
+	Parameter ICCM_ENABLE bound to: 1'b0 
+	Parameter DCCM_ENABLE bound to: 1'b1 
+	Parameter CCM_SADR bound to: -268173312 - type: integer 
+	Parameter CCM_SIZE bound to: 64 - type: integer 
+	Parameter REGION_BITS bound to: 4 - type: integer 
+	Parameter MASK_BITS bound to: 16 - type: integer 
+	Parameter CCM_SADR bound to: -267649024 - type: integer 
+	Parameter CCM_SIZE bound to: 32 - type: integer 
+	Parameter REGION_BITS bound to: 4 - type: integer 
+	Parameter MASK_BITS bound to: 15 - type: integer 
+	Parameter WIDTH bound to: 18 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 18 - type: integer 
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter DCCM_ENABLE bound to: 1'b1 
+	Parameter DCCM_WIDTH_BITS bound to: 2 - type: integer 
+	Parameter PIC_BITS bound to: 15 - type: integer 
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter WIDTH bound to: 7 - type: integer 
+	Parameter WIDTH bound to: 7 - type: integer 
+	Parameter WIDTH bound to: 7 - type: integer 
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 8 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DEPTH_LOG2 bound to: 3 - type: integer 
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter DCCM_ENABLE bound to: 1'b1 
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 8 - type: integer 
+	Parameter DEPTH_LOG2 bound to: 3 - type: integer 
+	Parameter TIMER bound to: 8 - type: integer 
+	Parameter TIMER_LOG2 bound to: 3 - type: integer 
+	Parameter TIMER_MAX bound to: 3'sb111 
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter NUM_LEVELS bound to: 4 - type: integer 
+	Parameter INTPRIORITY_BASE_ADDR bound to: -267649024 - type: integer 
+	Parameter INTPEND_BASE_ADDR bound to: -267644928 - type: integer 
+	Parameter INTENABLE_BASE_ADDR bound to: -267640832 - type: integer 
+	Parameter EXT_INTR_PIC_CONFIG bound to: -267636736 - type: integer 
+	Parameter EXT_INTR_GW_CONFIG bound to: -267632640 - type: integer 
+	Parameter EXT_INTR_GW_CLEAR bound to: -267628544 - type: integer 
+	Parameter INTPEND_SIZE bound to: 32 - type: integer 
+	Parameter INT_GRPS bound to: 1 - type: integer 
+	Parameter INTPRIORITY_BITS bound to: 4 - type: integer 
+	Parameter ID_BITS bound to: 8 - type: integer 
+	Parameter GW_CONFIG bound to: 288'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ID_BITS bound to: 8 - type: integer 
+	Parameter INTPRIORITY_BITS bound to: 4 - type: integer 
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 4 - type: integer 
+	Parameter DEPTH_PTR bound to: 2 - type: integer 
+	Parameter NACK_COUNT bound to: 7 - type: integer 
+	Parameter WIDTH bound to: 2 - type: integer 
+	Parameter WIDTH bound to: 8 - type: integer 
+WARNING: [Synth 8-3848] Net dma_bus_clk in module/entity dma_ctrl does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/dma/dma_ctrl.sv:187]
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter DCCM_ENABLE bound to: 1'b1 
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter DCCM_WIDTH_BITS bound to: 2 - type: integer 
+	Parameter DCCM_INDEX_BITS bound to: 11 - type: integer 
+	Parameter WIDTH bound to: 39 - type: integer 
+	Parameter OVERRIDE bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 39 - type: integer 
+	Parameter TOTAL_INT bound to: 9 - type: integer 
+	Parameter DCCM_BITS bound to: 16 - type: integer 
+	Parameter DCCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter DCCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter DCCM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DCCM_FDATA_WIDTH bound to: 39 - type: integer 
+	Parameter DCCM_BYTE_WIDTH bound to: 4 - type: integer 
+	Parameter DCCM_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter LSU_RDBUF_DEPTH bound to: 8 - type: integer 
+	Parameter DMA_BUF_DEPTH bound to: 4 - type: integer 
+	Parameter LSU_STBUF_DEPTH bound to: 8 - type: integer 
+	Parameter LSU_SB_BITS bound to: 16 - type: integer 
+	Parameter DEC_INSTBUF_DEPTH bound to: 4 - type: integer 
+	Parameter ICCM_SIZE bound to: 512 - type: integer 
+	Parameter ICCM_BITS bound to: 19 - type: integer 
+	Parameter ICCM_NUM_BANKS bound to: 8 - type: integer 
+	Parameter ICCM_BANK_BITS bound to: 3 - type: integer 
+	Parameter ICCM_INDEX_BITS bound to: 14 - type: integer 
+	Parameter ICCM_BANK_HI bound to: 4 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter LSU_BUS_TAG bound to: 4 - type: integer 
+	Parameter DMA_BUS_TAG bound to: 1 - type: integer 
+	Parameter SB_BUS_TAG bound to: 1 - type: integer 
+	Parameter IFU_BUS_TAG bound to: 3 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_TAG_DEPTH bound to: 64 - type: integer 
+	Parameter TOP_BITS bound to: 0 - type: integer 
+	Parameter NUM_WAYS bound to: 4 - type: integer 
+	Parameter WIDTH bound to: 20 - type: integer 
+	Parameter WIDTH bound to: 20 - type: integer 
+	Parameter ICACHE_TAG_HIGH bound to: 12 - type: integer 
+	Parameter ICACHE_TAG_LOW bound to: 6 - type: integer 
+	Parameter ICACHE_IC_DEPTH bound to: 8 - type: integer 
+	Parameter NUM_WAYS bound to: 4 - type: integer 
+	Parameter NUM_SUBBANKS bound to: 4 - type: integer 
+WARNING: [Synth 8-3848] Net wb_s2m_gpio_rty in module/entity swervolf_core does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.vh:74]
+WARNING: [Synth 8-3848] Net wb_s2m_gpio2_rty in module/entity swervolf_core does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.vh:89]
+WARNING: [Synth 8-3848] Net wb_s2m_ptc_rty in module/entity swervolf_core does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.vh:105]
+WARNING: [Synth 8-3848] Net wb_s2m_spi_accel_err in module/entity swervolf_core does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.vh:118]
+WARNING: [Synth 8-3848] Net wb_s2m_spi_accel_rty in module/entity swervolf_core does not have driver. [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.vh:119]
+WARNING: [Synth 8-6104] Input port 'i_BTND' has an internal driver [D:/RVfpga/RFISC_V/RVfpga/src/rvfpganexys.sv:273]
+WARNING: [Synth 8-6104] Input port 'i_BTNR' has an internal driver [D:/RVfpga/RFISC_V/RVfpga/src/rvfpganexys.sv:273]
+WARNING: [Synth 8-6104] Input port 'i_BTNL' has an internal driver [D:/RVfpga/RFISC_V/RVfpga/src/rvfpganexys.sv:273]
+WARNING: [Synth 8-6104] Input port 'i_BTNU' has an internal driver [D:/RVfpga/RFISC_V/RVfpga/src/rvfpganexys.sv:273]
+WARNING: [Synth 8-6104] Input port 'i_BTNC' has an internal driver [D:/RVfpga/RFISC_V/RVfpga/src/rvfpganexys.sv:273]
+WARNING: [Synth 8-3331] design rvoclkhdr has unconnected port en
+WARNING: [Synth 8-3331] design rvoclkhdr has unconnected port scan_mode
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port dec_tlu_core_ecc_disable
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port ic_debug_addr[5]
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port ic_debug_addr[4]
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port ic_debug_addr[3]
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port ic_debug_addr[2]
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port ic_debug_wr_data[33]
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port ic_debug_wr_data[11]
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port ic_debug_wr_data[10]
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port ic_debug_wr_data[9]
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port ic_debug_wr_data[8]
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port ic_debug_wr_data[7]
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port ic_debug_wr_data[6]
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port ic_debug_wr_data[5]
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port ic_debug_wr_data[4]
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port ic_debug_wr_data[3]
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port ic_debug_wr_data[2]
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port ic_debug_wr_data[1]
+WARNING: [Synth 8-3331] design IC_TAG has unconnected port ic_debug_wr_data[0]
+WARNING: [Synth 8-3331] design ifu_ic_mem has unconnected port ic_debug_addr[15]
+WARNING: [Synth 8-3331] design ifu_ic_mem has unconnected port ic_debug_addr[14]
+WARNING: [Synth 8-3331] design ifu_ic_mem has unconnected port ic_debug_addr[13]
+WARNING: [Synth 8-3331] design ifu_ic_mem has unconnected port ic_debug_addr[12]
+WARNING: [Synth 8-3331] design rvdffe__parameterized23 has unconnected port scan_mode
+WARNING: [Synth 8-3331] design lsu_dccm_mem has unconnected port dccm_wr_addr[1]
+WARNING: [Synth 8-3331] design lsu_dccm_mem has unconnected port dccm_wr_addr[0]
+WARNING: [Synth 8-3331] design lsu_dccm_mem has unconnected port dccm_rd_addr_lo[1]
+WARNING: [Synth 8-3331] design lsu_dccm_mem has unconnected port dccm_rd_addr_lo[0]
+WARNING: [Synth 8-3331] design lsu_dccm_mem has unconnected port dccm_rd_addr_hi[1]
+WARNING: [Synth 8-3331] design lsu_dccm_mem has unconnected port dccm_rd_addr_hi[0]
+WARNING: [Synth 8-3331] design rvdffe__parameterized5 has unconnected port scan_mode
+WARNING: [Synth 8-3331] design rvdffe has unconnected port scan_mode
+WARNING: [Synth 8-3331] design rvdff_fpga__parameterized0 has unconnected port clk
+WARNING: [Synth 8-3331] design rvdff_fpga__parameterized0 has unconnected port scan_mode
+WARNING: [Synth 8-3331] design rvdffs_fpga__parameterized1 has unconnected port clk
+WARNING: [Synth 8-3331] design rvdffs_fpga__parameterized1 has unconnected port scan_mode
+WARNING: [Synth 8-3331] design rvdffs_fpga__parameterized0 has unconnected port clk
+WARNING: [Synth 8-3331] design rvdffs_fpga__parameterized0 has unconnected port scan_mode
+WARNING: [Synth 8-3331] design rvdffs_fpga__parameterized2 has unconnected port clk
+WARNING: [Synth 8-3331] design rvdffs_fpga__parameterized2 has unconnected port scan_mode
+WARNING: [Synth 8-3331] design rvdffsc_fpga has unconnected port clk
+WARNING: [Synth 8-3331] design rvdffsc_fpga has unconnected port scan_mode
+WARNING: [Synth 8-3331] design rvrangecheck__parameterized0 has unconnected port addr[14]
+WARNING: [Synth 8-3331] design rvrangecheck__parameterized0 has unconnected port addr[13]
+WARNING: [Synth 8-3331] design rvrangecheck__parameterized0 has unconnected port addr[12]
+WARNING: [Synth 8-3331] design rvrangecheck__parameterized0 has unconnected port addr[11]
+WARNING: [Synth 8-3331] design rvrangecheck__parameterized0 has unconnected port addr[10]
+WARNING: [Synth 8-3331] design rvrangecheck__parameterized0 has unconnected port addr[9]
+WARNING: [Synth 8-3331] design rvrangecheck__parameterized0 has unconnected port addr[8]
+WARNING: [Synth 8-3331] design rvrangecheck__parameterized0 has unconnected port addr[7]
+WARNING: [Synth 8-3331] design rvrangecheck__parameterized0 has unconnected port addr[6]
+WARNING: [Synth 8-3331] design rvrangecheck__parameterized0 has unconnected port addr[5]
+WARNING: [Synth 8-3331] design rvrangecheck__parameterized0 has unconnected port addr[4]
+WARNING: [Synth 8-3331] design rvrangecheck__parameterized0 has unconnected port addr[3]
+WARNING: [Synth 8-3331] design rvrangecheck__parameterized0 has unconnected port addr[2]
+WARNING: [Synth 8-3331] design rvrangecheck__parameterized0 has unconnected port addr[1]
+WARNING: [Synth 8-3331] design rvrangecheck__parameterized0 has unconnected port addr[0]
+WARNING: [Synth 8-3331] design rvrangecheck has unconnected port addr[15]
+WARNING: [Synth 8-3331] design rvrangecheck has unconnected port addr[14]
+WARNING: [Synth 8-3331] design rvrangecheck has unconnected port addr[13]
+WARNING: [Synth 8-3331] design rvrangecheck has unconnected port addr[12]
+WARNING: [Synth 8-3331] design rvrangecheck has unconnected port addr[11]
+WARNING: [Synth 8-3331] design rvrangecheck has unconnected port addr[10]
+WARNING: [Synth 8-3331] design rvrangecheck has unconnected port addr[9]
+WARNING: [Synth 8-3331] design rvrangecheck has unconnected port addr[8]
+WARNING: [Synth 8-3331] design rvrangecheck has unconnected port addr[7]
+WARNING: [Synth 8-3331] design rvrangecheck has unconnected port addr[6]
+WARNING: [Synth 8-3331] design rvrangecheck has unconnected port addr[5]
+WARNING: [Synth 8-3331] design rvrangecheck has unconnected port addr[4]
+WARNING: [Synth 8-3331] design rvrangecheck has unconnected port addr[3]
+WARNING: [Synth 8-3331] design rvrangecheck has unconnected port addr[2]
+WARNING: [Synth 8-3331] design rvrangecheck has unconnected port addr[1]
+WARNING: [Synth 8-3331] design rvrangecheck has unconnected port addr[0]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_awprot[2]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_awprot[1]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_awprot[0]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_awlen[7]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_awlen[6]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_awlen[5]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_awlen[4]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_awlen[3]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_awlen[2]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_awlen[1]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_awlen[0]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_awburst[1]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_awburst[0]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_wlast
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arprot[2]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arprot[1]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arprot[0]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arlen[7]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arlen[6]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arlen[5]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arlen[4]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arlen[3]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arlen[2]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arlen[1]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arlen[0]
+WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arburst[1]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2337.508 ; gain = 730.836
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2356.820 ; gain = 750.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2356.820 ; gain = 750.148
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2356.820 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 24 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/RVfpga/RFISC_V/RVfpga/src/rvfpganexys.xdc]
+Finished Parsing XDC File [D:/RVfpga/RFISC_V/RVfpga/src/rvfpganexys.xdc]
+Parsing XDC File [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/liteDRAM.xdc]
+Finished Parsing XDC File [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/liteDRAM.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/liteDRAM.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/rvfpganexys_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/rvfpganexys_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 2594.262 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 28 instances were transformed.
+  FD => FDRE: 8 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 16 instances
+  IOBUFDS => IOBUFDS (IBUFDS, INV, OBUFTDS(x2)): 2 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  PLLE2_BASE => PLLE2_ADV: 1 instance 
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:01:19 ; elapsed = 00:01:14 . Memory (MB): peak = 2594.262 ; gain = 987.590
+292 Infos, 364 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:25 ; elapsed = 00:01:21 . Memory (MB): peak = 2594.262 ; gain = 1135.574
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Mon Jan  1 20:07:25 2024] Launched synth_1...
+Run output will be captured here: D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/synth_1/runme.log
+[Mon Jan  1 20:07:25 2024] Launched impl_1...
+Run output will be captured here: D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/impl_1/runme.log
+CRITICAL WARNING: [Common 17-1649] The Vivado message database 'D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/synth_1/vivado.pb' contains 20476 messages. Restoring all messages from this message database will impact Vivado performance, so only WARNING, CRITICAL WARNING, and ERROR messages will be restored. To restore all messages from this file use the tcl command 'set_param messaging.loadPbLimit 20477' and re-open the project.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Mon Jan  1 20:19:46 2024] Launched synth_1...
+Run output will be captured here: D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/synth_1/runme.log
+[Mon Jan  1 20:19:46 2024] Launched impl_1...
+Run output will be captured here: D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/impl_1/runme.log
+CRITICAL WARNING: [Common 17-1649] The Vivado message database 'D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/synth_1/vivado.pb' contains 20478 messages. Restoring all messages from this message database will impact Vivado performance, so only WARNING, CRITICAL WARNING, and ERROR messages will be restored. To restore all messages from this file use the tcl command 'set_param messaging.loadPbLimit 20479' and re-open the project.

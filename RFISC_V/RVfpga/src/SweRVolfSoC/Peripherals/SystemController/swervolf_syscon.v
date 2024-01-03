@@ -216,14 +216,22 @@ module swervolf_syscon
 	     if (i_wb_sel[0])
 	       irq_timer_en <= i_wb_dat[0];
 	  end
-  	14 : begin
-  	   if (i_wb_sel[0]) Enables_Reg[7:0]  <= i_wb_dat[7:0];
+
+   // ADDED - MODIEFED SWITCH TO INDEX NEW REGISTERS FOR SEGMENT DISPLAY
+   // xx00_00xx
+   // 0x38 -> xx11_10xx >> 2 = 1110 = 14
+  	
+   14 : begin  // 0x38-0x3B
+  	   if (i_wb_sel[0]) wb_SegDigit0[6:0]  <= i_wb_dat[6:0];
+      if (i_wb_sel[1]) wb_SegDigit1[6:0]  <= i_wb_dat[14:8];
+      if (i_wb_sel[2]) wb_SegDigit2[6:0]  <= i_wb_dat[23:16];
+      if (i_wb_sel[3]) wb_SegDigit3[6:0]  <= i_wb_dat[30:24];
   	end
-  	15 : begin
-       if (i_wb_sel[0]) Digits_Reg[7:0]   <= i_wb_dat[7:0];
-       if (i_wb_sel[1]) Digits_Reg[15:8]  <= i_wb_dat[15:8];
-       if (i_wb_sel[2]) Digits_Reg[23:16] <= i_wb_dat[23:16];
-       if (i_wb_sel[3]) Digits_Reg[31:24] <= i_wb_dat[31:24];
+  	15 : begin  // 0x3C-3F 
+      if (i_wb_sel[0]) wb_SegDigit4[6:0]  <= i_wb_dat[6:0];
+      if (i_wb_sel[1]) wb_SegDigit5[6:0]  <= i_wb_dat[14:8];
+      if (i_wb_sel[2]) wb_SegDigit6[6:0]  <= i_wb_dat[23:16];
+      if (i_wb_sel[3]) wb_SegDigit7[6:0]  <= i_wb_dat[30:24];
   	end
 	endcase
 
@@ -273,16 +281,34 @@ module swervolf_syscon
       end
    end
 
-	// Eight-Digit 7 Segment Displays
+	// Eight-Digit 7 Segment Displays ADDED NEW REGISTERS
 
-	  reg  [ 7:0]  Enables_Reg;
-	  reg  [31:0]  Digits_Reg;
+	//   reg  [ 7:0]  Enables_Reg;
+	//   reg  [31:0]  Digits_Reg;
+
+   reg [6:0] wb_SegDigit0;
+   reg [6:0] wb_SegDigit1;
+   reg [6:0] wb_SegDigit2;
+   reg [6:0] wb_SegDigit3;
+   reg [6:0] wb_SegDigit4;
+   reg [6:0] wb_SegDigit5;
+   reg [6:0] wb_SegDigit6;
+   reg [6:0] wb_SegDigit7;
 
 	  SevSegDisplays_Controller SegDispl_Ctr(
 	    .clk               (i_clk),    
 	    .rst_n             (i_rst),
-	    .Enables_Reg       (Enables_Reg), 
-	    .Digits_Reg        (Digits_Reg), 
+	   //  .Enables_Reg       (Enables_Reg), 
+	   //  .Digits_Reg        (Digits_Reg), 
+       .SegDigit0(wb_SegDigit0),
+       .SegDigit1(wb_SegDigit1),
+       .SegDigit2(wb_SegDigit2),
+       .SegDigit3(wb_SegDigit3),
+       .SegDigit4(wb_SegDigit4),
+       .SegDigit5(wb_SegDigit5),
+       .SegDigit6(wb_SegDigit6),
+       .SegDigit7(wb_SegDigit7),
+
 	    .AN                (AN),
 	    .Digits_Bits       (Digits_Bits)
 	  );

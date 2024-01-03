@@ -1,0 +1,987 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:40:23 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 17656
+License: Customer
+
+Current time: 	Mon Jan 01 19:35:23 EST 2024
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Available disk space: 38 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Vivado/2019.2/tps/win64/jre9.0.4
+Java executable location: 	D:/Vivado/2019.2/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	zacly
+User home directory: C:/Users/zacly
+User working directory: D:/RVfpga/RiscV/Lab5/Lab5
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Vivado
+HDI_APPROOT: D:/Vivado/2019.2
+RDI_DATADIR: D:/Vivado/2019.2/data
+RDI_BINDIR: D:/Vivado/2019.2/bin
+
+Vivado preferences file location: C:/Users/zacly/AppData/Roaming/Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: C:/Users/zacly/AppData/Roaming/Xilinx/Vivado/2019.2/
+Vivado layouts directory: C:/Users/zacly/AppData/Roaming/Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	D:/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	D:/RVfpga/RiscV/Lab5/Lab5/vivado.log
+Vivado journal file location: 	D:/RVfpga/RiscV/Lab5/Lab5/vivado.jou
+Engine tmp dir: 	D:/RVfpga/RiscV/Lab5/Lab5/.Xil/Vivado-17656-MSI
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: D:/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Vivado/2019.2
+XILINX_SDK: D:/Vitis/2019.2
+XILINX_VITIS: D:/Vitis/2019.2
+XILINX_VIVADO: D:/Vivado/2019.2
+XILINX_VIVADO_HLS: D:/Vivado/2019.2
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 602 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 90 MB (+92226kb) [00:00:18]
+// [Engine Memory]: 586 MB (+462858kb) [00:00:18]
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: D:\RVfpga\RiscV\Lab5\Lab5\Lab5.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/RVfpga/RiscV/Lab5/Lab5/Lab5.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 602 MB. GUI used memory: 50 MB. Current time: 1/1/24, 7:35:25 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 749 MB. GUI used memory: 50 MB. Current time: 1/1/24, 7:35:40 PM EST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project D:/RVfpga/RiscV/Lab5/Lab5/Lab5.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,001 MB. GUI used memory: 50 MB. Current time: 1/1/24, 7:35:55 PM EST
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 1,025 MB (+430224kb) [00:01:03]
+// [GUI Memory]: 105 MB (+10251kb) [00:01:04]
+// [GUI Memory]: 123 MB (+13362kb) [00:01:06]
+// [Engine Memory]: 1,078 MB (+1185kb) [00:01:09]
+// WARNING: HEventQueue.dispatchEvent() is taking  11887 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2019.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,098 MB. GUI used memory: 64 MB. Current time: 1/1/24, 7:36:14 PM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  2040 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:31 ; elapsed = 00:00:53 . Memory (MB): peak = 1134.016 ; gain = 507.645 
+// [Engine Memory]: 1,146 MB (+14488kb) [00:01:14]
+// Project name: Lab5; location: D:/RVfpga/RiscV/Lab5/Lab5; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bB (cr)
+// a (cr): Critical Messages: addNotify
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 22 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cr)
+// PAPropertyPanels.initPanels (rvfpganexys.sv) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv)]", 4, true); // B (F, cr) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv)]", 4); // B (F, cr)
+// [Engine Memory]: 1,216 MB (+13845kb) [00:01:52]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,216 MB. GUI used memory: 76 MB. Current time: 1/1/24, 7:36:55 PM EST
+// Elapsed time: 16 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv), swervolf : swervolf_core (swervolf_core.v)]", 9); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv), swervolf : swervolf_core (swervolf_core.v), gpio_module2 : gpio_top (gpio_top.v)]", 82, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv), swervolf : swervolf_core (swervolf_core.v)]", 9, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv), swervolf : swervolf_core (swervolf_core.v)]", 9, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv), swervolf : swervolf_core (swervolf_core.v)]", 9, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectCodeEditor("swervolf_core.v", 336, 234); // ch (w, cr)
+// [GUI Memory]: 134 MB (+5896kb) [00:02:48]
+// Elapsed time: 30 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "added"); // l (aP, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv)]", 4, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv)]", 4, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Elapsed time: 16 seconds
+maximizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA (aL, cr)
+unMaximizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA (aL, cr)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// PAResourceOtoP.PAViews_CODE: Code: close view
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+maximizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA (aL, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 113); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 114); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, rvfpganexys.xdc]", 115, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, rvfpganexys.xdc]", 115, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv)]", 4, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv)]", 4, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv), swervolf : swervolf_core (swervolf_core.v)]", 9, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv), swervolf : swervolf_core (swervolf_core.v), gpio1 : bidirec (swervolf_core.v)]", 18, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 14 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv), swervolf : swervolf_core (swervolf_core.v), wb_intercon0 : wb_intercon (wb_intercon.v)]", 11); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv), swervolf : swervolf_core (swervolf_core.v), wb_intercon0 : wb_intercon (wb_intercon.v)]", 11); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 2); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, wb_intercon.vh]", 11, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, wb_intercon.vh]", 11, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv), swervolf : swervolf_core (swervolf_core.v), wb_intercon0 : wb_intercon (wb_intercon.v)]", 24, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv), swervolf : swervolf_core (swervolf_core.v), wb_intercon0 : wb_intercon (wb_intercon.v)]", 24, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv), swervolf : swervolf_core (swervolf_core.v), wb_intercon0 : wb_intercon (wb_intercon.v), wb_mux_io : wb_mux (wb_mux.v)]", 25, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv), swervolf : swervolf_core (swervolf_core.v), wb_intercon0 : wb_intercon (wb_intercon.v), wb_mux_io : wb_mux (wb_mux.v)]", 25, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 124 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P (aI, cr)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rvfpganexys.sv", 1); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rvfpganexys.xdc", 0); // i (h, cr)
+selectCodeEditor("rvfpganexys.xdc", 344, 179); // ch (w, cr)
+typeControlKey((HResource) null, "rvfpganexys.xdc", 'v'); // ch (w, cr)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rvfpganexys.sv", 1); // i (h, cr)
+selectCodeEditor("rvfpganexys.sv", 209, 196); // ch (w, cr)
+typeControlKey((HResource) null, "rvfpganexys.sv", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "swervolf_core.v", 2); // i (h, cr)
+selectCodeEditor("swervolf_core.v", 195, 146); // ch (w, cr)
+typeControlKey((HResource) null, "swervolf_core.v", 'v'); // ch (w, cr)
+// [GUI Memory]: 142 MB (+637kb) [00:07:16]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "wb_intercon.vh", 3); // i (h, cr)
+selectCodeEditor("wb_intercon.vh", 248, 96); // ch (w, cr)
+typeControlKey((HResource) null, "wb_intercon.vh", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "wb_intercon.v", 4); // i (h, cr)
+selectCodeEditor("wb_intercon.v", 397, 100); // ch (w, cr)
+// [GUI Memory]: 149 MB (+246kb) [00:07:34]
+typeControlKey((HResource) null, "wb_intercon.v", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "wb_mux.v", 5); // i (h, cr)
+// Elapsed time: 23 seconds
+selectCodeEditor("wb_mux.v", 230, 327); // ch (w, cr)
+selectCodeEditor("wb_mux.v", 209, 349); // ch (w, cr)
+typeControlKey((HResource) null, "wb_mux.v", 'v'); // ch (w, cr)
+// [GUI Memory]: 160 MB (+3247kb) [00:08:20]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P (aI, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,244 MB. GUI used memory: 84 MB. Current time: 1/1/24, 7:43:30 PM EST
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 2); // B (F, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cr): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cr)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// 'cw' command handler elapsed time: 3 seconds
+dismissDialog("Resetting Runs"); // bB (cr)
+// bB (cr):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 11 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon Jan  1 19:43:49 2024] Launched synth_1... Run output will be captured here: D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/synth_1/runme.log [Mon Jan  1 19:43:49 2024] Launched impl_1... Run output will be captured here: D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// [Engine Memory]: 1,306 MB (+30833kb) [00:08:49]
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,374 MB. GUI used memory: 73 MB. Current time: 1/1/24, 7:43:55 PM EST
+// [Engine Memory]: 1,374 MB (+2521kb) [00:10:45]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// aj (cr): Implementation Failed: addNotify
+// Elapsed time: 601 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // aj (cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpganexys (rvfpganexys.sv)]", 4); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 114); // B (F, cr)
+selectCheckBox(PAResourceItoN.MsgView_CRITICAL_WARNINGS, (String) null, false); // g (aR, cr): FALSE
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.. ]", 6, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. ]", 5, true); // ah (O, cr) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. ]", 5, true, false, false, false, false, true); // ah (O, cr) - Double Click - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. , [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[1] has multiple drivers: swervolf/gpio_module2/sync[28]_i_1/O, and i_BTNR_IBUF_inst/O.. ]", 6, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. , [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[2] has multiple drivers: swervolf/gpio_module2/sync[29]_i_1/O, and i_BTNL_IBUF_inst/O.. ]", 7, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. , [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[2] has multiple drivers: swervolf/gpio_module2/sync[29]_i_1/O, and i_BTNL_IBUF_inst/O.. ]", 7, false, false, false, false, false, true); // ah (O, cr) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. , [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[3] has multiple drivers: swervolf/gpio_module2/sync[30]_i_1/O, and i_BTNU_IBUF_inst/O.. ]", 8, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. , [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[3] has multiple drivers: swervolf/gpio_module2/sync[30]_i_1/O, and i_BTNU_IBUF_inst/O.. ]", 8, false, false, false, false, false, true); // ah (O, cr) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. , [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[4] has multiple drivers: swervolf/gpio_module2/sync[31]_i_1/O, and i_BTNC_IBUF_inst/O.. ]", 9, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. , [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[4] has multiple drivers: swervolf/gpio_module2/sync[31]_i_1/O, and i_BTNC_IBUF_inst/O.. ]", 9, false, false, false, false, false, true); // ah (O, cr) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.. ]", 10, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.. ]", 10, false, false, false, false, false, true); // ah (O, cr) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. , [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[1] has multiple drivers: swervolf/gpio_module2/sync[28]_i_1/O, and i_BTNR_IBUF_inst/O.. ]", 6, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. ]", 5, true); // ah (O, cr) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. ]", 5, true, false, false, false, false, true); // ah (O, cr) - Double Click - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. ]", 5, true); // ah (O, cr) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. ]", 5, true, false, false, false, false, true); // ah (O, cr) - Double Click - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. , [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[1] has multiple drivers: swervolf/gpio_module2/sync[28]_i_1/O, and i_BTNR_IBUF_inst/O.. ]", 6, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. , [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[1] has multiple drivers: swervolf/gpio_module2/sync[28]_i_1/O, and i_BTNR_IBUF_inst/O.. ]", 6, false, false, false, false, true, false); // ah (O, cr) - Popup Trigger
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. , [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[1] has multiple drivers: swervolf/gpio_module2/sync[28]_i_1/O, and i_BTNR_IBUF_inst/O.. ]", 6, false); // ah (O, cr)
+selectCheckBox(PAResourceItoN.MsgView_CRITICAL_WARNINGS, (String) null, true); // g (aR, cr): TRUE
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin i_BTNC_IBUF with 1st driver pin 'sync[31]_i_1/O' [D:/RVfpga/RFISC_V/RVfpga/src/rvfpganexys.sv:25]. ]", 8, true); // ah (O, cr) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\RVfpga\RFISC_V\RVfpga\src\rvfpganexys.sv;-;;-;16;-;line;-;25;-;;-;16;-;"); // ah (O, cr)
+// Elapsed time: 11 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin i_BTNC_IBUF with 1st driver pin 'sync[31]_i_1/O' [D:/RVfpga/RFISC_V/RVfpga/src/rvfpganexys.sv:25]. ]", 8); // ah (O, cr)
+// Elapsed time: 26 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. ]", 23); // ah (O, cr)
+// Elapsed time: 14 seconds
+selectCodeEditor("rvfpganexys.sv", 256, 160); // ch (w, cr)
+selectCodeEditor("rvfpganexys.sv", 256, 160, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("rvfpganexys.sv", 260, 224); // ch (w, cr)
+selectCodeEditor("rvfpganexys.sv", 259, 224, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 12 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. , [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[4] has multiple drivers: swervolf/gpio_module2/sync[31]_i_1/O, and i_BTNC_IBUF_inst/O.. ]", 27, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. , [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[3] has multiple drivers: swervolf/gpio_module2/sync[30]_i_1/O, and i_BTNU_IBUF_inst/O.. ]", 26, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. , [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[2] has multiple drivers: swervolf/gpio_module2/sync[29]_i_1/O, and i_BTNL_IBUF_inst/O.. ]", 25, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. , [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[1] has multiple drivers: swervolf/gpio_module2/sync[28]_i_1/O, and i_BTNR_IBUF_inst/O.. ]", 24, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net swervolf/gpio_module2/sync_reg[31]_0[0] has multiple drivers: swervolf/gpio_module2/sync[27]_i_1/O, and i_BTND_IBUF_inst/O.. ]", 23, true); // ah (O, cr) - Node
+// Elapsed time: 14 seconds
+selectCodeEditor("rvfpganexys.sv", 311, 117); // ch (w, cr)
+typeControlKey((HResource) null, "rvfpganexys.sv", 'c'); // ch (w, cr)
+// Elapsed time: 68 seconds
+selectCodeEditor("rvfpganexys.sv", 338, 177); // ch (w, cr)
+// Elapsed time: 21 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "BTNC"); // l (aP, cr)
+selectCodeEditor("rvfpganexys.sv", 623, 136); // ch (w, cr)
+selectCodeEditor("rvfpganexys.sv", 623, 136, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "swervolf_core.v", 2); // i (h, cr)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "BTNC", true); // l (aP, cr)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "IO", true); // l (aP, cr)
+// Elapsed time: 70 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "IO_data"); // l (aP, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "wb_intercon.vh", 3); // i (h, cr)
+// Elapsed time: 13 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "io_dat", true); // l (aP, cr)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "io_dat"); // l (aP, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "swervolf_core.v", 2); // i (h, cr)
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u (O, cr) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (cr): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bB (cr):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A (cr)
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a100tcsg324-1 Top: rvfpganexys 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,510 MB. GUI used memory: 81 MB. Current time: 1/1/24, 8:00:11 PM EST
+// TclEventType: ELABORATE_START
+// [Engine Memory]: 1,859 MB (+435873kb) [00:25:18]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,955 MB. GUI used memory: 80 MB. Current time: 1/1/24, 8:00:26 PM EST
+// TclEventType: ELABORATE_FINISH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,363 MB. GUI used memory: 80 MB. Current time: 1/1/24, 8:01:11 PM EST
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,428 MB. GUI used memory: 80 MB. Current time: 1/1/24, 8:01:23 PM EST
+// [Engine Memory]: 2,428 MB (+499232kb) [00:26:21]
+// Xgd.load filename: D:/Vivado/2019.2/data/parts/xilinx/artix7/devint/artix7/xc7a100t/xc7a100t.xgd; ZipEntry: xc7a100t_detail.xgd elapsed time: 0.5s
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 2.5s
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  3163 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a100tcsg324-1 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1835.410 ; gain = 228.738 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'rvfpganexys' [D:/RVfpga/RFISC_V/RVfpga/src/rvfpganexys.sv:25] 
+// Tcl Message: 	Parameter bootrom_file bound to: boot_main.mem - type: string  	Parameter RAM_SIZE bound to: 65536 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'clk_gen_nexys' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/clk_gen_nexys.v:24] INFO: [Synth 8-6157] synthesizing module 'PLLE2_BASE' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:61495] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'PLLE2_BASE' (1#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:61495] INFO: [Synth 8-6155] done synthesizing module 'clk_gen_nexys' (2#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/clk_gen_nexys.v:24] INFO: [Synth 8-6157] synthesizing module 'AXI_BUS' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_intf.sv:20] 
+// Tcl Message: 	Parameter AXI_ADDR_WIDTH bound to: 32'b00000000000000000000000000100000  	Parameter AXI_DATA_WIDTH bound to: 32'b00000000000000000000000001000000  	Parameter AXI_ID_WIDTH bound to: 32'b00000000000000000000000000000110  	Parameter AXI_USER_WIDTH bound to: 32'b00000000000000000000000000000001  	Parameter AXI_STRB_WIDTH bound to: 32'b00000000000000000000000000001000  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'AXI_BUS' (2#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_intf.sv:20] INFO: [Synth 8-6157] synthesizing module 'AXI_BUS' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_intf.sv:20] 
+// Tcl Message: 	Parameter AXI_ADDR_WIDTH bound to: 32'b00000000000000000000000000100000  	Parameter AXI_DATA_WIDTH bound to: 32'b00000000000000000000000001000000  	Parameter AXI_ID_WIDTH bound to: 32'b00000000000000000000000000000110  	Parameter AXI_USER_WIDTH bound to: 32'b00000000000000000000000000000001  	Parameter AXI_STRB_WIDTH bound to: 32'b00000000000000000000000000001000  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'AXI_BUS' (2#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_intf.sv:20] INFO: [Synth 8-6157] synthesizing module 'axi_cdc_intf' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_cdc.sv:133] 
+// Tcl Message: 	Parameter AXI_ID_WIDTH bound to: 32'b00000000000000000000000000000110  	Parameter AXI_ADDR_WIDTH bound to: 32'b00000000000000000000000000100000  	Parameter AXI_DATA_WIDTH bound to: 32'b00000000000000000000000001000000  	Parameter AXI_USER_WIDTH bound to: 32'b00000000000000000000000000000001  	Parameter LOG_DEPTH bound to: 32'b00000000000000000000000000000001  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'axi_cdc' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_cdc.sv:23] 
+// Tcl Message: 	Parameter LogDepth bound to: 32'b00000000000000000000000000000001  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'cdc_fifo_gray' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:81] 
+// Tcl Message: 	Parameter WIDTH bound to: 32'b00000000000000000000000001001010  	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001  	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'cdc_fifo_gray_src' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:151] 
+// Tcl Message: 	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001  	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010  	Parameter PtrWidth bound to: 32'sb00000000000000000000000000000010  	Parameter PtrFull bound to: 2'b10  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'sync' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/sync.sv:15] 
+// Tcl Message: 	Parameter STAGES bound to: 32'b00000000000000000000000000000010  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'sync' (3#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/sync.sv:15] INFO: [Synth 8-6157] synthesizing module 'gray_to_binary' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/gray_to_binary.sv:15] 
+// Tcl Message: 	Parameter N bound to: 32'sb00000000000000000000000000000010  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'gray_to_binary' (4#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/gray_to_binary.sv:15] INFO: [Synth 8-6157] synthesizing module 'binary_to_gray' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/binary_to_gray.sv:15] 
+// Tcl Message: 	Parameter N bound to: 32'sb00000000000000000000000000000010  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'binary_to_gray' (5#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/binary_to_gray.sv:15] INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray_src' (6#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:151] INFO: [Synth 8-6157] synthesizing module 'cdc_fifo_gray_dst' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:209] 
+// Tcl Message: 	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001  	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010  	Parameter PtrWidth bound to: 32'sb00000000000000000000000000000010  	Parameter PtrEmpty bound to: 2'b00  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'spill_register' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] 
+// Tcl Message: 	Parameter Bypass bound to: 1'b0  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'spill_register' (7#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray_dst' (8#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:209] INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray' (9#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:81] INFO: [Synth 8-6157] synthesizing module 'cdc_fifo_gray__parameterized0' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:81] 
+// Tcl Message: 	Parameter WIDTH bound to: 32'b00000000000000000000000000001001  	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001  	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'cdc_fifo_gray_src__parameterized0' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:151] 
+// Tcl Message: 	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001  	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010  	Parameter PtrWidth bound to: 32'sb00000000000000000000000000000010  	Parameter PtrFull bound to: 2'b10  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray_src__parameterized0' (9#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:151] INFO: [Synth 8-6157] synthesizing module 'cdc_fifo_gray_dst__parameterized0' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:209] 
+// Tcl Message: 	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001  	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010  	Parameter PtrWidth bound to: 32'sb00000000000000000000000000000010  	Parameter PtrEmpty bound to: 2'b00  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized0' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] 
+// Tcl Message: 	Parameter Bypass bound to: 1'b0  
+// Tcl Message: 	Parameter WIDTH bound to: 32'b00000000000000000000000001000100  	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001  	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'cdc_fifo_gray_src__parameterized1' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:151] 
+// Tcl Message: 	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001  	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010  	Parameter PtrWidth bound to: 32'sb00000000000000000000000000000010  	Parameter PtrFull bound to: 2'b10  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray_src__parameterized1' (9#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:151] INFO: [Synth 8-6157] synthesizing module 'cdc_fifo_gray_dst__parameterized1' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:209] 
+// Tcl Message: 	Parameter LOG_DEPTH bound to: 32'sb00000000000000000000000000000001  	Parameter SYNC_STAGES bound to: 32'sb00000000000000000000000000000010  	Parameter PtrWidth bound to: 32'sb00000000000000000000000000000010  	Parameter PtrEmpty bound to: 2'b00  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized1' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] 
+// Tcl Message: 	Parameter Bypass bound to: 1'b0  
+// Tcl Message: 	Parameter ID_WIDTH bound to: 6 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'IDELAYCTRL' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:35014] 
+// Tcl Message: 	Parameter SIM_DEVICE bound to: 7SERIES - type: string  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'IDELAYCTRL' (13#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:35014] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:50288] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (14#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:50288] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:46225] 
+// Tcl Message: 	Parameter CAPACITANCE bound to: DONT_CARE - type: string  	Parameter IOSTANDARD bound to: DEFAULT - type: string  	Parameter SLEW bound to: SLOW - type: string  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (15#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:46225] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'IOBUFDS' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:36213] 
+// Tcl Message: 	Parameter DIFF_TERM bound to: FALSE - type: string  	Parameter DQS_BIAS bound to: FALSE - type: string  	Parameter IBUF_LOW_PWR bound to: TRUE - type: string  	Parameter IOSTANDARD bound to: DEFAULT - type: string  	Parameter SLEW bound to: SLOW - type: string  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'IOBUFDS' (16#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:36213] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'ISERDESE2' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:38572] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'ISERDESE2' (17#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:38572] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'IDELAYE2' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:35027] 
+// Tcl Message: 	Parameter CINVCTRL_SEL bound to: FALSE - type: string  	Parameter DELAY_SRC bound to: IDATAIN - type: string  	Parameter HIGH_PERFORMANCE_MODE bound to: TRUE - type: string  	Parameter IDELAY_TYPE bound to: VARIABLE - type: string  	Parameter IDELAY_VALUE bound to: 0 - type: integer  	Parameter IS_C_INVERTED bound to: 1'b0  	Parameter IS_DATAIN_INVERTED bound to: 1'b0  	Parameter IS_IDATAIN_INVERTED bound to: 1'b0  	Parameter PIPE_SEL bound to: FALSE - type: string  	Parameter REFCLK_FREQUENCY bound to: 200.000000 - type: double  	Parameter SIGNAL_PATTERN bound to: DATA - type: string  	Parameter SIM_DELAY_D bound to: 0 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'IDELAYE2' (18#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:35027] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:36196] 
+// Tcl Message: 	Parameter DRIVE bound to: 12 - type: integer  	Parameter IBUF_LOW_PWR bound to: TRUE - type: string  	Parameter IOSTANDARD bound to: DEFAULT - type: string  	Parameter SLEW bound to: SLOW - type: string  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (19#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:36196] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'serv_rf_top' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_rf_top.v:3] 
+// Tcl Message: 	Parameter RESET_PC bound to: 1'b0  	Parameter WITH_CSR bound to: 1 - type: integer  	Parameter RF_WIDTH bound to: 2 - type: integer  	Parameter RF_L2D bound to: 10 - type: integer  	Parameter CSR_REGS bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'serv_rf_ram_if' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_rf_ram_if.v:2] 
+// Tcl Message: 	Parameter width bound to: 2 - type: integer  	Parameter csr_regs bound to: 4 - type: integer  	Parameter depth bound to: 576 - type: integer  	Parameter l2w bound to: 1 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'serv_rf_ram_if' (20#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_rf_ram_if.v:2] INFO: [Synth 8-6157] synthesizing module 'serv_rf_ram' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_rf_ram.v:1] 
+// Tcl Message: 	Parameter width bound to: 2 - type: integer  	Parameter csr_regs bound to: 4 - type: integer  	Parameter depth bound to: 576 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'serv_rf_ram' (21#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_rf_ram.v:1] INFO: [Synth 8-6157] synthesizing module 'serv_top' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_top.v:3] 
+// Tcl Message: 	Parameter WITH_CSR bound to: 1 - type: integer  	Parameter RESET_PC bound to: 1'b0  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'serv_csr' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_csr.v:2] 
+// Tcl Message: 	Parameter CSR_SOURCE_CSR bound to: 2'b00  	Parameter CSR_SOURCE_EXT bound to: 2'b01  	Parameter CSR_SOURCE_SET bound to: 2'b10  	Parameter CSR_SOURCE_CLR bound to: 2'b11  	Parameter CSR_MSCRATCH bound to: 2'b00  	Parameter CSR_MTVEC bound to: 2'b01  	Parameter CSR_MEPC bound to: 2'b10  	Parameter CSR_MTVAL bound to: 2'b11  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'serv_csr' (22#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_csr.v:2] INFO: [Synth 8-6157] synthesizing module 'serv_state' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_state.v:1] 
+// Tcl Message: 	Parameter WITH_CSR bound to: 1 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'serv_state' (23#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_state.v:1] INFO: [Synth 8-6157] synthesizing module 'serv_decode' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_decode.v:2] 
+// Tcl Message: 	Parameter CSR_SOURCE_CSR bound to: 2'b00  	Parameter CSR_SOURCE_EXT bound to: 2'b01  	Parameter CSR_SOURCE_SET bound to: 2'b10  	Parameter CSR_SOURCE_CLR bound to: 2'b11  	Parameter CSR_MSCRATCH bound to: 2'b00  	Parameter CSR_MTVEC bound to: 2'b01  	Parameter CSR_MEPC bound to: 2'b10  	Parameter CSR_MTVAL bound to: 2'b11  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'serv_decode' (24#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_decode.v:2] INFO: [Synth 8-6157] synthesizing module 'serv_bufreg' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_bufreg.v:1] INFO: [Synth 8-6155] done synthesizing module 'serv_bufreg' (25#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_bufreg.v:1] INFO: [Synth 8-6157] synthesizing module 'serv_ctrl' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_ctrl.v:2] 
+// Tcl Message: 	Parameter RESET_PC bound to: 1'b0  	Parameter WITH_CSR bound to: 1 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'serv_ctrl' (26#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_ctrl.v:2] INFO: [Synth 8-6157] synthesizing module 'serv_alu' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_alu.v:2] 
+// Tcl Message: 	Parameter BOOL_LUT bound to: 16'b1000111010010110  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'serv_shift' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_shift.v:2] INFO: [Synth 8-6155] done synthesizing module 'serv_shift' (27#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_shift.v:2] INFO: [Synth 8-6155] done synthesizing module 'serv_alu' (28#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_alu.v:2] INFO: [Synth 8-6157] synthesizing module 'serv_rf_if' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_rf_if.v:2] 
+// Tcl Message: 	Parameter WITH_CSR bound to: 1 - type: integer  	Parameter CSR_SOURCE_CSR bound to: 2'b00  	Parameter CSR_SOURCE_EXT bound to: 2'b01  	Parameter CSR_SOURCE_SET bound to: 2'b10  	Parameter CSR_SOURCE_CLR bound to: 2'b11  	Parameter CSR_MSCRATCH bound to: 2'b00  	Parameter CSR_MTVEC bound to: 2'b01  	Parameter CSR_MEPC bound to: 2'b10  	Parameter CSR_MTVAL bound to: 2'b11  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'serv_rf_if' (29#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_rf_if.v:2] INFO: [Synth 8-6157] synthesizing module 'serv_mem_if' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_mem_if.v:2] 
+// Tcl Message: 	Parameter WITH_CSR bound to: 1 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'serv_mem_if' (30#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_mem_if.v:2] INFO: [Synth 8-6155] done synthesizing module 'serv_top' (31#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_top.v:3] INFO: [Synth 8-6155] done synthesizing module 'serv_rf_top' (32#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/serv_1.0.2/rtl/serv_rf_top.v:3] INFO: [Synth 8-6157] synthesizing module 'FD' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13467] 
+// Tcl Message: 	Parameter INIT bound to: 1'b0  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'FD' (33#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13467] INFO: [Synth 8-6157] synthesizing module 'PLLE2_ADV' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:61416] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'PLLE2_ADV' (34#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:61416] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'FDPE' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13648] 
+// Tcl Message: 	Parameter INIT bound to: 1'b1  	Parameter IS_C_INVERTED bound to: 1'b0  	Parameter IS_D_INVERTED bound to: 1'b0  	Parameter IS_PRE_INVERTED bound to: 1'b0  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'FDPE' (35#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13648] 
+// Tcl Message: INFO: [Synth 8-4471] merging register 'memadr_1_reg[0:0]' into 'memadr_2_reg[0:0]' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:18758] INFO: [Synth 8-4471] merging register 'sdram_dfi_p1_cs_n_reg' into 'sdram_dfi_p0_cs_n_reg' [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:4323] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'litedram_core' (36#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_core.v:4] INFO: [Synth 8-6155] done synthesizing module 'litedram_top' (37#1) [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/litedram_top.v:27] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'STARTUPE2' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:78135] 
+// Tcl Message: 	Parameter PROG_USR bound to: FALSE - type: string  	Parameter SIM_CCLK_FREQ bound to: 0.000000 - type: double  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'STARTUPE2' (38#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:78135] INFO: [Synth 8-6157] synthesizing module 'bscan_tap' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/bscan_tap.sv:16] 
+// Tcl Message: 	Parameter AWIDTH bound to: 7 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'BSCANE2' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:876] 
+// Tcl Message: 	Parameter DISABLE_JTAG bound to: FALSE - type: string  	Parameter JTAG_CHAIN bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'BSCANE2' (39#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:876] INFO: [Synth 8-6157] synthesizing module 'BSCANE2__parameterized0' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:876] 
+// Tcl Message: 	Parameter DISABLE_JTAG bound to: FALSE - type: string  	Parameter JTAG_CHAIN bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'BSCANE2__parameterized0' (39#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:876] INFO: [Synth 8-6157] synthesizing module 'BSCANE2__parameterized1' [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:876] 
+// Tcl Message: 	Parameter DISABLE_JTAG bound to: FALSE - type: string  	Parameter JTAG_CHAIN bound to: 3 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'BSCANE2__parameterized1' (39#1) [D:/Vivado/2019.2/scripts/rt/data/unisim_comp.v:876] INFO: [Synth 8-6155] done synthesizing module 'bscan_tap' (40#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/bscan_tap.sv:16] INFO: [Synth 8-6157] synthesizing module 'swervolf_core' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/swervolf_core.v:22] 
+// Tcl Message: 	Parameter bootrom_file bound to: boot_main.mem - type: string  	Parameter clk_freq_hz bound to: 50000000 - type: integer  	Parameter BOOTROM_SIZE bound to: 4096 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'axi_intercon' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/axi_intercon.sv:7] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'axi_xbar' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_xbar.sv:15] 
+// Tcl Message: 	Parameter Cfg[NoSlvPorts] bound to: 3 - type: integer  	Parameter Cfg[NoMstPorts] bound to: 2 - type: integer  	Parameter Cfg[MaxMstTrans] bound to: 10 - type: integer  	Parameter Cfg[MaxSlvTrans] bound to: 6 - type: integer  	Parameter Cfg[FallThrough] bound to: 1'b0  	Parameter Cfg[LatencyMode] bound to: 10'b1001010010  	Parameter Cfg[AxiIdWidthSlvPorts] bound to: 4 - type: integer  	Parameter Cfg[AxiIdUsedSlvPorts] bound to: 4 - type: integer  	Parameter Cfg[AxiAddrWidth] bound to: 32 - type: integer  	Parameter Cfg[AxiDataWidth] bound to: 64 - type: integer  	Parameter Cfg[NoAddrRules] bound to: 2 - type: integer  	Parameter ATOPs bound to: 1'b0  	Parameter cfg_NoMstPorts bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'addr_decode' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/addr_decode.sv:30] 
+// Tcl Message: 	Parameter NoIndices bound to: 2 - type: integer  	Parameter NoRules bound to: 2 - type: integer  	Parameter IdxWidth bound to: 32'b00000000000000000000000000000001  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'addr_decode' (41#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/addr_decode.sv:30] INFO: [Synth 8-6157] synthesizing module 'axi_demux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:17] 
+// Tcl Message: 	Parameter AxiIdWidth bound to: 4 - type: integer  	Parameter NoMstPorts bound to: 32'b00000000000000000000000000000011  	Parameter MaxTrans bound to: 10 - type: integer  	Parameter AxiLookBits bound to: 4 - type: integer  	Parameter FallThrough bound to: 1'b0  	Parameter SpillAw bound to: 1'b1  	Parameter SpillW bound to: 1'b0  	Parameter SpillB bound to: 1'b0  	Parameter SpillAr bound to: 1'b1  	Parameter SpillR bound to: 1'b0  	Parameter SelectWidth bound to: 32'b00000000000000000000000000000010  	Parameter IdCounterWidth bound to: 32'b00000000000000000000000000000100  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized2' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] 
+// Tcl Message: 	Parameter Bypass bound to: 1'b0  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized2' (41#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] INFO: [Synth 8-6157] synthesizing module 'axi_demux_id_counters' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:538] 
+// Tcl Message: 	Parameter AxiIdBits bound to: 4 - type: integer  	Parameter CounterWidth bound to: 32'b00000000000000000000000000000100  	Parameter NoCounters bound to: 32'b00000000000000000000000000010000  
+// Tcl Message: INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:588] INFO: [Synth 8-6157] synthesizing module 'delta_counter' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv:13] 
+// Tcl Message: 	Parameter WIDTH bound to: 32'b00000000000000000000000000000100  	Parameter STICKY_OVERFLOW bound to: 1'b0  
+// Tcl Message: 	Parameter FALL_THROUGH bound to: 1'b0  	Parameter DATA_WIDTH bound to: 32'b00000000000000000000000000100000  	Parameter DEPTH bound to: 10 - type: integer  	Parameter ADDR_DEPTH bound to: 32'b00000000000000000000000000000100  	Parameter FifoDepth bound to: 10 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'fifo_v3' (44#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13] INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized3' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] 
+// Tcl Message: 	Parameter Bypass bound to: 1'b1  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized3' (44#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized4' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] 
+// Tcl Message: 	Parameter Bypass bound to: 1'b1  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized4' (44#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] INFO: [Synth 8-6157] synthesizing module 'rr_arb_tree' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv:47] 
+// Tcl Message: 	Parameter NumIn bound to: 32'b00000000000000000000000000000011  	Parameter DataWidth bound to: 32'b00000000000000000000000000100000  	Parameter ExtPrio bound to: 1'b0  	Parameter AxiVldRdy bound to: 1'b1  	Parameter LockIn bound to: 1'b1  	Parameter FairArb bound to: 1'b1  	Parameter IdxWidth bound to: 32'b00000000000000000000000000000010  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'lzc' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/lzc.sv:25] 
+// Tcl Message: 	Parameter WIDTH bound to: 32'b00000000000000000000000000000011  	Parameter MODE bound to: 1'b0  	Parameter CNT_WIDTH bound to: 32'b00000000000000000000000000000010  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'lzc' (45#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/lzc.sv:25] INFO: [Synth 8-6155] done synthesizing module 'rr_arb_tree' (46#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv:47] INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized5' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] 
+// Tcl Message: 	Parameter Bypass bound to: 1'b0  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized5' (46#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized6' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] 
+// Tcl Message: 	Parameter Bypass bound to: 1'b1  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized6' (46#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] INFO: [Synth 8-6157] synthesizing module 'rr_arb_tree__parameterized0' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv:47] 
+// Tcl Message: 	Parameter NumIn bound to: 32'b00000000000000000000000000000011  	Parameter DataWidth bound to: 32'b00000000000000000000000000100000  	Parameter ExtPrio bound to: 1'b0  	Parameter AxiVldRdy bound to: 1'b1  	Parameter LockIn bound to: 1'b1  	Parameter FairArb bound to: 1'b1  	Parameter IdxWidth bound to: 32'b00000000000000000000000000000010  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'rr_arb_tree__parameterized0' (46#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv:47] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'axi_demux' (47#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv:17] INFO: [Synth 8-6157] synthesizing module 'axi_err_slv' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_err_slv.sv:16] 
+// Tcl Message: 	Parameter AxiIdWidth bound to: 4 - type: integer  	Parameter Resp bound to: 2'b11  	Parameter RespWidth bound to: 64 - type: integer  	Parameter RespData bound to: 64'b1100101000010001101010110001111010111010110111001010101100011110  	Parameter ATOPs bound to: 1'b0  	Parameter MaxTrans bound to: 32'b00000000000000000000000000000100  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'fifo_v3__parameterized0' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13] 
+// Tcl Message: 	Parameter FALL_THROUGH bound to: 1'b1  	Parameter DATA_WIDTH bound to: 32'b00000000000000000000000000100000  	Parameter DEPTH bound to: 32'b00000000000000000000000000000100  	Parameter ADDR_DEPTH bound to: 32'b00000000000000000000000000000010  	Parameter FifoDepth bound to: 32'b00000000000000000000000000000100  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'fifo_v3__parameterized0' (47#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13] INFO: [Synth 8-6157] synthesizing module 'fifo_v3__parameterized1' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13] 
+// Tcl Message: 	Parameter FALL_THROUGH bound to: 1'b0  	Parameter DATA_WIDTH bound to: 32'b00000000000000000000000000100000  	Parameter DEPTH bound to: 32'b00000000000000000000000000000010  	Parameter ADDR_DEPTH bound to: 32'b00000000000000000000000000000001  	Parameter FifoDepth bound to: 32'b00000000000000000000000000000010  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'fifo_v3__parameterized1' (47#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13] INFO: [Synth 8-6157] synthesizing module 'fifo_v3__parameterized2' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13] 
+// Tcl Message: 	Parameter FALL_THROUGH bound to: 1'b0  	Parameter DATA_WIDTH bound to: 32'b00000000000000000000000000100000  	Parameter DEPTH bound to: 32'b00000000000000000000000000000100  	Parameter ADDR_DEPTH bound to: 32'b00000000000000000000000000000010  	Parameter FifoDepth bound to: 32'b00000000000000000000000000000100  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'fifo_v3__parameterized2' (47#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13] INFO: [Synth 8-6157] synthesizing module 'counter' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/counter.sv:14] 
+// Tcl Message: 	Parameter WIDTH bound to: 32'b00000000000000000000000000001000  	Parameter STICKY_OVERFLOW bound to: 1'b0  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'delta_counter__parameterized0' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv:13] 
+// Tcl Message: 	Parameter WIDTH bound to: 32'b00000000000000000000000000001000  	Parameter STICKY_OVERFLOW bound to: 1'b0  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'delta_counter__parameterized0' (47#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv:13] INFO: [Synth 8-6155] done synthesizing module 'counter' (48#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/counter.sv:14] INFO: [Synth 8-6155] done synthesizing module 'axi_err_slv' (49#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_err_slv.sv:16] INFO: [Synth 8-6157] synthesizing module 'axi_mux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_mux.sv:25] 
+// Tcl Message: 	Parameter SlvAxiIDWidth bound to: 4 - type: integer  	Parameter NoSlvPorts bound to: 3 - type: integer  	Parameter MaxWTrans bound to: 6 - type: integer  	Parameter FallThrough bound to: 1'b0  	Parameter SpillAw bound to: 1'b1  	Parameter SpillW bound to: 1'b0  	Parameter SpillB bound to: 1'b0  	Parameter SpillAr bound to: 1'b1  	Parameter SpillR bound to: 1'b0  	Parameter MstIdxBits bound to: 32'b00000000000000000000000000000010  	Parameter MstAxiIDWidth bound to: 32'b00000000000000000000000000000110  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'axi_id_prepend' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_id_prepend.sv:16] 
+// Tcl Message: 	Parameter NoBus bound to: 1 - type: integer  	Parameter AxiIdWidthSlvPort bound to: 4 - type: integer  	Parameter AxiIdWidthMstPort bound to: 32'b00000000000000000000000000000110  	Parameter PreIdWidth bound to: 32'b00000000000000000000000000000010  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'axi_id_prepend' (50#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_id_prepend.sv:16] INFO: [Synth 8-6157] synthesizing module 'rr_arb_tree__parameterized1' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv:47] 
+// Tcl Message: 	Parameter NumIn bound to: 3 - type: integer  	Parameter DataWidth bound to: 32'b00000000000000000000000000100000  	Parameter ExtPrio bound to: 1'b0  	Parameter AxiVldRdy bound to: 1'b1  	Parameter LockIn bound to: 1'b1  	Parameter FairArb bound to: 1'b1  	Parameter IdxWidth bound to: 32'b00000000000000000000000000000010  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'rr_arb_tree__parameterized1' (50#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv:47] INFO: [Synth 8-6157] synthesizing module 'fifo_v3__parameterized3' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13] 
+// Tcl Message: 	Parameter FALL_THROUGH bound to: 1'b0  	Parameter DATA_WIDTH bound to: 32'b00000000000000000000000000100000  	Parameter DEPTH bound to: 6 - type: integer  	Parameter ADDR_DEPTH bound to: 32'b00000000000000000000000000000011  	Parameter FifoDepth bound to: 6 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'fifo_v3__parameterized3' (50#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv:13] INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized7' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] 
+// Tcl Message: 	Parameter Bypass bound to: 1'b0  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized7' (50#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized8' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] 
+// Tcl Message: 	Parameter Bypass bound to: 1'b1  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized8' (50#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] INFO: [Synth 8-6157] synthesizing module 'rr_arb_tree__parameterized2' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv:47] 
+// Tcl Message: 	Parameter NumIn bound to: 3 - type: integer  	Parameter DataWidth bound to: 32'b00000000000000000000000000100000  	Parameter ExtPrio bound to: 1'b0  	Parameter AxiVldRdy bound to: 1'b1  	Parameter LockIn bound to: 1'b1  	Parameter FairArb bound to: 1'b1  	Parameter IdxWidth bound to: 32'b00000000000000000000000000000010  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'rr_arb_tree__parameterized2' (50#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv:47] INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized9' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] 
+// Tcl Message: 	Parameter Bypass bound to: 1'b0  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized9' (50#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized10' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] 
+// Tcl Message: 	Parameter Bypass bound to: 1'b1  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized10' (50#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv:17] INFO: [Synth 8-6155] done synthesizing module 'axi_mux' (51#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_mux.sv:25] INFO: [Synth 8-6155] done synthesizing module 'axi_xbar' (52#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_xbar.sv:15] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'axi_intercon' (53#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiInterconnect/axi_intercon.sv:7] INFO: [Synth 8-6157] synthesizing module 'wb_intercon' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.v:1] INFO: [Synth 8-6157] synthesizing module 'wb_mux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon_1.2.2-r1/wb_mux.v:45] 
+// Tcl Message: 	Parameter dw bound to: 32 - type: integer  	Parameter aw bound to: 32 - type: integer  	Parameter num_slaves bound to: 7 - type: integer  	Parameter MATCH_ADDR bound to: 224'b00000000000000000001000000000000000000000000000000010000010000000000000000000000000100010000000000000000000000000001001000000000000000000000000000010100000000000000000000000000000110000000000000000000000000000010000000000000  	Parameter MATCH_MASK bound to: 224'b11111111111111111111111111000000111111111111111111111111110000001111111111111111111111111100000011111111111111111111111111000000111111111111111111111111110000001111111111111111111111110000000011111111111111111111000000000000  	Parameter slave_sel_bits bound to: 3 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'wb_mux' (54#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon_1.2.2-r1/wb_mux.v:45] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'wb_intercon' (55#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon.v:1] INFO: [Synth 8-6157] synthesizing module 'axi2wb' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiToWb/axi2wb.v:25] 
+// Tcl Message: 	Parameter AW bound to: 16 - type: integer  	Parameter IW bound to: 6 - type: integer  	Parameter STATESIZE bound to: 4 - type: integer  	Parameter IDLE bound to: 4'b0000  	Parameter AWACK bound to: 4'b0001  	Parameter WBWACK bound to: 4'b0010  	Parameter WBRACK1 bound to: 4'b0011  	Parameter WBR2 bound to: 4'b0100  	Parameter WBRACK2 bound to: 4'b0101  	Parameter BAXI bound to: 4'b0110  	Parameter RRAXI bound to: 4'b0111  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'axi2wb' (56#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Interconnect/AxiToWb/axi2wb.v:25] INFO: [Synth 8-6157] synthesizing module 'wb_mem_wrapper' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/BootROM/wb_mem_wrapper.v:25] 
+// Tcl Message: 	Parameter MEM_SIZE bound to: 4096 - type: integer  	Parameter mem_clear bound to: 0 - type: integer  	Parameter INIT_FILE bound to: boot_main.mem - type: string  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'dpram64' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/BootROM/dpram64.v:24] 
+// Tcl Message: 	Parameter SIZE bound to: 4096 - type: integer  	Parameter mem_clear bound to: 0 - type: integer  	Parameter memfile bound to: boot_main.mem - type: string  	Parameter AW bound to: 12 - type: integer  
+// Tcl Message: INFO: [Synth 8-251] Preloading  from boot_main.mem [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/BootROM/dpram64.v:60] INFO: [Synth 8-3876] $readmem data file 'boot_main.mem' is read successfully [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/BootROM/dpram64.v:61] INFO: [Synth 8-6155] done synthesizing module 'dpram64' (57#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/BootROM/dpram64.v:24] INFO: [Synth 8-6155] done synthesizing module 'wb_mem_wrapper' (58#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/BootROM/wb_mem_wrapper.v:25] INFO: [Synth 8-6157] synthesizing module 'swervolf_syscon' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:26] 
+// Tcl Message: 	Parameter clk_freq_hz bound to: 50000000 - type: integer  
+// Tcl Message: 	Parameter WIDTH bound to: 32'b00000000000000000000000000010100  	Parameter STICKY_OVERFLOW bound to: 1'b0  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'delta_counter__parameterized1' [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv:13] 
+// Tcl Message: 	Parameter WIDTH bound to: 32'b00000000000000000000000000010100  	Parameter STICKY_OVERFLOW bound to: 1'b0  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'delta_counter__parameterized1' (59#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv:13] INFO: [Synth 8-6155] done synthesizing module 'counter__parameterized0' (59#1) [D:/RVfpga/RFISC_V/RVfpga/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/counter.sv:14] INFO: [Synth 8-6157] synthesizing module 'SevSegMux' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:398] 
+// Tcl Message: 	Parameter DATA_WIDTH bound to: 8 - type: integer  	Parameter N_IN bound to: 8 - type: integer  	Parameter SEL_WIDTH bound to: 3 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'SevSegMux' (60#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:398] INFO: [Synth 8-6157] synthesizing module 'SevSegMux__parameterized0' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:398] 
+// Tcl Message: 	Parameter DATA_WIDTH bound to: 4 - type: integer  	Parameter N_IN bound to: 8 - type: integer  	Parameter SEL_WIDTH bound to: 3 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'SevSegMux__parameterized0' (60#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:398] INFO: [Synth 8-6155] done synthesizing module 'SevSegDisplays_Controller' (61#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:297] INFO: [Synth 8-6155] done synthesizing module 'swervolf_syscon' (62#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:26] INFO: [Synth 8-6157] synthesizing module 'simple_spi' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:69] 
+// Tcl Message: 	Parameter SS_WIDTH bound to: 1 - type: integer  
+// Tcl Message: INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:147] INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:147] INFO: [Synth 8-6157] synthesizing module 'fifo4' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/spi/fifo4.v:54] 
+// Tcl Message: 	Parameter dw bound to: 8 - type: integer  
+// Tcl Message: 	Parameter SIM bound to: 0 - type: integer  	Parameter debug bound to: 0 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'uart_wb' [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/uart/uart_wb.v:139] INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. INFO: [Synth 8-6155] done synthesizing module 'uart_wb' (65#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/uart/uart_wb.v:139] 
+// Tcl Message: 	Parameter SIM bound to: 0 - type: integer  	Parameter SIM bound to: 0 - type: integer  	Parameter s_idle bound to: 3'b000  	Parameter s_send_start bound to: 3'b001  	Parameter s_send_byte bound to: 3'b010  	Parameter s_send_parity bound to: 3'b011  	Parameter s_send_stop bound to: 3'b100  	Parameter s_pop_byte bound to: 3'b101  	Parameter fifo_width bound to: 8 - type: integer  	Parameter fifo_depth bound to: 16 - type: integer  	Parameter fifo_pointer_w bound to: 4 - type: integer  	Parameter fifo_counter_w bound to: 5 - type: integer  	Parameter addr_width bound to: 4 - type: integer  	Parameter data_width bound to: 8 - type: integer  	Parameter depth bound to: 16 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'raminfr' (66#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/uart/raminfr.v:83] INFO: [Synth 8-6155] done synthesizing module 'uart_tfifo' (67#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/uart/uart_tfifo.v:140] INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (68#1) [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/uart/uart_transmitter.v:150] INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. 
+// Tcl Message: INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/gpio/gpio_top.v:987] INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/gpio/gpio_top.v:987] 
+// Tcl Message: 	Parameter dw bound to: 32 - type: integer  	Parameter aw bound to: 16 - type: integer  	Parameter cw bound to: 32 - type: integer  
+// Tcl Message: INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/ptc/ptc_top.v:311] INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/Peripherals/ptc/ptc_top.v:311] 
+// Tcl Message: INFO: [Synth 8-226] default block is never used [D:/RVfpga/RFISC_V/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/ifu/ifu_bp_ctl.sv:1075] 
+// Tcl Message: INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2337.508 ; gain = 730.836 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2356.820 ; gain = 750.148 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2356.820 ; gain = 750.148 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2356.820 ; gain = 0.000 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers. INFO: [Opt 31-141] Inserted 24 OBUFs to IO ports without IO buffers. 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [D:/RVfpga/RFISC_V/RVfpga/src/rvfpganexys.xdc] Finished Parsing XDC File [D:/RVfpga/RFISC_V/RVfpga/src/rvfpganexys.xdc] Parsing XDC File [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/liteDRAM.xdc] Finished Parsing XDC File [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/liteDRAM.xdc] 
+// Tcl Message: INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/RVfpga/RFISC_V/RVfpga/src/LiteDRAM/liteDRAM.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/rvfpganexys_propImpl.xdc]. Resolution: To avoid this warning, move constraints listed in [.Xil/rvfpganexys_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis. INFO: [Timing 38-2] Deriving generated clocks 
+// Tcl Message: Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 2594.262 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 28 instances were transformed.   FD => FDRE: 8 instances   IOBUF => IOBUF (IBUF, OBUFT): 16 instances   IOBUFDS => IOBUFDS (IBUFDS, INV, OBUFTDS(x2)): 2 instances   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance    PLLE2_BASE => PLLE2_ADV: 1 instance   
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:01:19 ; elapsed = 00:01:14 . Memory (MB): peak = 2594.262 ; gain = 987.590 
+// Tcl Message: 292 Infos, 364 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:01:25 ; elapsed = 00:01:21 . Memory (MB): peak = 2594.262 ; gain = 1135.574 
+// 'dQ' command handler elapsed time: 83 seconds
+// WARNING: HEventQueue.dispatchEvent() is taking  1184 ms.
+// Elapsed time: 82 seconds
+dismissDialog("Open Elaborated Design"); // bB (cr)
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // H (aI, cr)
+// PAPropertyPanels.initPanels (i_BTNC) elapsed time: 0.2s
+// [GUI Memory]: 171 MB (+3485kb) [00:26:59]
+// Elapsed time: 38 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rvfpganexys.xdc", 2); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rvfpganexys.sv", 3); // i (h, cr)
+// Elapsed time: 36 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // i (h, cr)
+// Elapsed time: 28 seconds
+selectView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic", 294, 49, 1484, 769, false, false, false, true, false); // f (i, cr) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Net Properties..."); // ai (ao, cr)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+// Elapsed time: 20 seconds
+selectView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic", 202, 95, 940, 769, false, false, false, true, false); // f (i, cr) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Net Properties..."); // ai (ao, cr)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+selectView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic", 170, 95, 940, 769, false, false, false, true, false); // f (i, cr) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Net Properties..."); // ai (ao, cr)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+selectView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic", 124, 93, 940, 769, false, false, false, true, false); // f (i, cr) - Popup Trigger
+// Schematic: addNotify
+// PAPropertyPanels.initPanels (i_sw) elapsed time: 0.2s
+// Elapsed time: 54 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rvfpganexys.xdc", 2); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rvfpganexys.sv", 3); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "swervolf_core.v", 4); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "wb_intercon.vh", 5); // i (h, cr)
+unMinimizeFrame(PAResourceOtoP.PAViews_MESSAGES, "Messages"); // aA
+// [Engine Memory]: 2,560 MB (+11771kb) [00:30:02]
+// Elapsed time: 10 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin i_BTNC_IBUF with 1st driver pin 'sync[31]_i_1/O' [D:/RVfpga/RFISC_V/RVfpga/src/rvfpganexys.sv:25]. ]", 8); // ah (O, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,560 MB. GUI used memory: 114 MB. Current time: 1/1/24, 8:05:06 PM EST
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin i_BTNC_IBUF with 1st driver pin 'sync[31]_i_1/O' [D:/RVfpga/RFISC_V/RVfpga/src/rvfpganexys.sv:25]. ]", 8, true); // ah (O, cr) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\RVfpga\RFISC_V\RVfpga\src\rvfpganexys.sv;-;;-;16;-;line;-;25;-;;-;16;-;"); // ah (O, cr)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin i_BTNC_IBUF with 1st driver pin 'sync[31]_i_1/O' [D:/RVfpga/RFISC_V/RVfpga/src/rvfpganexys.sv:25]. ]", 8); // ah (O, cr)
+// Elapsed time: 12 seconds
+selectCodeEditor("rvfpganexys.sv", 278, 226); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,695 MB. GUI used memory: 114 MB. Current time: 1/1/24, 8:06:06 PM EST
+// Elapsed time: 52 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "sync", true); // l (aP, cr)
+// Elapsed time: 16 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, (String) null); // l (aP, cr)
+selectCodeEditor("rvfpganexys.sv", 262, 287); // ch (w, cr)
+// [Engine Memory]: 2,697 MB (+9364kb) [00:31:37]
+selectCodeEditor("rvfpganexys.sv", 62, 177); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "swervolf_core.v", 4); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rvfpganexys.sv", 3); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rvfpganexys.xdc", 2); // i (h, cr)
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aA, cr)
+closeTask("RTL Analysis", "Elaborated Design", "DesignTask.RTL_PLANNING");
+// A (cr): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bB (cr):  Close : addNotify
+dismissDialog("Confirm Close"); // A (cr)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,710 MB. GUI used memory: 109 MB. Current time: 1/1/24, 8:07:10 PM EST
+// Engine heap size: 2,710 MB. GUI used memory: 110 MB. Current time: 1/1/24, 8:07:10 PM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  2572 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Close"); // bB (cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "wb_intercon.vh", 3); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "swervolf_core.v", 2); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rvfpganexys.sv", 1); // i (h, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cr): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cr)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bB (cr)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 11 
+// TclEventType: RUN_LAUNCH
+// bB (cr):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon Jan  1 20:07:25 2024] Launched synth_1... Run output will be captured here: D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/synth_1/runme.log [Mon Jan  1 20:07:25 2024] Launched impl_1... Run output will be captured here: D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 182 MB (+2064kb) [00:43:29]
+// aj (cr): Implementation Failed: addNotify
+// Elapsed time: 680 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // aj (cr)
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rvfpganexys.xdc", 0); // i (h, cr)
+selectCodeEditor("rvfpganexys.xdc", 1008, 178); // ch (w, cr)
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rvfpganexys.xdc", 261, 164); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cr): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (A)
+dismissDialog("Synthesis is Out-of-date"); // A (cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,891 MB. GUI used memory: 91 MB. Current time: 1/1/24, 8:19:26 PM EST
+// [Engine Memory]: 2,891 MB (+61628kb) [00:44:32]
+// Elapsed time: 18 seconds
+selectCodeEditor("rvfpganexys.xdc", 260, 126); // ch (w, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cr): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cr)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bB (cr)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bB (cr):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 11 
+// Tcl Message: [Mon Jan  1 20:19:46 2024] Launched synth_1... Run output will be captured here: D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/synth_1/runme.log [Mon Jan  1 20:19:46 2024] Launched impl_1... Run output will be captured here: D:/RVfpga/RiscV/Lab5/Lab5/Lab5.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 840 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpgasim (rvfpgasim.v)]", 11, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rvfpgasim (rvfpgasim.v)]", 11, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rvfpganexys.xdc", 0); // i (h, cr)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// aj (cr): Bitstream Generation Completed: addNotify
+// Elapsed time: 411 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (aj)
+dismissDialog("Bitstream Generation Completed"); // aj (cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,891 MB. GUI used memory: 89 MB. Current time: 1/1/24, 8:49:27 PM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  221008 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,891 MB. GUI used memory: 86 MB. Current time: 1/1/24, 9:19:32 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,891 MB. GUI used memory: 85 MB. Current time: 1/1/24, 9:49:34 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,891 MB. GUI used memory: 85 MB. Current time: 1/1/24, 10:19:37 PM EST
