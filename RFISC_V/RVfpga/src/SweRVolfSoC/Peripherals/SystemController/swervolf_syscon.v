@@ -291,14 +291,24 @@ endmodule
 
 
 
-
+// CHNAGE TO 5 WHEN SIMULATING SEG DISPLAY ELSE 20
 parameter COUNT_MAX = 20;
 
 module SevSegDisplays_Controller(
                      input wire           clk,
                      input wire           rst_n,
-                     input wire    [ 7:0] Enables_Reg,
-                     input wire    [31:0] Digits_Reg,
+
+                     // input wire    [ 7:0] Enables_Reg,
+                     // input wire    [31:0] Digits_Reg,
+                     input wire    [ 6:0] SegDigit0,
+                     input wire    [ 6:0] SegDigit1,
+                     input wire    [ 6:0] SegDigit2,
+                     input wire    [ 6:0] SegDigit3,
+                     input wire    [ 6:0] SegDigit4,
+                     input wire    [ 6:0] SegDigit5,
+                     input wire    [ 6:0] SegDigit6,
+                     input wire    [ 6:0] SegDigit7,
+
                      output wire   [ 7:0] AN,
                      output wire   [ 6:0] Digits_Bits);
 
@@ -307,8 +317,15 @@ module SevSegDisplays_Controller(
   wire overflow_o_count;
 
 
+   // Mux is used to switch between digit bits for each digit and to switch between digit annodes
 
-  SevenSegDecoder SevSegDec(.data(DecNumber), .seg(Digits_Bits));
+   // DecNumber is the only output of mux -- MUX SEL SIGNAL
+   // Mux uses digits_concat, countSelection[(COUNT_MAX-1):(COUNT_MAX-3)] as inputs
+
+
+
+   // Converts the dec number from mux to 7 segment bits
+//   SevenSegDecoder SevSegDec(.data(DecNumber), .seg(Digits_Bits));
 
 
 
@@ -318,15 +335,16 @@ module SevSegDisplays_Controller(
 
   wire [ 7:0] [7:0] enable;
 
-  assign enable[0] = (Enables_Reg | 8'hfe);
-  assign enable[1] = (Enables_Reg | 8'hfd);
-  assign enable[2] = (Enables_Reg | 8'hfb);
-  assign enable[3] = (Enables_Reg | 8'hf7);
-  assign enable[4] = (Enables_Reg | 8'hef);
-  assign enable[5] = (Enables_Reg | 8'hdf);
-  assign enable[6] = (Enables_Reg | 8'hbf);
-  assign enable[7] = (Enables_Reg | 8'h7f);
+  assign enable[0] = 8'hfe;
+  assign enable[1] = 8'hfd;
+  assign enable[2] = 8'hfb;
+  assign enable[3] = 8'hf7;
+  assign enable[4] = 8'hef;
+  assign enable[5] = 8'hdf;
+  assign enable[6] = 8'hbf;
+  assign enable[7] = 8'h7f;
 
+   // Selects which annode to enable -- LEAVE THE SAME 
   SevSegMux
   #(
     .DATA_WIDTH(8),
@@ -335,63 +353,64 @@ module SevSegDisplays_Controller(
   Select_Enables
   (
     .IN_DATA(enable),
-    .OUT_DATA(AN),
+    .OUT_DATA(AN),                                       // Annode is selected by MUX
     .SEL(countSelection[(COUNT_MAX-1):(COUNT_MAX-3)])
   );
 
 
-  wire [ 7:0] [3:0] digits_concat;
+  wire [ 7:0] [6:0] digits_concat;
 
-  assign digits_concat[0] = Digits_Reg[3:0];
-  assign digits_concat[1] = Digits_Reg[7:4];
-  assign digits_concat[2] = Digits_Reg[11:8];
-  assign digits_concat[3] = Digits_Reg[15:12];
-  assign digits_concat[4] = Digits_Reg[19:16];
-  assign digits_concat[5] = Digits_Reg[23:20];
-  assign digits_concat[6] = Digits_Reg[27:24];
-  assign digits_concat[7] = Digits_Reg[31:28];
+  assign digits_concat[0] = SegDigit0;
+  assign digits_concat[1] = SegDigit1;
+  assign digits_concat[2] = SegDigit2;
+  assign digits_concat[3] = SegDigit3;
+  assign digits_concat[4] = SegDigit4;
+  assign digits_concat[5] = SegDigit5;
+  assign digits_concat[6] = SegDigit6;
+  assign digits_concat[7] = SegDigit7;
 
+   // Selects which digit value to use
   SevSegMux
   #(
-    .DATA_WIDTH(4),
-    .N_IN(8)
+    .DATA_WIDTH(7),  // Chnage to 7 to hold the digit bits
+    .N_IN(8)         // Use all 8 digits
   )
   Select_Digits
   (
     .IN_DATA(digits_concat),
-    .OUT_DATA(DecNumber),
+    .OUT_DATA(Digits_Bits),                              // Segment bits is slected by Mux
     .SEL(countSelection[(COUNT_MAX-1):(COUNT_MAX-3)])
   );
 
 endmodule
 
 
-
-module SevenSegDecoder(input wire     [3:0] data,
-                           output reg [6:0] seg);
-  always @(*)
-    case(data)
-                  // abc_defg
-      4'h0: seg = 7'b000_0001;
-      4'h1: seg = 7'b100_1111;
-      4'h2: seg = 7'b001_0010;
-      4'h3: seg = 7'b000_0110;
-      4'h4: seg = 7'b100_1100;
-      4'h5: seg = 7'b010_0100;
-      4'h6: seg = 7'b010_0000;
-      4'h7: seg = 7'b000_1111;
-      4'h8: seg = 7'b000_0000;
-      4'h9: seg = 7'b000_1100;
-      4'ha: seg = 7'b000_1000;
-      4'hb: seg = 7'b110_0000;
-      4'hc: seg = 7'b111_0010;
-      4'hd: seg = 7'b100_0010;
-      4'he: seg = 7'b011_0000;
-      4'hf: seg = 7'b011_1000;
-      default: 
-            seg = 7'b111_1111;
-    endcase
-endmodule
+// ADDED - LAB 7 modifies the 7 segment decoder
+// module SevenSegDecoder(input wire     [3:0] data,
+//                            output reg [6:0] seg);
+//   always @(*)
+//     case(data)
+//                   // abc_defg
+//       4'h0: seg = 7'b000_0001;
+//       4'h1: seg = 7'b100_1111;
+//       4'h2: seg = 7'b001_0010;
+//       4'h3: seg = 7'b000_0110;
+//       4'h4: seg = 7'b100_1100;
+//       4'h5: seg = 7'b010_0100;
+//       4'h6: seg = 7'b010_0000;
+//       4'h7: seg = 7'b000_1111;
+//       4'h8: seg = 7'b000_0000;
+//       4'h9: seg = 7'b000_1100;
+//       4'ha: seg = 7'b000_1000;
+//       4'hb: seg = 7'b110_0000;
+//       4'hc: seg = 7'b111_0010;
+//       4'hd: seg = 7'b100_0010;
+//       4'he: seg = 7'b011_0000;
+//       4'hf: seg = 7'b011_1000;
+//       default: 
+//             seg = 7'b111_1111;
+//     endcase
+// endmodule
 
 
 

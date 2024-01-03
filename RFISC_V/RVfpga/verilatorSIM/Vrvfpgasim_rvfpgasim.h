@@ -13,7 +13,7 @@
 class Vrvfpgasim__Syms;
 class Vrvfpgasim_VerilatedVcd;
 class Vrvfpgasim_axi_mem_wrapper__I6_M10000;
-class Vrvfpgasim_swervolf_core__Bz1;
+class Vrvfpgasim_swervolf_core__B0;
 
 
 //----------
@@ -22,7 +22,7 @@ VL_MODULE(Vrvfpgasim_rvfpgasim) {
   public:
     // CELLS
     Vrvfpgasim_axi_mem_wrapper__I6_M10000* ram;
-    Vrvfpgasim_swervolf_core__Bz1* swervolf;
+    Vrvfpgasim_swervolf_core__B0* swervolf;
     
     // PORTS
     VL_IN8(clk,0,0);
@@ -63,8 +63,6 @@ VL_MODULE(Vrvfpgasim_rvfpgasim) {
     // LOCAL VARIABLES
     CData/*0:0*/ __Vcellinp__swervolf__rstn;
     CData/*4:0*/ __Vtableidx1;
-    IData/*31:0*/ io_data__en0;
-    IData/*31:0*/ io_data2__en1;
     static CData/*3:0*/ __Vtable1___PVT__dmi_wrapper__DOT__i_jtag_tap__DOT__nstate[32];
     
     // INTERNAL VARIABLES
@@ -95,8 +93,9 @@ VL_MODULE(Vrvfpgasim_rvfpgasim) {
     static void _sequent__TOP__rvfpgasim__8(Vrvfpgasim__Syms* __restrict vlSymsp);
     static void _sequent__TOP__rvfpgasim__9(Vrvfpgasim__Syms* __restrict vlSymsp);
     static void _settle__TOP__rvfpgasim__2(Vrvfpgasim__Syms* __restrict vlSymsp) VL_ATTR_COLD;
-  private:
-    static void traceInit(void* userp, VerilatedVcd* tracep, uint32_t code) VL_ATTR_COLD;
+    static void traceInit(VerilatedVcd* vcdp, void* userthis, uint32_t code);
+    static void traceFull(VerilatedVcd* vcdp, void* userthis, uint32_t code);
+    static void traceChg(VerilatedVcd* vcdp, void* userthis, uint32_t code);
 } VL_ATTR_ALIGNED(VL_CACHE_LINE_BYTES);
 
 //----------
