@@ -24,8 +24,8 @@
 `default_nettype none
 module rvfpganexys
   #(parameter bootrom_file  = "boot_main.mem")
-   (input wire 	       clk,
-    input wire 	       rstn,
+   (input wire         clk,
+    input wire         rstn,
     output wire [12:0] ddram_a,
     output wire [2:0]  ddram_ba,
     output wire        ddram_ras_n,
@@ -42,8 +42,8 @@ module rvfpganexys
     output wire        ddram_odt,
     output wire        o_flash_cs_n,
     output wire        o_flash_mosi,
-    input wire 	       i_flash_miso,
-    input wire 	       i_uart_rx,
+    input wire         i_flash_miso,
+    input wire         i_uart_rx,
     output wire        o_uart_tx,
     inout wire [15:0]  i_sw,
     output reg [15:0]  o_led,
@@ -55,28 +55,28 @@ module rvfpganexys
     output wire        accel_sclk,
     
     // Button inputs - Added
-    inout wire         i_BTNC, i_BTNU, i_BTNL, i_BTNR, i_BTND
+    inout wire         i_BTNC, i_BTNU, i_BTNL, i_BTNR, i_BTND,
 
     // Added Lab 8 - inouts for RGB LED
     inout wire         R_o, G_o, B_o
     );
 
-   wire [15:0] 	       gpio_out;
+   wire [15:0]         gpio_out;
 
    // Added for buttons. Does nothing currently
    wire [26:0]         gpio_out2;
 
-   wire 	       cpu_tx,litedram_tx;
+   wire          cpu_tx,litedram_tx;
 
-   wire 	       litedram_init_done;
-   wire 	       litedram_init_error;
+   wire          litedram_init_done;
+   wire          litedram_init_error;
 
    localparam RAM_SIZE     = 32'h10000;
 
-   wire 	 clk_core;
-   wire 	 rst_core;
-   wire 	 user_clk;
-   wire 	 user_rst;
+   wire    clk_core;
+   wire    rst_core;
+   wire    user_clk;
+   wire    user_rst;
 
    clk_gen_nexys clk_gen
      (.i_clk (user_clk),
@@ -273,7 +273,7 @@ module rvfpganexys
       .i_accel_miso   (i_accel_miso),
       
       // Added for buttons
-      .io_data2       ({i_BTNC, i_BTNU, i_BTNL, i_BTNR, i_BTND, gpio_out2})
+      .io_data2       ({i_BTNC, i_BTNU, i_BTNL, i_BTNR, i_BTND, gpio_out2}),
 
       // Added Lab 8 - Pass connection to RGB LEDs to core
       .RGB_o          ({R_o, G_o, B_o})

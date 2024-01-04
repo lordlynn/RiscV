@@ -22,19 +22,19 @@
 module swervolf_core
   #(parameter bootrom_file  = "",
     parameter clk_freq_hz = 0)
-   (input wire 	clk,
-    input wire 	       rstn,
-    input wire 	       dmi_reg_en,
+   (input wire  clk,
+    input wire         rstn,
+    input wire         dmi_reg_en,
     input wire [6:0]   dmi_reg_addr,
-    input wire 	       dmi_reg_wr_en,
+    input wire         dmi_reg_wr_en,
     input wire [31:0]  dmi_reg_wdata,
     output wire [31:0] dmi_reg_rdata,
-    input wire 	       dmi_hard_reset,
+    input wire         dmi_hard_reset,
     output wire        o_flash_sclk,
     output wire        o_flash_cs_n,
     output wire        o_flash_mosi,
-    input wire 	       i_flash_miso,
-    input wire 	       i_uart_rx,
+    input wire         i_flash_miso,
+    input wire         i_uart_rx,
     output wire        o_uart_tx,
     output wire [5:0]  o_ram_awid,
     output wire [31:0] o_ram_awaddr,
@@ -47,7 +47,7 @@ module swervolf_core
     output wire [3:0]  o_ram_awregion,
     output wire [3:0]  o_ram_awqos,
     output wire        o_ram_awvalid,
-    input wire 	       i_ram_awready,
+    input wire         i_ram_awready,
     output wire [5:0]  o_ram_arid,
     output wire [31:0] o_ram_araddr,
     output wire [7:0]  o_ram_arlen,
@@ -59,24 +59,24 @@ module swervolf_core
     output wire [3:0]  o_ram_arregion,
     output wire [3:0]  o_ram_arqos,
     output wire        o_ram_arvalid,
-    input wire 	       i_ram_arready,
+    input wire         i_ram_arready,
     output wire [63:0] o_ram_wdata,
     output wire [7:0]  o_ram_wstrb,
     output wire        o_ram_wlast,
     output wire        o_ram_wvalid,
-    input wire 	       i_ram_wready,
+    input wire         i_ram_wready,
     input wire [5:0]   i_ram_bid,
     input wire [1:0]   i_ram_bresp,
-    input wire 	       i_ram_bvalid,
+    input wire         i_ram_bvalid,
     output wire        o_ram_bready,
     input wire [5:0]   i_ram_rid,
     input wire [63:0]  i_ram_rdata,
     input wire [1:0]   i_ram_rresp,
-    input wire 	       i_ram_rlast,
-    input wire 	       i_ram_rvalid,
+    input wire         i_ram_rlast,
+    input wire         i_ram_rvalid,
     output wire        o_ram_rready,
-    input wire 	       i_ram_init_done,
-    input wire 	       i_ram_init_error,
+    input wire         i_ram_init_done,
+    input wire         i_ram_init_error,
     inout wire [31:0]  io_data,
     output wire [ 7          :0] AN,
     output wire [ 6          :0] Digits_Bits,
@@ -89,7 +89,7 @@ module swervolf_core
     inout wire [31:0] io_data2,
     
     // Added Lab 8 - Accept connection to RGB LED from rvfpganexys
-    inout wire [2:0] RGB_o;
+    inout wire [2:0] RGB_o
     );
 
    localparam BOOTROM_SIZE = 32'h1000;
@@ -146,14 +146,14 @@ module swervolf_core
    assign ram_rvalid     = i_ram_rvalid;
    assign o_ram_rready   = ram_rready;
 
-   wire 		      wb_clk = clk;
-   wire 		      wb_rst = ~rst_n;
+   wire           wb_clk = clk;
+   wire           wb_rst = ~rst_n;
 
 `include "wb_intercon.vh"
 
-   wire [15:2] 		       wb_adr;
+   wire [15:2]           wb_adr;
 
-   assign		       wb_m2s_io_adr = {16'd0,wb_adr,2'b00};
+   assign          wb_m2s_io_adr = {16'd0,wb_adr,2'b00};
    assign wb_m2s_io_cti = 3'b000;
    assign wb_m2s_io_bte = 2'b00;
 
@@ -247,7 +247,7 @@ module swervolf_core
    assign wb_s2m_sys_err = 1'b0;
    assign wb_s2m_sys_rty = 1'b0;
 
-   wire [7:0] 		       spi_rdt;
+   wire [7:0]            spi_rdt;
    assign wb_s2m_spi_flash_dat = {24'd0,spi_rdt};
 
    simple_spi spi
@@ -271,23 +271,23 @@ module swervolf_core
    assign wb_s2m_spi_flash_err = 1'b0;
    assign wb_s2m_spi_flash_rty = 1'b0;
 
-   wire [7:0] 		       uart_rdt;
+   wire [7:0]            uart_rdt;
    assign wb_s2m_uart_dat = {24'd0, uart_rdt};
    assign wb_s2m_uart_err = 1'b0;
    assign wb_s2m_uart_rty = 1'b0;
 
    uart_top uart16550_0
      (// Wishbone slave interface
-      .wb_clk_i	(clk),
-      .wb_rst_i	(~rst_n),
-      .wb_adr_i	(wb_m2s_uart_adr[4:2]),
-      .wb_dat_i	(wb_m2s_uart_dat[7:0]),
-      .wb_we_i	(wb_m2s_uart_we),
-      .wb_cyc_i	(wb_m2s_uart_cyc),
-      .wb_stb_i	(wb_m2s_uart_stb),
-      .wb_sel_i	(4'b0), // Not used in 8-bit mode
-      .wb_dat_o	(uart_rdt),
-      .wb_ack_o	(wb_s2m_uart_ack),
+      .wb_clk_i (clk),
+      .wb_rst_i (~rst_n),
+      .wb_adr_i (wb_m2s_uart_adr[4:2]),
+      .wb_dat_i (wb_m2s_uart_dat[7:0]),
+      .wb_we_i  (wb_m2s_uart_we),
+      .wb_cyc_i (wb_m2s_uart_cyc),
+      .wb_stb_i (wb_m2s_uart_stb),
+      .wb_sel_i (4'b0), // Not used in 8-bit mode
+      .wb_dat_o (uart_rdt),
+      .wb_ack_o (wb_s2m_uart_ack),
 
       // Outputs
       .int_o     (uart_irq),
