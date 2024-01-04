@@ -449,6 +449,7 @@ module swervolf_core
   // Added Lab 8 - new timer modules to create PWM signals for RGB LED
   //  do not create new PTC_IRQ, instead use same interrupt for all timers and 
   //  check flags in irq for specific module
+    wire ptc_irq1;
     ptc_top timer_ptc1(
         .wb_clk_i     (clk), 
         .wb_rst_i     (wb_rst), 
@@ -461,7 +462,7 @@ module swervolf_core
         .wb_dat_o     (wb_s2m_ptc1_dat),
         .wb_ack_o     (wb_s2m_ptc1_ack), 
         .wb_err_o     (wb_s2m_ptc1_err),
-        .wb_inta_o    (ptc_irq),
+        .wb_inta_o    (ptc_irq1),
         // External PTC Interface
         .gate_clk_pad_i (),
         .capt_pad_i (),

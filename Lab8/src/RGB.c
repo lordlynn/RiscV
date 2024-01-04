@@ -17,22 +17,22 @@
 
 
 // New Timer 1
-#define RPTC1_CNTR  0x80002100                                   // Timer counter register
-#define RPTC1_HCR   0x80002104                                   // High reference capture/compare
-#define RPTC1_LCR   0x80002108                                   // Low reference capture/compare
-#define RPTC1_CTRL  0x8000210C                                   // Control Register
+#define RPTC1_CNTR  0x80001300                                   // Timer counter register
+#define RPTC1_HCR   0x80001304                                   // High reference capture/compare
+#define RPTC1_LCR   0x80001308                                   // Low reference capture/compare
+#define RPTC1_CTRL  0x8000130C                                   // Control Register
 
 // New Timer 2
-#define RPTC2_CNTR  0x80002200                                   // Timer counter register
-#define RPTC2_HCR   0x80002204                                   // High reference capture/compare
-#define RPTC2_LCR   0x80002208                                   // Low reference capture/compare
-#define RPTC2_CTRL  0x8000220C                                   // Control Register
+#define RPTC2_CNTR  0x80001500                                   // Timer counter register
+#define RPTC2_HCR   0x80001504                                   // High reference capture/compare
+#define RPTC2_LCR   0x80001508                                   // Low reference capture/compare
+#define RPTC2_CTRL  0x8000150C                                   // Control Register
 
 // New Timer 3
-#define RPTC3_CNTR  0x80002300                                   // Timer counter register
-#define RPTC3_HCR   0x80002304                                   // High reference capture/compare
-#define RPTC3_LCR   0x80002308                                   // Low reference capture/compare
-#define RPTC3_CTRL  0x8000230C                                   // Control Register
+#define RPTC3_CNTR  0x80001600                                   // Timer counter register
+#define RPTC3_HCR   0x80001604                                   // High reference capture/compare
+#define RPTC3_LCR   0x80001608                                   // Low reference capture/compare
+#define RPTC3_CTRL  0x8000160C                                   // Control Register
 
 
 void displayTime(int count);

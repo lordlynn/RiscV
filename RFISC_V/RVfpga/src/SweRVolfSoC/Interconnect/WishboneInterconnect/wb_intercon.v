@@ -167,8 +167,8 @@ module wb_intercon
 
 wb_mux
   #(.num_slaves (11),
-    .MATCH_ADDR ({32'h00000000, 32'h00001000, 32'h00001040, 32'h00001100, 32'h00001200,     32'h00002100, 32'h00002200, 32'h00002300,       32'h00001400, 32'h00001800, 32'h00002000}),
-    .MATCH_MASK ({32'hfffff000, 32'hffffffc0, 32'hffffffc0, 32'hffffffc0, 32'hffffffc0,     32'hffffffc0, 32'hffffffc0, 32'hffffffc0,       32'hffffffc0, 32'hffffff00, 32'hfffff000}))
+    .MATCH_ADDR ({32'h00000000, 32'h00001000, 32'h00001040, 32'h00001100, 32'h00001200, 32'h00001300, 32'h00001500, 32'h00001600, 32'h00001400, 32'h00001800, 32'h00002000}),
+    .MATCH_MASK ({32'hfffff000, 32'hffffffc0, 32'hffffffc0, 32'hffffffc0, 32'hffffffc0, 32'hffffffc0, 32'hffffffc0, 32'hffffffc0, 32'hffffffc0, 32'hffffff00, 32'hfffff000}))
  wb_mux_io
    (.wb_clk_i  (wb_clk_i),
     .wb_rst_i  (wb_rst_i),

@@ -63,7 +63,16 @@ VL_MODULE(Vrvfpgasim) {
         CData/*0:0*/ __Vclklast__TOP____VinpClk__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__swerv__DOT__dbg__DOT____Vcellinp__dbg_state_reg__rst_l;
         CData/*0:0*/ __Vclklast__TOP__rvfpgasim__swervolf____PVT__timer_ptc__DOT__hrc_clk;
         CData/*0:0*/ __Vclklast__TOP__rvfpgasim__swervolf____PVT__timer_ptc__DOT__lrc_clk;
+        CData/*0:0*/ __Vclklast__TOP__rvfpgasim__swervolf____PVT__timer_ptc1__DOT__hrc_clk;
+        CData/*0:0*/ __Vclklast__TOP__rvfpgasim__swervolf____PVT__timer_ptc1__DOT__lrc_clk;
+        CData/*0:0*/ __Vclklast__TOP__rvfpgasim__swervolf____PVT__timer_ptc2__DOT__hrc_clk;
+        CData/*0:0*/ __Vclklast__TOP__rvfpgasim__swervolf____PVT__timer_ptc2__DOT__lrc_clk;
+        CData/*0:0*/ __Vclklast__TOP__rvfpgasim__swervolf____PVT__timer_ptc3__DOT__hrc_clk;
+        CData/*0:0*/ __Vclklast__TOP__rvfpgasim__swervolf____PVT__timer_ptc3__DOT__lrc_clk;
         CData/*0:0*/ __Vclklast__TOP__rvfpgasim__swervolf____PVT__timer_ptc__DOT__cntr_clk;
+        CData/*0:0*/ __Vclklast__TOP__rvfpgasim__swervolf____PVT__timer_ptc1__DOT__cntr_clk;
+        CData/*0:0*/ __Vclklast__TOP__rvfpgasim__swervolf____PVT__timer_ptc2__DOT__cntr_clk;
+        CData/*0:0*/ __Vclklast__TOP__rvfpgasim__swervolf____PVT__timer_ptc3__DOT__cntr_clk;
         CData/*0:0*/ __Vclklast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT____Vcellinp__mem_bank__BRA__0__KET____DOT__dccm_bank__CLK;
         CData/*0:0*/ __Vclklast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT____Vcellinp__mem_bank__BRA__1__KET____DOT__dccm_bank__CLK;
         CData/*0:0*/ __Vclklast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT____Vcellinp__mem_bank__BRA__2__KET____DOT__dccm_bank__CLK;
@@ -94,6 +103,9 @@ VL_MODULE(Vrvfpgasim) {
         CData/*0:0*/ __Vclklast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__mem__DOT__icm__DOT__ic_tag_inst__DOT____Vcellinp__WAYS__BRA__3__KET____DOT__ICACHE_SZ_16__DOT__ic_way_tag__CLK;
         CData/*0:0*/ __Vchglast__TOP__rvfpgasim____Vcellinp__swervolf__rstn;
         CData/*0:0*/ __Vchglast__TOP__rvfpgasim__swervolf__timer_ptc__DOT__eclk_gate;
+        CData/*0:0*/ __Vchglast__TOP__rvfpgasim__swervolf__timer_ptc1__DOT__eclk_gate;
+        CData/*0:0*/ __Vchglast__TOP__rvfpgasim__swervolf__timer_ptc2__DOT__eclk_gate;
+        CData/*0:0*/ __Vchglast__TOP__rvfpgasim__swervolf__timer_ptc3__DOT__eclk_gate;
         CData/*0:0*/ __Vchglast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__core_rst_l;
         CData/*0:0*/ __Vchglast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__swerv__DOT__dbg__DOT__dbg_dm_rst_l;
         CData/*0:0*/ __Vchglast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__swerv__DOT__dbg__DOT____Vcellinp__dbg_state_reg__rst_l;
@@ -102,6 +114,8 @@ VL_MODULE(Vrvfpgasim) {
         CData/*3:0*/ __Vchglast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT____Vcellout__LEVEL__BRA__0__KET____DOT__COMPARE__BRA__1__KET____DOT__cmp_l1__out_priority;
         CData/*7:0*/ __Vchglast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT____Vcellout__LEVEL__BRA__0__KET____DOT__COMPARE__BRA__1__KET____DOT__cmp_l1__out_id;
         CData/*3:0*/ __Vchglast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT____Vcellout__LEVEL__BRA__0__KET____DOT__COMPARE__BRA__2__KET____DOT__cmp_l1__out_priority;
+    };
+    struct {
         CData/*7:0*/ __Vchglast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT____Vcellout__LEVEL__BRA__0__KET____DOT__COMPARE__BRA__2__KET____DOT__cmp_l1__out_id;
         CData/*3:0*/ __Vchglast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT____Vcellout__LEVEL__BRA__0__KET____DOT__COMPARE__BRA__3__KET____DOT__cmp_l1__out_priority;
         CData/*7:0*/ __Vchglast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT____Vcellout__LEVEL__BRA__0__KET____DOT__COMPARE__BRA__3__KET____DOT__cmp_l1__out_id;
@@ -114,8 +128,6 @@ VL_MODULE(Vrvfpgasim) {
         CData/*3:0*/ __Vchglast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT____Vcellout__LEVEL__BRA__1__KET____DOT__COMPARE__BRA__2__KET____DOT__cmp_l1__out_priority;
         CData/*7:0*/ __Vchglast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT____Vcellout__LEVEL__BRA__1__KET____DOT__COMPARE__BRA__2__KET____DOT__cmp_l1__out_id;
         CData/*3:0*/ __Vchglast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT____Vcellout__LEVEL__BRA__2__KET____DOT__COMPARE__BRA__0__KET____DOT__cmp_l1__out_priority;
-    };
-    struct {
         CData/*7:0*/ __Vchglast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT____Vcellout__LEVEL__BRA__2__KET____DOT__COMPARE__BRA__0__KET____DOT__cmp_l1__out_id;
         CData/*3:0*/ __Vchglast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT____Vcellout__LEVEL__BRA__2__KET____DOT__COMPARE__BRA__1__KET____DOT__cmp_l1__out_priority;
         CData/*7:0*/ __Vchglast__TOP__rvfpgasim__swervolf__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT____Vcellout__LEVEL__BRA__2__KET____DOT__COMPARE__BRA__1__KET____DOT__cmp_l1__out_id;
@@ -168,6 +180,8 @@ VL_MODULE(Vrvfpgasim) {
         CData/*7:0*/ __Vchglast__TOP__rvfpgasim__swervolf__axi_intercon__DOT__axi_xbar__DOT__gen_slv_port_demux__BRA__2__KET____DOT__i_axi_demux__gen_demux__DOT__i_r_mux__DOT__gen_arbiter__DOT__gen_int_rr__DOT__gen_fair_arb__DOT__i_lzc_lower__DOT__gen_lzc__DOT__index_nodes;
         CData/*5:0*/ __Vchglast__TOP__rvfpgasim__swervolf__axi_intercon__DOT__axi_xbar__DOT__gen_mst_port_mux__BRA__0__KET____DOT__i_axi_mux__gen_mux__DOT__i_aw_arbiter__DOT__gen_arbiter__DOT__index_nodes;
         CData/*2:0*/ __Vchglast__TOP__rvfpgasim__swervolf__axi_intercon__DOT__axi_xbar__DOT__gen_mst_port_mux__BRA__0__KET____DOT__i_axi_mux__gen_mux__DOT__i_aw_arbiter__DOT__gen_arbiter__DOT__gnt_nodes;
+    };
+    struct {
         CData/*2:0*/ __Vchglast__TOP__rvfpgasim__swervolf__axi_intercon__DOT__axi_xbar__DOT__gen_mst_port_mux__BRA__0__KET____DOT__i_axi_mux__gen_mux__DOT__i_aw_arbiter__DOT__gen_arbiter__DOT__req_nodes;
         CData/*3:0*/ __Vchglast__TOP__rvfpgasim__swervolf__axi_intercon__DOT__axi_xbar__DOT__gen_mst_port_mux__BRA__0__KET____DOT__i_axi_mux__gen_mux__DOT__i_aw_arbiter__DOT__gen_arbiter__DOT__gen_int_rr__DOT__gen_fair_arb__DOT__i_lzc_upper__DOT__gen_lzc__DOT__sel_nodes;
         CData/*7:0*/ __Vchglast__TOP__rvfpgasim__swervolf__axi_intercon__DOT__axi_xbar__DOT__gen_mst_port_mux__BRA__0__KET____DOT__i_axi_mux__gen_mux__DOT__i_aw_arbiter__DOT__gen_arbiter__DOT__gen_int_rr__DOT__gen_fair_arb__DOT__i_lzc_upper__DOT__gen_lzc__DOT__index_nodes;
@@ -180,8 +194,6 @@ VL_MODULE(Vrvfpgasim) {
         CData/*7:0*/ __Vchglast__TOP__rvfpgasim__swervolf__axi_intercon__DOT__axi_xbar__DOT__gen_mst_port_mux__BRA__0__KET____DOT__i_axi_mux__gen_mux__DOT__i_ar_arbiter__DOT__gen_arbiter__DOT__gen_int_rr__DOT__gen_fair_arb__DOT__i_lzc_upper__DOT__gen_lzc__DOT__index_nodes;
         CData/*3:0*/ __Vchglast__TOP__rvfpgasim__swervolf__axi_intercon__DOT__axi_xbar__DOT__gen_mst_port_mux__BRA__0__KET____DOT__i_axi_mux__gen_mux__DOT__i_ar_arbiter__DOT__gen_arbiter__DOT__gen_int_rr__DOT__gen_fair_arb__DOT__i_lzc_lower__DOT__gen_lzc__DOT__sel_nodes;
         CData/*7:0*/ __Vchglast__TOP__rvfpgasim__swervolf__axi_intercon__DOT__axi_xbar__DOT__gen_mst_port_mux__BRA__0__KET____DOT__i_axi_mux__gen_mux__DOT__i_ar_arbiter__DOT__gen_arbiter__DOT__gen_int_rr__DOT__gen_fair_arb__DOT__i_lzc_lower__DOT__gen_lzc__DOT__index_nodes;
-    };
-    struct {
         CData/*5:0*/ __Vchglast__TOP__rvfpgasim__swervolf__axi_intercon__DOT__axi_xbar__DOT__gen_mst_port_mux__BRA__1__KET____DOT__i_axi_mux__gen_mux__DOT__i_aw_arbiter__DOT__gen_arbiter__DOT__index_nodes;
         CData/*2:0*/ __Vchglast__TOP__rvfpgasim__swervolf__axi_intercon__DOT__axi_xbar__DOT__gen_mst_port_mux__BRA__1__KET____DOT__i_axi_mux__gen_mux__DOT__i_aw_arbiter__DOT__gen_arbiter__DOT__gnt_nodes;
         CData/*2:0*/ __Vchglast__TOP__rvfpgasim__swervolf__axi_intercon__DOT__axi_xbar__DOT__gen_mst_port_mux__BRA__1__KET____DOT__i_axi_mux__gen_mux__DOT__i_aw_arbiter__DOT__gen_arbiter__DOT__req_nodes;
@@ -197,6 +209,9 @@ VL_MODULE(Vrvfpgasim) {
         CData/*3:0*/ __Vchglast__TOP__rvfpgasim__swervolf__axi_intercon__DOT__axi_xbar__DOT__gen_mst_port_mux__BRA__1__KET____DOT__i_axi_mux__gen_mux__DOT__i_ar_arbiter__DOT__gen_arbiter__DOT__gen_int_rr__DOT__gen_fair_arb__DOT__i_lzc_lower__DOT__gen_lzc__DOT__sel_nodes;
         CData/*7:0*/ __Vchglast__TOP__rvfpgasim__swervolf__axi_intercon__DOT__axi_xbar__DOT__gen_mst_port_mux__BRA__1__KET____DOT__i_axi_mux__gen_mux__DOT__i_ar_arbiter__DOT__gen_arbiter__DOT__gen_int_rr__DOT__gen_fair_arb__DOT__i_lzc_lower__DOT__gen_lzc__DOT__index_nodes;
         SData/*8:0*/ __Vchglast__TOP__rvfpgasim__swervolf__timer_ptc__DOT__rptc_ctrl;
+        SData/*8:0*/ __Vchglast__TOP__rvfpgasim__swervolf__timer_ptc1__DOT__rptc_ctrl;
+        SData/*8:0*/ __Vchglast__TOP__rvfpgasim__swervolf__timer_ptc2__DOT__rptc_ctrl;
+        SData/*8:0*/ __Vchglast__TOP__rvfpgasim__swervolf__timer_ptc3__DOT__rptc_ctrl;
         WData/*95:0*/ __Vm_traceActivity[3];
         WData/*650:0*/ __Vchglast__TOP__rvfpgasim__swervolf__axi_intercon__DOT__axi_xbar__DOT__gen_slv_port_demux__BRA__0__KET____DOT__i_axi_demux__mst_reqs_o[21];
         WData/*215:0*/ __Vchglast__TOP__rvfpgasim__swervolf__axi_intercon__DOT__axi_xbar__DOT__gen_slv_port_demux__BRA__0__KET____DOT__i_axi_demux__gen_demux__DOT__i_r_mux__DOT__gen_arbiter__DOT__data_nodes[7];
@@ -323,7 +338,18 @@ VL_MODULE(Vrvfpgasim) {
     static void traceChgThis__16(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
     static void traceChgThis__160(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
     static void traceChgThis__161(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
+    static void traceChgThis__162(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
+    static void traceChgThis__163(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
+    static void traceChgThis__164(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
+    static void traceChgThis__165(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
+    static void traceChgThis__166(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
+    static void traceChgThis__167(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
+    static void traceChgThis__168(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
+    static void traceChgThis__169(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
     static void traceChgThis__17(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
+    static void traceChgThis__170(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
+    static void traceChgThis__171(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
+    static void traceChgThis__172(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
     static void traceChgThis__18(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
     static void traceChgThis__19(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
     static void traceChgThis__2(Vrvfpgasim__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);

@@ -27,49 +27,33 @@ Vrvfpgasim_wb_mem_wrapper__M1000_I0::~Vrvfpgasim_wb_mem_wrapper__M1000_I0() {
 VL_INLINE_OPT void Vrvfpgasim_wb_mem_wrapper__M1000_I0::_settle__TOP__rvfpgasim__swervolf__bootrom__1(Vrvfpgasim__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+          Vrvfpgasim_wb_mem_wrapper__M1000_I0::_settle__TOP__rvfpgasim__swervolf__bootrom__1\n"); );
     Vrvfpgasim* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Variables
-    WData/*223:0*/ __Vtemp1[7];
-    WData/*223:0*/ __Vtemp3[7];
     // Body
-    __Vtemp1[0U] = ((IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_adr) 
-                    << 2U);
-    __Vtemp1[1U] = ((IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_adr) 
-                    << 2U);
-    __Vtemp1[2U] = ((IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_adr) 
-                    << 2U);
-    __Vtemp1[3U] = ((IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_adr) 
-                    << 2U);
-    __Vtemp1[4U] = ((IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_adr) 
-                    << 2U);
-    __Vtemp1[5U] = ((IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_adr) 
-                    << 2U);
-    __Vtemp1[6U] = ((IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_adr) 
-                    << 2U);
     vlSymsp->TOP__rvfpgasim__swervolf__bootrom.__PVT__mem_we 
-        = (0xf0U & (IData)(vlSymsp->TOP__rvfpgasim__swervolf__bootrom.__PVT__mem_we));
-    __Vtemp3[0U] = ((IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_adr) 
-                    << 2U);
-    __Vtemp3[1U] = ((IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_adr) 
-                    << 2U);
-    __Vtemp3[2U] = ((IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_adr) 
-                    << 2U);
-    __Vtemp3[3U] = ((IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_adr) 
-                    << 2U);
-    __Vtemp3[4U] = ((IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_adr) 
-                    << 2U);
-    __Vtemp3[5U] = ((IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_adr) 
-                    << 2U);
-    __Vtemp3[6U] = ((IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_adr) 
-                    << 2U);
+        = ((0xf0U & (IData)(vlSymsp->TOP__rvfpgasim__swervolf__bootrom.__PVT__mem_we)) 
+           | ((((((IData)(vlSymsp->TOP__rvfpgasim__swervolf.wb_intercon0__DOT____Vcellout__wb_mux_io__wbs_cyc_o) 
+                  >> 0xaU) & (IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_m2s_io_stb)) 
+                & (IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_m2s_io_we)) 
+               & (~ (IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_adr)))
+               ? (IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_m2s_io_sel)
+               : 0U));
     vlSymsp->TOP__rvfpgasim__swervolf__bootrom.__PVT__mem_we 
-        = (0xfU & (IData)(vlSymsp->TOP__rvfpgasim__swervolf__bootrom.__PVT__mem_we));
+        = ((0xfU & (IData)(vlSymsp->TOP__rvfpgasim__swervolf__bootrom.__PVT__mem_we)) 
+           | (((((((IData)(vlSymsp->TOP__rvfpgasim__swervolf.wb_intercon0__DOT____Vcellout__wb_mux_io__wbs_cyc_o) 
+                   >> 0xaU) & (IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_m2s_io_stb)) 
+                 & (IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_m2s_io_we)) 
+                & (IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_adr))
+                ? (IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_m2s_io_sel)
+                : 0U) << 4U));
 }
 
 VL_INLINE_OPT void Vrvfpgasim_wb_mem_wrapper__M1000_I0::_sequent__TOP__rvfpgasim__swervolf__bootrom__2(Vrvfpgasim__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+          Vrvfpgasim_wb_mem_wrapper__M1000_I0::_sequent__TOP__rvfpgasim__swervolf__bootrom__2\n"); );
     Vrvfpgasim* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    vlSymsp->TOP__rvfpgasim__swervolf__bootrom.__PVT__o_wb_ack = 0U;
+    vlSymsp->TOP__rvfpgasim__swervolf__bootrom.__PVT__o_wb_ack 
+        = ((((IData)(vlSymsp->TOP__rvfpgasim__swervolf.wb_intercon0__DOT____Vcellout__wb_mux_io__wbs_cyc_o) 
+             >> 0xaU) & (IData)(vlSymsp->TOP__rvfpgasim__swervolf.__PVT__wb_m2s_io_stb)) 
+           & (~ (IData)(vlSymsp->TOP__rvfpgasim__swervolf__bootrom.__PVT__o_wb_ack)));
     if ((1U & (~ (IData)(vlSymsp->TOP__rvfpgasim.__Vcellinp__swervolf__rstn)))) {
         vlSymsp->TOP__rvfpgasim__swervolf__bootrom.__PVT__o_wb_ack = 0U;
     }
