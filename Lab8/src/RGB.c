@@ -16,6 +16,25 @@
 #define RPTC_CTRL  0x8000120C                                   // Control Register
 
 
+// New Timer 1
+#define RPTC1_CNTR  0x80002100                                   // Timer counter register
+#define RPTC1_HCR   0x80002104                                   // High reference capture/compare
+#define RPTC1_LCR   0x80002108                                   // Low reference capture/compare
+#define RPTC1_CTRL  0x8000210C                                   // Control Register
+
+// New Timer 2
+#define RPTC2_CNTR  0x80002200                                   // Timer counter register
+#define RPTC2_HCR   0x80002204                                   // High reference capture/compare
+#define RPTC2_LCR   0x80002208                                   // Low reference capture/compare
+#define RPTC2_CTRL  0x8000220C                                   // Control Register
+
+// New Timer 3
+#define RPTC3_CNTR  0x80002300                                   // Timer counter register
+#define RPTC3_HCR   0x80002304                                   // High reference capture/compare
+#define RPTC3_LCR   0x80002308                                   // Low reference capture/compare
+#define RPTC3_CTRL  0x8000230C                                   // Control Register
+
+
 void displayTime(int count);
 int decode(int val);
 
@@ -35,8 +54,25 @@ int main(void) {
     WRITE_REG(SEG_BASE, state);                                 // Set all of the segment display digits to 0
     WRITE_REG(SEG_END, state);
     
+    
     WRITE_REG(RPTC_LCR, 50000);                                 // Set count limit of 100k. 1/1Mhz * 100k = 1 ms. counter increments ever 2 cycles
-    WRITE_REG(RPTC_CTRL, 0b00010001);                           // Enable timer and use Single mode
+    WRITE_REG(RPTC_CTRL, 0b0010001);                           // Enable timer and use Single mode
+
+    // R
+    WRITE_REG(RPTC1_HCR, 5000);
+    WRITE_REG(RPTC1_LCR, 10000);                               
+    WRITE_REG(RPTC1_CTRL, 0b00001001);                           // Enable timer, PWM, and use Single mode
+
+    // G
+    WRITE_REG(RPTC2_HCR, 5000);
+    WRITE_REG(RPTC2_LCR, 10000);                               
+    WRITE_REG(RPTC2_CTRL, 0b00001001);                           // Enable timer, PWM, and use Single mode
+
+    // B
+    WRITE_REG(RPTC3_LCR, 5000);
+    WRITE_REG(RPTC3_HCR, 10000);                               
+    WRITE_REG(RPTC3_CTRL, 0b00001001);                           // Enable timer, PWM, and use Single mode
+
 
 
     while (1)  {
@@ -45,11 +81,11 @@ int main(void) {
         WRITE_REG(GPIO_LEDs, state);
         
 
-        while (READ_REG(RPTC_CNTR) != 50000);
+        while (READ_REG(RPTC1_CNTR) != 50000);
         
-        state = READ_REG(RPTC_CTRL);                            // Read control register
+        state = READ_REG(RPTC1_CTRL);                            // Read control register
         state |= 0x40;
-        WRITE_REG(RPTC_CTRL, state);                            // Reset Counter but keep other values of control register
+        WRITE_REG(RPTC1_CTRL, state);                            // Reset Counter but keep other values of control register
 
         time++;
 
