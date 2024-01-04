@@ -86,7 +86,11 @@ module swervolf_core
     input wire         i_accel_miso,
 
     // Added for second GPIO module
-    inout wire [31:0] io_data2);
+    inout wire [31:0] io_data2,
+    
+    // Added Lab 8 - Accept connection to RGB LED from rvfpganexys
+    inout wire [2:0] RGB_o;
+    );
 
    localparam BOOTROM_SIZE = 32'h1000;
 
@@ -441,6 +445,74 @@ module swervolf_core
         .pwm_pad_o (),
         .oen_padoen_o ()
    );
+
+  // Added Lab 8 - new timer modules to create PWM signals for RGB LED
+  //  do not create new PTC_IRQ, instead use same interrupt for all timers and 
+  //  check flags in irq for specific module
+    ptc_top timer_ptc1(
+        .wb_clk_i     (clk), 
+        .wb_rst_i     (wb_rst), 
+        .wb_cyc_i     (wb_m2s_ptc1_cyc), 
+        .wb_adr_i     ({2'b0,wb_m2s_ptc1_adr[5:2],2'b0}), 
+        .wb_dat_i     (wb_m2s_ptc1_dat), 
+        .wb_sel_i     (4'b1111),
+        .wb_we_i      (wb_m2s_ptc1_we), 
+        .wb_stb_i     (wb_m2s_ptc1_stb), 
+        .wb_dat_o     (wb_s2m_ptc1_dat),
+        .wb_ack_o     (wb_s2m_ptc1_ack), 
+        .wb_err_o     (wb_s2m_ptc1_err),
+        .wb_inta_o    (ptc_irq),
+        // External PTC Interface
+        .gate_clk_pad_i (),
+        .capt_pad_i (),
+        .pwm_pad_o (RGB_o[0]),
+        .oen_padoen_o ()
+    );
+
+    ptc_top timer_ptc2(
+        .wb_clk_i     (clk), 
+        .wb_rst_i     (wb_rst), 
+        .wb_cyc_i     (wb_m2s_ptc2_cyc), 
+        .wb_adr_i     ({2'b0,wb_m2s_ptc2_adr[5:2],2'b0}), 
+        .wb_dat_i     (wb_m2s_ptc2_dat), 
+        .wb_sel_i     (4'b1111),
+        .wb_we_i      (wb_m2s_ptc2_we), 
+        .wb_stb_i     (wb_m2s_ptc2_stb), 
+        .wb_dat_o     (wb_s2m_ptc2_dat),
+        .wb_ack_o     (wb_s2m_ptc2_ack), 
+        .wb_err_o     (wb_s2m_ptc2_err),
+        .wb_inta_o    (ptc_irq),
+        // External PTC Interface
+        .gate_clk_pad_i (),
+        .capt_pad_i (),
+        .pwm_pad_o (RGB_o[1]),
+        .oen_padoen_o ()
+    );
+
+
+    ptc_top timer_ptc3(
+        .wb_clk_i     (clk), 
+        .wb_rst_i     (wb_rst), 
+        .wb_cyc_i     (wb_m2s_ptc3_cyc), 
+        .wb_adr_i     ({2'b0,wb_m2s_ptc3_adr[5:2],2'b0}), 
+        .wb_dat_i     (wb_m2s_ptc3_dat), 
+        .wb_sel_i     (4'b1111),
+        .wb_we_i      (wb_m2s_ptc3_we), 
+        .wb_stb_i     (wb_m2s_ptc3_stb), 
+        .wb_dat_o     (wb_s2m_ptc3_dat),
+        .wb_ack_o     (wb_s2m_ptc3_ack), 
+        .wb_err_o     (wb_s2m_ptc3_err),
+        .wb_inta_o    (ptc_irq),
+        // External PTC Interface
+        .gate_clk_pad_i (),
+        .capt_pad_i (),
+        .pwm_pad_o (RGB_o[2]),
+        .oen_padoen_o ()
+    );
+
+
+
+
 
 
    // SPI for the Accelerometer

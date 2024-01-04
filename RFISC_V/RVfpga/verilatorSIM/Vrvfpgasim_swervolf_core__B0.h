@@ -307,9 +307,17 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__syscon__DOT__irq_ptc_enable;
         CData/*0:0*/ __PVT__syscon__DOT__nmi_int;
         CData/*0:0*/ __PVT__syscon__DOT__nmi_int_r;
-        CData/*7:0*/ __PVT__syscon__DOT__Enables_Reg;
+        CData/*6:0*/ __PVT__syscon__DOT__wb_SegDigit0;
+        CData/*6:0*/ __PVT__syscon__DOT__wb_SegDigit1;
+        CData/*6:0*/ __PVT__syscon__DOT__wb_SegDigit2;
+        CData/*6:0*/ __PVT__syscon__DOT__wb_SegDigit3;
+        CData/*6:0*/ __PVT__syscon__DOT__wb_SegDigit4;
+        CData/*6:0*/ __PVT__syscon__DOT__wb_SegDigit5;
+        CData/*6:0*/ __PVT__syscon__DOT__wb_SegDigit6;
+        CData/*6:0*/ __PVT__syscon__DOT__wb_SegDigit7;
+        CData/*3:0*/ __PVT__syscon__DOT__SegDispl_Ctr__DOT__DecNumber;
         QData/*63:0*/ __PVT__syscon__DOT__SegDispl_Ctr__DOT__enable;
-        IData/*31:0*/ __PVT__syscon__DOT__SegDispl_Ctr__DOT__digits_concat;
+        QData/*55:0*/ __PVT__syscon__DOT__SegDispl_Ctr__DOT__digits_concat;
         CData/*5:0*/ __PVT__syscon__DOT__SegDispl_Ctr__DOT__counter20__DOT__i_counter__DOT__counter_q;
         CData/*5:0*/ __PVT__syscon__DOT__SegDispl_Ctr__DOT__counter20__DOT__i_counter__DOT__counter_d;
         CData/*7:0*/ __PVT__spi__DOT__spcr;
@@ -355,6 +363,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__uart16550_0__DOT__regs__DOT__srx_pad;
         CData/*3:0*/ __PVT__uart16550_0__DOT__regs__DOT__ier;
         CData/*3:0*/ __PVT__uart16550_0__DOT__regs__DOT__iir;
+    };
+    struct {
         CData/*1:0*/ __PVT__uart16550_0__DOT__regs__DOT__fcr;
         CData/*4:0*/ __PVT__uart16550_0__DOT__regs__DOT__mcr;
         CData/*7:0*/ __PVT__uart16550_0__DOT__regs__DOT__lcr;
@@ -363,8 +373,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__uart16550_0__DOT__regs__DOT__start_dlc;
         CData/*0:0*/ __PVT__uart16550_0__DOT__regs__DOT__lsr_mask_d;
         CData/*0:0*/ __PVT__uart16550_0__DOT__regs__DOT__msi_reset;
-    };
-    struct {
         CData/*3:0*/ __PVT__uart16550_0__DOT__regs__DOT__trigger_level;
         CData/*0:0*/ __PVT__uart16550_0__DOT__regs__DOT__rx_reset;
         CData/*0:0*/ __PVT__uart16550_0__DOT__regs__DOT__tx_reset;
@@ -421,6 +429,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__uart16550_0__DOT__regs__DOT__rls_int_pnd;
         CData/*0:0*/ __PVT__uart16550_0__DOT__regs__DOT__rda_int_pnd;
         CData/*0:0*/ __PVT__uart16550_0__DOT__regs__DOT__thre_int_pnd;
+    };
+    struct {
         CData/*0:0*/ __PVT__uart16550_0__DOT__regs__DOT__ms_int_pnd;
         CData/*0:0*/ __PVT__uart16550_0__DOT__regs__DOT__ti_int_pnd;
         CData/*4:0*/ __PVT__uart16550_0__DOT__regs__DOT__transmitter__DOT__counter;
@@ -429,8 +439,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__uart16550_0__DOT__regs__DOT__transmitter__DOT__stx_o_tmp;
         CData/*0:0*/ __PVT__uart16550_0__DOT__regs__DOT__transmitter__DOT__parity_xor;
         CData/*0:0*/ __PVT__uart16550_0__DOT__regs__DOT__transmitter__DOT__tf_pop;
-    };
-    struct {
         CData/*0:0*/ __PVT__uart16550_0__DOT__regs__DOT__transmitter__DOT__bit_out;
         CData/*7:0*/ __PVT__uart16550_0__DOT__regs__DOT__transmitter__DOT__tf_data_out;
         CData/*0:0*/ __PVT__uart16550_0__DOT__regs__DOT__transmitter__DOT__tf_overrun;
@@ -487,6 +495,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*1:0*/ __PVT__spi2__DOT__state;
         CData/*2:0*/ __PVT__spi2__DOT__bcnt;
         CData/*0:0*/ __PVT__spi2__DOT__wb_acc;
+    };
+    struct {
         CData/*0:0*/ __PVT__spi2__DOT__wb_wr;
         CData/*3:0*/ __PVT__spi2__DOT__espr;
         CData/*0:0*/ __PVT__spi2__DOT__wr_spsr;
@@ -495,8 +505,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*1:0*/ __PVT__spi2__DOT__tcnt;
         CData/*1:0*/ __PVT__spi2__DOT__rfifo__DOT__wp;
         CData/*1:0*/ __PVT__spi2__DOT__rfifo__DOT__rp;
-    };
-    struct {
         CData/*1:0*/ __PVT__spi2__DOT__rfifo__DOT__wp_p1;
         CData/*1:0*/ __PVT__spi2__DOT__rfifo__DOT__rp_p1;
         CData/*0:0*/ __PVT__spi2__DOT__rfifo__DOT__gb;
@@ -553,6 +561,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu_i0_perr;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu_i1_perr;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu_i0_sbecc;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu_i1_sbecc;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__picm_wren;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__picm_rden;
@@ -561,8 +571,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg_cmd_type;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg_halt_req;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg_resume_req;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__core_dbg_cmd_done;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_dbg_cmd_done;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg_dma_bubble;
@@ -619,6 +627,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__sbdata0_reg_wren1;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__sbdata1_reg_wren0;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__sbaddress0_reg_wren0;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__sbaddress0_reg_wren1;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__sb_abmem_cmd_done_in;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__sb_abmem_data_done_in;
@@ -627,8 +637,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__sb_abmem_cmd_done;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__sb_abmem_data_done;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__abmem_addr_core_local;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__sb_abmem_cmd_pending;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__sb_abmem_cmd_arvalid;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__sb_abmem_cmd_awvalid;
@@ -685,6 +693,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__ifc__DOT__miss_sel_f1;
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__ifc__DOT__next_state;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__ifc__DOT__dma_stall;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__ifc__DOT__faddmiss_ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__ifc__DOT__faddrf1_ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__exu_mp_valid_write;
@@ -693,8 +703,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__rsenable;
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__bp_total_branch_offset_f2;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__rs_push;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__rs_pop;
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__btb_rd_addr_f1;
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__btb_wr_addr;
@@ -751,6 +759,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__bht_rd_addr_hashed_f1;
         WData/*255:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__bht_bank_wr_data[8];
         WData/*255:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__bht_bank_rd_data_out[8];
+    };
+    struct {
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__bht_bank0_rd_data_f2_in;
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__bht_bank1_rd_data_f2_in;
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__bht_bank2_rd_data_f2_in;
@@ -759,8 +769,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__bht_bank5_rd_data_f2_in;
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__bht_bank6_rd_data_f2_in;
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__bht_bank7_rd_data_f2_in;
-    };
-    struct {
         CData/*7:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__bht_bank_clken;
         CData/*7:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__bht_bank_clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__btb_lru_ff__DOT__l1clk;
@@ -817,6 +825,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__shift_f2_f1;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__fetch_to_f0;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__fetch_to_f1;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__fetch_to_f2;
         CData/*7:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__f2val_in;
         CData/*7:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__f2val;
@@ -825,8 +835,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*7:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__sf1val;
         CData/*7:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__sf0val;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__i0_shift;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__i1_shift;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__shift_2B;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__shift_4B;
@@ -883,6 +891,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__wrptr_in;
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__rdptr;
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__rdptr_in;
+    };
+    struct {
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__qwen;
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__first_offset;
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__second_offset;
@@ -891,8 +901,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__q1off_in;
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__q1off;
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__q0off_in;
-    };
-    struct {
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__q0off;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__f0_shift_6B;
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__q0ptr;
@@ -949,6 +957,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress1__DOT__uswimm6_2;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress1__DOT__uswspimm7_2;
         CData/*5:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress1__DOT__simm5d;
+    };
+    struct {
         CData/*5:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress1__DOT__simm9d;
         CData/*7:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress1__DOT__sbr8d;
         CData/*4:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress1__DOT__uswimm6d;
@@ -957,8 +967,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress2__DOT__rdrs1;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress2__DOT__rdeq1;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress2__DOT__sbroffset8_1;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress2__DOT__sjaloffset11_1;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress2__DOT__sluimm17_12;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress2__DOT__uswimm6_2;
@@ -1015,6 +1023,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__way_status_wr_en_ff;
         WData/*191:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__way_status_out[6];
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__ifu_axi_rid_ff;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__fetch_req_icache_f2;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__fetch_req_iccm_f2;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__fetch_uncacheable_ff;
@@ -1023,8 +1033,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__ic_rd_parity_final_err_ff;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__ic_act_miss_f2_delayed;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__axi_ifu_wr_data_error;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__debug_data_clk;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__ic_wr_parity;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__perr_state_en;
@@ -1081,6 +1089,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__tag_valid_w1_clken;
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__tag_valid_w2_clken;
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__tag_valid_w3_clken;
+    };
+    struct {
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__tag_valid_w0_clk;
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__tag_valid_w1_clk;
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__tag_valid_w2_clk;
@@ -1089,8 +1099,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__ifu_fetch_addr_f2_ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__imb_f2_ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__byp_data_first_half__DOT__l1clk;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__byp_data_second_half__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__ifu_debug_sel_ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__ifu_debug_data_ff__DOT__l1clk;
@@ -1147,6 +1155,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__instbuff__DOT__pc1ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__instbuff__DOT__pc0ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__instbuff__DOT__bp1ff__DOT__l1clk;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__instbuff__DOT__bp0ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__instbuff__DOT__ib1ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__instbuff__DOT__ib0ff__DOT__l1clk;
@@ -1155,8 +1165,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__instbuff__DOT__genblk5__DOT__pc3ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__instbuff__DOT__genblk5__DOT__pc2ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__instbuff__DOT__genblk7__DOT__bp3ff__DOT__l1clk;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__instbuff__DOT__genblk7__DOT__bp2ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__instbuff__DOT__genblk9__DOT__ib3ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__instbuff__DOT__genblk9__DOT__ib2ff__DOT__l1clk;
@@ -1213,6 +1221,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1_rs2_depend_i1_e4;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1_rs2_depend_i1_wb;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1_rs1_depend_i0_d;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1_rs2_depend_i0_d;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_secondary_d;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1_secondary_d;
@@ -1221,8 +1231,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_rs1_depth_d;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_rs2_depth_d;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1_rs1_depth_d;
-    };
-    struct {
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1_rs2_depth_d;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_rs1_match_e1_e2;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_rs1_match_e1_e3;
@@ -1279,6 +1287,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__leak1_i0_stall_in;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__leak1_i0_stall;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__leak1_i1_stall_in;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__leak1_i1_stall;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_csr_write_only_d;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__any_csr_d;
@@ -1287,8 +1297,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_e2_ctl_en;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_e3_ctl_en;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_e4_ctl_en;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_wb_ctl_en;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_e1_data_en;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_e2_data_en;
@@ -1345,6 +1353,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*4:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__div_waddr_wb;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__csr_data_e1ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__write_csr_ff__DOT__l1clk;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__illegal_any_ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__freeze_i0_e4ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__freeze_i1_e4ff__DOT__l1clk;
@@ -1353,8 +1363,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__trap_e1ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__trap_e2ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__trap_e3ff__DOT__l1clk;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__trap_e4ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__e4_trigger_ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__e1ff__DOT__l1clk;
@@ -1411,6 +1419,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__wr_mcyclel_wb;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__wr_mcycleh_wb;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__wr_minstretl_wb;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__wr_minstreth_wb;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__wr_mepc_wb;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__wr_mcause_wb;
@@ -1419,8 +1429,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__wr_dpc_wb;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__wr_meicpct_wb;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__wr_micect_wb;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__wr_miccmect_wb;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__wr_mdccmect_wb;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mgpmc_b;
@@ -1477,6 +1485,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__synchronous_flush_e4;
         CData/*4:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__exc_cause_e4;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mcyclel_cout_f;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__minstret_enable;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mtval_capture_pc_wb;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mtval_capture_inst_wb;
@@ -1485,8 +1495,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__lsu_i0_rfnpc_dc4;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__lsu_i1_rfnpc_dc4;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__lsu_i0_rfpc_dc4;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__dec_tlu_br0_error_e4;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__dec_tlu_br0_start_error_e4;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__dec_tlu_br1_error_e4;
@@ -1543,6 +1551,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__debug_halt_req;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__wr_mpmc_wb;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__set_mie_pmu_fw_halt;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mpmc_b_ns;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__e4_valid;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__e4e5_valid;
@@ -1551,8 +1561,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__sel_exu_npc_e4;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__sel_flush_npc_e4;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__sel_i0_npc_e4;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__pc0_valid_e4;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__pc1_valid_e4;
         CData/*4:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__csr_sat;
@@ -1609,6 +1617,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*5:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__syncro_ff__DOT__din_ff1;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mtvec_ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mcyclel_ff__DOT__l1clk;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mcycleh_ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__minstretl_ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__minstreth_ff__DOT__l1clk;
@@ -1617,8 +1627,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__pwbc_ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mcgc_ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mfdc_ff__DOT__l1clk;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mrac_ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mdseac_ff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__micect_ff__DOT__l1clk;
@@ -1675,6 +1683,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__arf__DOT__gpr_banks__BRA__0__KET____DOT__gpr__BRA__30__KET____DOT__gprff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__arf__DOT__gpr_banks__BRA__0__KET____DOT__gpr__BRA__31__KET____DOT__gprff__DOT__l1clk;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__dec_trigger__DOT__dec_i0_trigger_data_match;
+    };
+    struct {
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__dec_trigger__DOT__dec_i1_trigger_data_match;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__0__KET____DOT__trigger_i0_match__DOT__masken_or_fullmask;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__0__KET____DOT__trigger_i1_match__DOT__masken_or_fullmask;
@@ -1683,8 +1693,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__2__KET____DOT__trigger_i0_match__DOT__masken_or_fullmask;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__2__KET____DOT__trigger_i1_match__DOT__masken_or_fullmask;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__3__KET____DOT__trigger_i0_match__DOT__masken_or_fullmask;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__3__KET____DOT__trigger_i1_match__DOT__masken_or_fullmask;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__exu_i0_flush_upper_e1;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__exu_i1_flush_upper_e1;
@@ -1741,6 +1749,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__div_e1__DOT__shortq_enable;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__div_e1__DOT__shortq_raw;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__div_e1__DOT__mff__DOT__l1clk;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__div_e1__DOT__qff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__div_e1__DOT__aff__DOT__l1clk;
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_alu_e1__DOT__logic_sel;
@@ -1749,8 +1759,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_alu_e1__DOT__cond_mispredict;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_alu_e1__DOT__target_mispredict;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_alu_e1__DOT__eq;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_alu_e1__DOT__lt;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_alu_e1__DOT__any_jal;
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_alu_e1__DOT__newhist;
@@ -1807,6 +1815,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_alu_e4__DOT__pcff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_alu_e4__DOT__brimmff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_alu_e4__DOT__predictpacketff__DOT__l1clk;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_alu_e4__DOT__ibradder__DOT__cout;
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i1_alu_e4__DOT__logic_sel;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i1_alu_e4__DOT__actual_taken;
@@ -1815,8 +1825,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i1_alu_e4__DOT__target_mispredict;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i1_alu_e4__DOT__eq;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i1_alu_e4__DOT__lt;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i1_alu_e4__DOT__any_jal;
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i1_alu_e4__DOT__newhist;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i1_alu_e4__DOT__aff__DOT__l1clk;
@@ -1873,6 +1881,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_stbuf_commit_any;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_busreq_dc5;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_bus_buffer_empty_any;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_busreq_dc2;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__ld_bus_error_dc3;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__flush_dc2_up;
@@ -1881,8 +1891,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__is_sideeffects_dc2;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__is_sideeffects_dc3;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_freeze_c1_dc1_clken;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_freeze_c1_dc2_clken;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_freeze_c1_dc3_clken;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_freeze_c2_dc1_clken;
@@ -1939,6 +1947,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__ldst_dual_dc2;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__ldst_dual_dc3;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__ldst_dual_dc4;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__ldst_dual_dc5;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__ldst_stbuf_reqvld_dc4;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__ldst_stbuf_reqvld_dc5;
@@ -1947,8 +1957,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__stbuf_numvld_any;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__stbuf_specvld_any;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__cmpen_hi_dc2;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__jit_in_same_region;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__stbuf_ldmatch_hi_hi;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__stbuf_ldmatch_hi_lo;
@@ -2005,6 +2013,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__GenStBuf__BRA__6__KET____DOT__stbuf_dataff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__GenStBuf__BRA__7__KET____DOT__stbuf_data_vldff__DOT__din_new;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__GenStBuf__BRA__7__KET____DOT__stbuf_drain_vldff__DOT__din_new;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__GenStBuf__BRA__7__KET____DOT__stbuf_flush_vldff__DOT__din_new;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__GenStBuf__BRA__7__KET____DOT__stbuf_addrff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf__DOT__GenStBuf__BRA__7__KET____DOT__stbuf_dataff__DOT__l1clk;
@@ -2013,8 +2023,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__ecc__DOT__is_ldst_lo_dc3;
         CData/*7:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__ecc__DOT__store_byteen_ext_dc3;
         CData/*6:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__ecc__DOT__Gen_dccm_enable__DOT__lsu_ecc_decode_hi__DOT__ecc_check;
-    };
-    struct {
         CData/*6:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__ecc__DOT__Gen_dccm_enable__DOT__lsu_ecc_decode_lo__DOT__ecc_check;
         CData/*5:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__ecc__DOT__Gen_dccm_enable__DOT__lsu_ecc_encode__DOT__ecc_out_temp;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__trigger__DOT__lsu_trigger_data_match;
@@ -2071,6 +2079,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__ld_addr_dc4hit_hi_lo;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__ld_addr_dc4hit_lo_hi;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__ld_addr_dc4hit_hi_hi;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__ld_addr_dc5hit_lo_lo;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__ld_addr_dc5hit_hi_lo;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__ld_addr_dc5hit_lo_hi;
@@ -2079,8 +2089,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__ld_byte_dc3hit_hi_lo;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__ld_byte_dc3hit_lo_hi;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__ld_byte_dc3hit_hi_hi;
-    };
-    struct {
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__ld_byte_dc4hit_lo_lo;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__ld_byte_dc4hit_hi_lo;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__ld_byte_dc4hit_lo_hi;
@@ -2137,6 +2145,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__CmdPtr1;
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__WrPtr0_dc3;
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__WrPtr0_dc4;
+    };
+    struct {
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__WrPtr0_dc5;
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__WrPtr1_dc3;
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__WrPtr1_dc4;
@@ -2145,8 +2155,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__found_wrptr1;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__buf_numvld_any;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__buf_numvld_wrcmd_any;
-    };
-    struct {
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__buf_numvld_pend_any;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__buf_numvld_cmd_any;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__bus_sideeffect_pend;
@@ -2203,6 +2211,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ibuf_valid;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ibuf_dual;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ibuf_samedw;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ibuf_nomerge;
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ibuf_tag;
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ibuf_dualtag;
@@ -2211,8 +2221,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ibuf_unsign;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ibuf_write;
         CData/*1:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ibuf_sz;
-    };
-    struct {
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ibuf_byteen;
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ibuf_timer;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ibuf_byp;
@@ -2269,6 +2277,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ld_freezeff__DOT__din_new;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__genblk8__BRA__0__KET____DOT__buf_addrff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__genblk8__BRA__0__KET____DOT__buf_dataff__DOT__l1clk;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__genblk8__BRA__0__KET____DOT__buf_errorff__DOT__din_new;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__genblk8__BRA__1__KET____DOT__buf_addrff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__genblk8__BRA__1__KET____DOT__buf_dataff__DOT__l1clk;
@@ -2277,8 +2287,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__genblk8__BRA__2__KET____DOT__buf_dataff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__genblk8__BRA__2__KET____DOT__buf_errorff__DOT__din_new;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__genblk8__BRA__3__KET____DOT__buf_addrff__DOT__l1clk;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__genblk8__BRA__3__KET____DOT__buf_dataff__DOT__l1clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__genblk8__BRA__3__KET____DOT__buf_errorff__DOT__din_new;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__genblk8__BRA__4__KET____DOT__buf_addrff__DOT__l1clk;
@@ -2335,6 +2343,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT__LEVEL__BRA__0__KET____DOT__COMPARE__BRA__1__KET____DOT__cmp_l1__DOT__a_is_lt_b;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT__LEVEL__BRA__0__KET____DOT__COMPARE__BRA__2__KET____DOT__cmp_l1__DOT__a_is_lt_b;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT__LEVEL__BRA__0__KET____DOT__COMPARE__BRA__3__KET____DOT__cmp_l1__DOT__a_is_lt_b;
+    };
+    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT__LEVEL__BRA__0__KET____DOT__COMPARE__BRA__4__KET____DOT__cmp_l1__DOT__a_is_lt_b;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT__LEVEL__BRA__1__KET____DOT__COMPARE__BRA__0__KET____DOT__cmp_l1__DOT__a_is_lt_b;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT__LEVEL__BRA__1__KET____DOT__COMPARE__BRA__1__KET____DOT__cmp_l1__DOT__a_is_lt_b;
@@ -2343,8 +2353,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT__LEVEL__BRA__2__KET____DOT__COMPARE__BRA__1__KET____DOT__cmp_l1__DOT__a_is_lt_b;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT__LEVEL__BRA__3__KET____DOT__COMPARE__BRA__0__KET____DOT__cmp_l1__DOT__a_is_lt_b;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__fifo_valid;
-    };
-    struct {
         CData/*7:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__fifo_error;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__fifo_dccm_valid;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__fifo_iccm_valid;
@@ -2401,6 +2409,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__rdbuf_cmd_sent;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__rdbuf_vld;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__rdbuf_tag;
+    };
+    struct {
         CData/*2:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__rdbuf_size;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__axi_mstr_valid;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__axi_mstr_valid_q;
@@ -2409,8 +2419,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__axi_mstr_priority;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__axi_mstr_sel;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__axi_slv_sent_q;
-    };
-    struct {
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__dma_bus_clk_en_q;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__fifo_full_spec_bus;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__dbg_dma_bubble_bus;
@@ -2467,6 +2475,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*3:0*/ __PVT__swerv_eh1__DOT__mem__DOT__icm__DOT__ic_tag_inst__DOT__ic_tag_clk;
         SData/*15:0*/ __PVT__swerv_eh1__DOT__mem__DOT__icm__DOT__ic_data_inst__DOT__ic_b_sb_wren;
         SData/*15:0*/ __PVT__swerv_eh1__DOT__mem__DOT__icm__DOT__ic_data_inst__DOT__ic_bank_way_clken;
+    };
+    struct {
         SData/*15:0*/ __PVT__swerv_eh1__DOT__mem__DOT__icm__DOT__ic_data_inst__DOT__ic_bank_way_clk;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__mem__DOT__icm__DOT__ic_data_inst__DOT__ic_b_rden;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__mem__DOT__icm__DOT__ic_data_inst__DOT__ic_debug_wr_way_en;
@@ -2475,8 +2485,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*3:0*/ __PVT__swerv_eh1__DOT__mem__DOT__icm__DOT__ic_data_inst__DOT__ic_bank_read_ff;
         CData/*3:0*/ __PVT__swerv_eh1__DOT__mem__DOT__icm__DOT__ic_data_inst__DOT__ic_rd_hit_q;
         CData/*7:0*/ __PVT__swerv_eh1__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT__wren_bank;
-    };
-    struct {
         CData/*7:0*/ __PVT__swerv_eh1__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT__rden_bank;
         CData/*0:0*/ __PVT__swerv_eh1__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT__rd_unaligned;
         CData/*7:0*/ __PVT__swerv_eh1__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT__wren_bank_q;
@@ -2533,6 +2541,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         SData/*9:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1_rs2bypass;
         SData/*11:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_br_offset;
         SData/*11:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1_br_offset;
+    };
+    struct {
         WData/*79:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__cam[3];
         WData/*79:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__cam_in[3];
         SData/*14:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0r;
@@ -2541,8 +2551,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         SData/*9:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mtdata1_t0;
         SData/*9:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mtdata1_t1_ns;
         SData/*9:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mtdata1_t1;
-    };
-    struct {
         SData/*9:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mtdata1_t2_ns;
         SData/*9:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mtdata1_t2;
         SData/*9:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mtdata1_t3_ns;
@@ -2583,7 +2591,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         WData/*1023:0*/ __PVT__syscon__DOT__signature_file[32];
         IData/*31:0*/ __PVT__syscon__DOT__f;
         IData/*31:0*/ __PVT__syscon__DOT__version;
-        IData/*31:0*/ __PVT__syscon__DOT__Digits_Reg;
         IData/*31:0*/ __PVT__uart16550_0__DOT__wb_dat32_o;
         IData/*31:0*/ __PVT__gpio_module__DOT__aux_i;
         IData/*31:0*/ __PVT__gpio_module__DOT__rgpio_in;
@@ -2600,6 +2607,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*31:0*/ __PVT__gpio_module__DOT__in_muxed;
         IData/*31:0*/ __PVT__gpio_module__DOT__wb_dat;
         IData/*31:0*/ __PVT__gpio_module__DOT__extc_in;
+    };
+    struct {
         IData/*31:0*/ __PVT__gpio_module__DOT__pext_clk;
         IData/*31:0*/ __PVT__gpio_module__DOT__pextc_sampled;
         IData/*31:0*/ __PVT__gpio_module__DOT__nextc_sampled;
@@ -2607,8 +2616,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*31:0*/ __PVT__gpio_module2__DOT__aux_i;
         IData/*31:0*/ __PVT__gpio_module2__DOT__rgpio_in;
         IData/*31:0*/ __PVT__gpio_module2__DOT__rgpio_out;
-    };
-    struct {
         IData/*31:0*/ __PVT__gpio_module2__DOT__rgpio_oe;
         IData/*31:0*/ __PVT__gpio_module2__DOT__rgpio_inte;
         IData/*31:0*/ __PVT__gpio_module2__DOT__rgpio_ptrig;
@@ -2666,6 +2673,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__dmcontrol_reg;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__command_reg;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__abstractcs_reg;
+    };
+    struct {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__haltsum0_reg;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__data0_reg;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__data1_reg;
@@ -2673,8 +2682,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__dbg_cmd_next_addr;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__dmi_reg_rdata_din;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__sb_axi_addr;
-    };
-    struct {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__sbcs_reg;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__sbaddress0_reg;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dbg__DOT__sbdata0_reg;
@@ -2732,6 +2739,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         WData/*127:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__q2[4];
         WData/*127:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__q1[4];
         WData/*127:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__q0[4];
+    };
+    struct {
         WData/*127:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__q0eff[4];
         WData/*127:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__q0final[4];
         WData/*127:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__q1eff[4];
@@ -2739,8 +2748,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress0__DOT__o;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress0__DOT__l1;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress0__DOT__l2;
-    };
-    struct {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress0__DOT__l3;
         IData/*19:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress0__DOT__sjald;
         IData/*19:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__compress0__DOT__sluimmd;
@@ -2798,6 +2805,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_inst_e1;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1_inst_e1;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_inst_e2;
+    };
+    struct {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1_inst_e2;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_inst_e3;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1_inst_e3;
@@ -2805,8 +2814,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1_inst_e4;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_inst_wb;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1_inst_wb;
-    };
-    struct {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_inst_wb1;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1_inst_wb1;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__div_inst;
@@ -2864,6 +2871,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*30:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__arf__DOT__gpr_bank_wr_en;
         WData/*127:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__dec_trigger__DOT__dec_i0_match_data[4];
         WData/*127:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__dec_trigger__DOT__dec_i1_match_data[4];
+    };
+    struct {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__0__KET____DOT__trigger_i0_match__DOT__matchvec;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__0__KET____DOT__trigger_i1_match__DOT__matchvec;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__1__KET____DOT__trigger_i0_match__DOT__matchvec;
@@ -2871,8 +2880,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__2__KET____DOT__trigger_i0_match__DOT__matchvec;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__2__KET____DOT__trigger_i1_match__DOT__matchvec;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__3__KET____DOT__trigger_i0_match__DOT__matchvec;
-    };
-    struct {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__3__KET____DOT__trigger_i1_match__DOT__matchvec;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_rs1_d;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_rs2_d;
@@ -2930,6 +2937,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*18:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_pkt_dc4;
         IData/*18:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_pkt_dc5;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf_data_any;
+    };
+    struct {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf_fwddata_hi_dc3;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__stbuf_fwddata_lo_dc3;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_read_data_dc3;
@@ -2937,8 +2946,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_lsc_ctl__DOT__full_end_addr_dc1;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_lsc_ctl__DOT__rs1_dc1;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_lsc_ctl__DOT__lsu_ld_datafn_dc3;
-    };
-    struct {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_lsc_ctl__DOT__lsu_ld_datafn_corr_dc3;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_lsc_ctl__DOT__rs1_dc1_raw;
         IData/*18:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_lsc_ctl__DOT__dma_pkt_d;
@@ -2996,6 +3003,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ibuf_data_out;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__obuf_addr;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT__picm_addr_ff;
+    };
+    struct {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__pic_ctrl_inst__DOT__picm_wr_data_ff;
         WData/*127:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__fifo_addr[4];
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__fifo_addr_in;
@@ -3003,8 +3012,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__dma_dbg_mem_wrdata;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__wrbuf_addr;
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__rdbuf_addr;
-    };
-    struct {
         IData/*31:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__axi_mstr_addr;
         WData/*83:0*/ __PVT__swerv_eh1__DOT__mem__DOT__icm__DOT__ic_tag_inst__DOT__ic_tag_data_raw[3];
         WData/*83:0*/ __PVT__swerv_eh1__DOT__mem__DOT__icm__DOT__ic_tag_inst__DOT__w_tout[3];
@@ -3062,6 +3069,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         QData/*63:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__ifu_axi_rdata_ff;
         WData/*255:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__ifu__DOT__mem_ctl__DOT__ic_tag_valid_out[8];
         QData/*36:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__instbuff__DOT__pc3;
+    };
+    struct {
         QData/*36:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__instbuff__DOT__pc2;
         QData/*36:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__instbuff__DOT__pc1;
         QData/*36:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__instbuff__DOT__pc0;
@@ -3069,8 +3078,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         QData/*36:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__instbuff__DOT__ifu_i0_pcdata;
         QData/*49:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_dp_raw;
         QData/*49:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0_dp;
-    };
-    struct {
         QData/*49:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1_dp_raw;
         QData/*49:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1_dp;
         WData/*66:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__dd[3];
@@ -3128,6 +3135,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         QData/*63:0*/ __PVT__swerv_eh1__DOT__swerv__DOT__dma_ctrl__DOT__wrbuf_data;
         WData/*135:0*/ __PVT__swerv_eh1__DOT__mem__DOT__icm__DOT__ic_data_inst__DOT__ic_sb_wr_data[5];
         WData/*311:0*/ __PVT__swerv_eh1__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT__dccm_bank_dout[10];
+    };
+    struct {
         QData/*38:0*/ __PVT__swerv_eh1__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT__wrdata;
         QData/*38:0*/ __PVT__swerv_eh1__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT__dccm_wr_data_q;
         QData/*38:0*/ __PVT__swerv_eh1__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT__dccm_rd_data_lo_q;
@@ -3135,8 +3144,6 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*7:0*/ __PVT__spi__DOT__rfifo__DOT__mem[4];
         CData/*7:0*/ __PVT__spi__DOT__wfifo__DOT__mem[4];
         CData/*7:0*/ __PVT__uart16550_0__DOT__regs__DOT__transmitter__DOT__fifo_tx__DOT__tfifo__DOT__ram[16];
-    };
-    struct {
         CData/*2:0*/ __PVT__uart16550_0__DOT__regs__DOT__receiver__DOT__fifo_rx__DOT__fifo[16];
         CData/*7:0*/ __PVT__uart16550_0__DOT__regs__DOT__receiver__DOT__fifo_rx__DOT__rfifo__DOT__ram[16];
         CData/*7:0*/ __PVT__spi2__DOT__rfifo__DOT__mem[4];
@@ -4863,9 +4870,8 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*2:0*/ __Vfunc_f_Enc8to3__14__Vfuncout;
         CData/*7:0*/ __Vfunc_f_Enc8to3__14__Dec_value;
         CData/*2:0*/ __Vfunc_f_Enc8to3__14__Enc_value;
-        CData/*3:0*/ __Vtableidx1;
+        CData/*7:0*/ __Vtableidx2;
         CData/*7:0*/ __Vtableidx3;
-        CData/*7:0*/ __Vtableidx4;
         CData/*0:0*/ __Vdly__axi2wb__DOT__arbiter;
         CData/*3:0*/ __Vdly__axi2wb__DOT__cs;
         CData/*1:0*/ __Vdly__spi__DOT__state;
@@ -4888,9 +4894,9 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         CData/*2:0*/ __Vdly__uart16550_0__DOT__regs__DOT__transmitter__DOT__bit_counter;
         CData/*0:0*/ __Vdly__uart16550_0__DOT__regs__DOT__transmitter__DOT__parity_xor;
         CData/*6:0*/ __Vdly__uart16550_0__DOT__regs__DOT__transmitter__DOT__shift_out;
+        CData/*0:0*/ __Vdly__uart16550_0__DOT__regs__DOT__transmitter__DOT__bit_out;
     };
     struct {
-        CData/*0:0*/ __Vdly__uart16550_0__DOT__regs__DOT__transmitter__DOT__bit_out;
         CData/*4:0*/ __Vdly__uart16550_0__DOT__regs__DOT__transmitter__DOT__counter;
         CData/*3:0*/ __Vdly__uart16550_0__DOT__regs__DOT__transmitter__DOT__fifo_tx__DOT__bottom;
         CData/*4:0*/ __Vdly__uart16550_0__DOT__regs__DOT__tf_count;
@@ -4954,9 +4960,9 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         SData/*13:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT____Vcellout__dcsr_ff__dout;
         SData/*9:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT____Vcellout__traceff__dout;
         SData/*8:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mcgc_ff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
+        SData/*13:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mfdc_ff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
     };
     struct {
-        SData/*13:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mfdc_ff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         SData/*13:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__dcsr_ff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         SData/*11:0*/ swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_alu_e1__DOT____Vcellout__brimmff__dout;
         SData/*11:0*/ swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_alu_e1__DOT__brimmff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
@@ -5020,9 +5026,9 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*31:0*/ io_data__out__out94;
         IData/*31:0*/ io_data__out__out95;
         IData/*31:0*/ io_data2__out__out96;
+        IData/*31:0*/ io_data2__out__out97;
     };
     struct {
-        IData/*31:0*/ io_data2__out__out97;
         IData/*31:0*/ io_data2__out__out98;
         IData/*31:0*/ io_data2__out__out99;
         IData/*31:0*/ io_data2__out__out100;
@@ -5086,9 +5092,9 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*25:0*/ swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT____Vcellout__BTB_FLOPS__BRA__1__KET____DOT__btb_bank0_way1__dout;
         IData/*25:0*/ swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT____Vcellout__BTB_FLOPS__BRA__1__KET____DOT__btb_bank1_way1__dout;
         IData/*25:0*/ swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT____Vcellout__BTB_FLOPS__BRA__1__KET____DOT__btb_bank2_way1__dout;
+        IData/*25:0*/ swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT____Vcellout__BTB_FLOPS__BRA__1__KET____DOT__btb_bank3_way1__dout;
     };
     struct {
-        IData/*25:0*/ swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT____Vcellout__BTB_FLOPS__BRA__1__KET____DOT__btb_bank3_way1__dout;
         IData/*25:0*/ swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT____Vcellout__BTB_FLOPS__BRA__2__KET____DOT__btb_bank0_way0__dout;
         IData/*25:0*/ swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT____Vcellout__BTB_FLOPS__BRA__2__KET____DOT__btb_bank1_way0__dout;
         IData/*25:0*/ swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT____Vcellout__BTB_FLOPS__BRA__2__KET____DOT__btb_bank2_way0__dout;
@@ -5152,9 +5158,9 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*25:0*/ swerv_eh1__DOT__swerv__DOT__ifu__DOT__bp__DOT__BTB_FLOPS__BRA__3__KET____DOT__btb_bank3_way1__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*30:0*/ swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT____Vcellout__f2pcff__dout;
         IData/*30:0*/ swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT____Vcellout__f1pcff__dout;
+        IData/*30:0*/ swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT____Vcellout__f0pcff__dout;
     };
     struct {
-        IData/*30:0*/ swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT____Vcellout__f0pcff__dout;
         IData/*30:0*/ swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__f2pcff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*30:0*/ swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__f1pcff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*30:0*/ swerv_eh1__DOT__swerv__DOT__ifu__DOT__aln__DOT__f0pcff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
@@ -5218,9 +5224,9 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0wbresultff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i1wbresultff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__divinstff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
+        IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0e1instff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
     };
     struct {
-        IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0e1instff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0e2instff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0e3instff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__decode__DOT__i0e4instff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
@@ -5284,9 +5290,9 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mhpmc4h_ff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mhpmc5_ff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mhpmc5h_ff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
+        IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mhpmc6_ff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
     };
     struct {
-        IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mhpmc6_ff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__tlu__DOT__mhpmc6h_ff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__arf__DOT____Vcellout__gpr_banks__BRA__0__KET____DOT__gpr__BRA__1__KET____DOT__gprff__dout;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__arf__DOT____Vcellout__gpr_banks__BRA__0__KET____DOT__gpr__BRA__2__KET____DOT__gprff__dout;
@@ -5350,9 +5356,9 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__arf__DOT__gpr_banks__BRA__0__KET____DOT__gpr__BRA__28__KET____DOT__gprff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__arf__DOT__gpr_banks__BRA__0__KET____DOT__gpr__BRA__29__KET____DOT__gprff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__arf__DOT__gpr_banks__BRA__0__KET____DOT__gpr__BRA__30__KET____DOT__gprff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
+        IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__arf__DOT__gpr_banks__BRA__0__KET____DOT__gpr__BRA__31__KET____DOT__gprff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
     };
     struct {
-        IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__dec__DOT__arf__DOT__gpr_banks__BRA__0__KET____DOT__gpr__BRA__31__KET____DOT__gprff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         WData/*73:0*/ swerv_eh1__DOT__swerv__DOT__exu__DOT____Vcellout__i0_pp_e2_ff__dout[3];
         WData/*73:0*/ swerv_eh1__DOT__swerv__DOT__exu__DOT____Vcellout__i0_pp_e3_ff__dout[3];
         WData/*73:0*/ swerv_eh1__DOT__swerv__DOT__exu__DOT____Vcellout__i1_pp_e2_ff__dout[3];
@@ -5416,9 +5422,9 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*30:0*/ swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_alu_e4__DOT__pcff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         WData/*73:0*/ swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_alu_e4__DOT__predictpacketff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din[3];
         IData/*30:0*/ swerv_eh1__DOT__swerv__DOT__exu__DOT__i1_alu_e4__DOT____Vcellout__pcff__dout;
+        WData/*73:0*/ swerv_eh1__DOT__swerv__DOT__exu__DOT__i1_alu_e4__DOT____Vcellout__predictpacketff__dout[3];
     };
     struct {
-        WData/*73:0*/ swerv_eh1__DOT__swerv__DOT__exu__DOT__i1_alu_e4__DOT____Vcellout__predictpacketff__dout[3];
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__exu__DOT__i1_alu_e4__DOT__aff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__exu__DOT__i1_alu_e4__DOT__bff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*30:0*/ swerv_eh1__DOT__swerv__DOT__exu__DOT__i1_alu_e4__DOT__pcff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
@@ -5482,9 +5488,9 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ibuf_dataff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__obuf_addrff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__genblk8__BRA__0__KET____DOT__buf_addrff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
+        IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__genblk8__BRA__0__KET____DOT__buf_dataff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
     };
     struct {
-        IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__genblk8__BRA__0__KET____DOT__buf_dataff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__genblk8__BRA__1__KET____DOT__buf_addrff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__genblk8__BRA__1__KET____DOT__buf_dataff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         IData/*31:0*/ swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__genblk8__BRA__2__KET____DOT__buf_addrff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
@@ -5548,9 +5554,9 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         QData/*62:0*/ swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_upper_flush_e3_ff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         QData/*62:0*/ swerv_eh1__DOT__swerv__DOT__exu__DOT__i0_upper_flush_e4_ff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         QData/*63:0*/ swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_lsc_ctl__DOT__sddc1ff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
+        QData/*63:0*/ swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_lsc_ctl__DOT__sddc2ff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
     };
     struct {
-        QData/*63:0*/ swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_lsc_ctl__DOT__sddc2ff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         QData/*63:0*/ swerv_eh1__DOT__swerv__DOT__lsu__DOT__lsu_lsc_ctl__DOT__sddc3ff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         QData/*63:0*/ swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__obuf_dataff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         QData/*63:0*/ swerv_eh1__DOT__swerv__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__lsu_axi_rdata_ff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
@@ -5589,14 +5595,13 @@ VL_MODULE(Vrvfpgasim_swervolf_core__B0) {
         QData/*38:0*/ swerv_eh1__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT____Vcellout__mem_bank__BRA__7__KET____DOT__dccm_bank__Q;
         QData/*38:0*/ swerv_eh1__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT__dccm_rd_data_loff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
         QData/*38:0*/ swerv_eh1__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT__dccm_rd_data_hiff__DOT__genblock__DOT__dff__DOT____Vcellinp__dffs__din;
-        CData/*2:0*/ __Vtablechg2[32];
+        CData/*2:0*/ __Vtablechg1[32];
     };
-    static CData/*6:0*/ __Vtable1___PVT__Digits_Bits[16];
-    static CData/*0:0*/ __Vtable2___PVT__wb_s2m_uart_ack[32];
-    static CData/*1:0*/ __Vtable2___PVT__uart16550_0__DOT__wb_interface__DOT__wbstate[32];
-    static CData/*0:0*/ __Vtable2___PVT__uart16550_0__DOT__wb_interface__DOT__wre[32];
-    static CData/*7:0*/ __Vtable3___PVT__uart16550_0__DOT__regs__DOT__block_value[256];
-    static SData/*9:0*/ __Vtable4___PVT__uart16550_0__DOT__regs__DOT__receiver__DOT__toc_value[256];
+    static CData/*0:0*/ __Vtable1___PVT__wb_s2m_uart_ack[32];
+    static CData/*1:0*/ __Vtable1___PVT__uart16550_0__DOT__wb_interface__DOT__wbstate[32];
+    static CData/*0:0*/ __Vtable1___PVT__uart16550_0__DOT__wb_interface__DOT__wre[32];
+    static CData/*7:0*/ __Vtable2___PVT__uart16550_0__DOT__regs__DOT__block_value[256];
+    static SData/*9:0*/ __Vtable3___PVT__uart16550_0__DOT__regs__DOT__receiver__DOT__toc_value[256];
     
     // INTERNAL VARIABLES
   private:

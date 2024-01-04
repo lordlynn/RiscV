@@ -318,7 +318,7 @@ endmodule
 
 
 // CHNAGE TO 5 WHEN SIMULATING SEG DISPLAY ELSE 20
-parameter COUNT_MAX = 5;
+parameter COUNT_MAX = 20;
 
 module SevSegDisplays_Controller(
                      input wire           clk,

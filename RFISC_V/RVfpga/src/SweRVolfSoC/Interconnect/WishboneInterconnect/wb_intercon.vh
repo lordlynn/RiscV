@@ -104,6 +104,53 @@ wire        wb_s2m_ptc_ack;
 wire        wb_s2m_ptc_err;
 wire        wb_s2m_ptc_rty;
 
+// Added Lab 8 - 3 new timer modules for RGB LEDs
+// PTC 1
+wire [31:0] wb_m2s_ptc1_adr;
+wire [31:0] wb_m2s_ptc1_dat;
+wire  [3:0] wb_m2s_ptc1_sel;
+wire        wb_m2s_ptc1_we;
+wire        wb_m2s_ptc1_cyc;
+wire        wb_m2s_ptc1_stb;
+wire  [2:0] wb_m2s_ptc1_cti;
+wire  [1:0] wb_m2s_ptc1_bte;
+wire [31:0] wb_s2m_ptc1_dat;
+wire        wb_s2m_ptc1_ack;
+wire        wb_s2m_ptc1_err;
+wire        wb_s2m_ptc1_rty;
+
+
+// PTC 2
+wire [31:0] wb_m2s_ptc2_adr;
+wire [31:0] wb_m2s_ptc2_dat;
+wire  [3:0] wb_m2s_ptc2_sel;
+wire        wb_m2s_ptc2_we;
+wire        wb_m2s_ptc2_cyc;
+wire        wb_m2s_ptc2_stb;
+wire  [2:0] wb_m2s_ptc2_cti;
+wire  [1:0] wb_m2s_ptc2_bte;
+wire [31:0] wb_s2m_ptc2_dat;
+wire        wb_s2m_ptc2_ack;
+wire        wb_s2m_ptc2_err;
+wire        wb_s2m_ptc2_rty;
+
+
+// PTC 3
+wire [31:0] wb_m2s_ptc3_adr;
+wire [31:0] wb_m2s_ptc3_dat;
+wire  [3:0] wb_m2s_ptc3_sel;
+wire        wb_m2s_ptc3_we;
+wire        wb_m2s_ptc3_cyc;
+wire        wb_m2s_ptc3_stb;
+wire  [2:0] wb_m2s_ptc3_cti;
+wire  [1:0] wb_m2s_ptc3_bte;
+wire [31:0] wb_s2m_ptc3_dat;
+wire        wb_s2m_ptc3_ack;
+wire        wb_s2m_ptc3_err;
+wire        wb_s2m_ptc3_rty;
+
+
+
 // SPI
 wire [31:0] wb_m2s_spi_accel_adr;
 wire [31:0] wb_m2s_spi_accel_dat;
@@ -224,6 +271,50 @@ wb_intercon wb_intercon0
     .wb_ptc_ack_i      (wb_s2m_ptc_ack),
     .wb_ptc_err_i      (wb_s2m_ptc_err),
     .wb_ptc_rty_i      (wb_s2m_ptc_rty),
+
+    // Added Lab 8 - 3 new timer modules for RGB LEDs
+    // PTC
+    .wb_ptc1_adr_o      (wb_m2s_ptc1_adr),
+    .wb_ptc1_dat_o      (wb_m2s_ptc1_dat),
+    .wb_ptc1_sel_o      (wb_m2s_ptc1_sel),
+    .wb_ptc1_we_o       (wb_m2s_ptc1_we),
+    .wb_ptc1_cyc_o      (wb_m2s_ptc1_cyc),
+    .wb_ptc1_stb_o      (wb_m2s_ptc1_stb),
+    .wb_ptc1_cti_o      (wb_m2s_ptc1_cti),
+    .wb_ptc1_bte_o      (wb_m2s_ptc1_bte),
+    .wb_ptc1_dat_i      (wb_s2m_ptc1_dat),
+    .wb_ptc1_ack_i      (wb_s2m_ptc1_ack),
+    .wb_ptc1_err_i      (wb_s2m_ptc1_err),
+    .wb_ptc1_rty_i      (wb_s2m_ptc1_rty),
+
+    // PTC
+    .wb_ptc2_adr_o      (wb_m2s_ptc2_adr),
+    .wb_ptc2_dat_o      (wb_m2s_ptc2_dat),
+    .wb_ptc2_sel_o      (wb_m2s_ptc2_sel),
+    .wb_ptc2_we_o       (wb_m2s_ptc2_we),
+    .wb_ptc2_cyc_o      (wb_m2s_ptc2_cyc),
+    .wb_ptc2_stb_o      (wb_m2s_ptc2_stb),
+    .wb_ptc2_cti_o      (wb_m2s_ptc2_cti),
+    .wb_ptc2_bte_o      (wb_m2s_ptc2_bte),
+    .wb_ptc2_dat_i      (wb_s2m_ptc2_dat),
+    .wb_ptc2_ack_i      (wb_s2m_ptc2_ack),
+    .wb_ptc2_err_i      (wb_s2m_ptc2_err),
+    .wb_ptc2_rty_i      (wb_s2m_ptc2_rty),
+
+    // PTC
+    .wb_ptc3_adr_o      (wb_m2s_ptc3_adr),
+    .wb_ptc3_dat_o      (wb_m2s_ptc3_dat),
+    .wb_ptc3_sel_o      (wb_m2s_ptc3_sel),
+    .wb_ptc3_we_o       (wb_m2s_ptc3_we),
+    .wb_ptc3_cyc_o      (wb_m2s_ptc3_cyc),
+    .wb_ptc3_stb_o      (wb_m2s_ptc3_stb),
+    .wb_ptc3_cti_o      (wb_m2s_ptc3_cti),
+    .wb_ptc3_bte_o      (wb_m2s_ptc3_bte),
+    .wb_ptc3_dat_i      (wb_s2m_ptc3_dat),
+    .wb_ptc3_ack_i      (wb_s2m_ptc3_ack),
+    .wb_ptc3_err_i      (wb_s2m_ptc3_err),
+    .wb_ptc3_rty_i      (wb_s2m_ptc3_rty),
+
 // SPI
     .wb_spi_accel_adr_o (wb_m2s_spi_accel_adr),
     .wb_spi_accel_dat_o (wb_m2s_spi_accel_dat),

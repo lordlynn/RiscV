@@ -107,6 +107,49 @@ module wb_intercon
     input         wb_ptc_err_i,
     input         wb_ptc_rty_i,
 
+    // Added Lab 8 - 3 new PTC modules for driving RGB LED
+    // PTC 1
+    output [31:0] wb_ptc1_adr_o,
+    output [31:0] wb_ptc1_dat_o,
+    output  [3:0] wb_ptc1_sel_o,
+    output        wb_ptc1_we_o,
+    output        wb_ptc1_cyc_o,
+    output        wb_ptc1_stb_o,
+    output  [2:0] wb_ptc1_cti_o,
+    output  [1:0] wb_ptc1_bte_o,
+    input  [31:0] wb_ptc1_dat_i,
+    input         wb_ptc1_ack_i,
+    input         wb_ptc1_err_i,
+    input         wb_ptc1_rty_i,
+
+    // PTC 2
+    output [31:0] wb_ptc2_adr_o,
+    output [31:0] wb_ptc2_dat_o,
+    output  [3:0] wb_ptc2_sel_o,
+    output        wb_ptc2_we_o,
+    output        wb_ptc2_cyc_o,
+    output        wb_ptc2_stb_o,
+    output  [2:0] wb_ptc2_cti_o,
+    output  [1:0] wb_ptc2_bte_o,
+    input  [31:0] wb_ptc2_dat_i,
+    input         wb_ptc2_ack_i,
+    input         wb_ptc2_err_i,
+    input         wb_ptc2_rty_i,
+
+    // PTC 3
+    output [31:0] wb_ptc3_adr_o,
+    output [31:0] wb_ptc3_dat_o,
+    output  [3:0] wb_ptc3_sel_o,
+    output        wb_ptc3_we_o,
+    output        wb_ptc3_cyc_o,
+    output        wb_ptc3_stb_o,
+    output  [2:0] wb_ptc3_cti_o,
+    output  [1:0] wb_ptc3_bte_o,
+    input  [31:0] wb_ptc3_dat_i,
+    input         wb_ptc3_ack_i,
+    input         wb_ptc3_err_i,
+    input         wb_ptc3_rty_i,
+
 // SPI
     output [31:0] wb_spi_accel_adr_o,
     output [31:0] wb_spi_accel_dat_o,
@@ -123,9 +166,9 @@ module wb_intercon
 
 
 wb_mux
-  #(.num_slaves (7),
-    .MATCH_ADDR ({32'h00000000, 32'h00001000, 32'h00001040, 32'h00001100, 32'h00001200, 32'h00001400, 32'h00001800, 32'h00002000}),
-    .MATCH_MASK ({32'hfffff000, 32'hffffffc0, 32'hffffffc0, 32'hffffffc0, 32'hffffffc0, 32'hffffffc0, 32'hffffff00, 32'hfffff000}))
+  #(.num_slaves (11),
+    .MATCH_ADDR ({32'h00000000, 32'h00001000, 32'h00001040, 32'h00001100, 32'h00001200,     32'h00002100, 32'h00002200, 32'h00002300,       32'h00001400, 32'h00001800, 32'h00002000}),
+    .MATCH_MASK ({32'hfffff000, 32'hffffffc0, 32'hffffffc0, 32'hffffffc0, 32'hffffffc0,     32'hffffffc0, 32'hffffffc0, 32'hffffffc0,       32'hffffffc0, 32'hffffff00, 32'hfffff000}))
  wb_mux_io
    (.wb_clk_i  (wb_clk_i),
     .wb_rst_i  (wb_rst_i),
@@ -141,17 +184,17 @@ wb_mux
     .wbm_ack_o (wb_io_ack_o),
     .wbm_err_o (wb_io_err_o),
     .wbm_rty_o (wb_io_rty_o),
-    .wbs_adr_o ({wb_rom_adr_o, wb_sys_adr_o, wb_spi_flash_adr_o, wb_spi_accel_adr_o, wb_ptc_adr_o, wb_gpio_adr_o, wb_gpio2_adr_o, wb_uart_adr_o}),
-    .wbs_dat_o ({wb_rom_dat_o, wb_sys_dat_o, wb_spi_flash_dat_o, wb_spi_accel_dat_o, wb_ptc_dat_o, wb_gpio_dat_o, wb_gpio2_dat_o, wb_uart_dat_o}),
-    .wbs_sel_o ({wb_rom_sel_o, wb_sys_sel_o, wb_spi_flash_sel_o, wb_spi_accel_sel_o, wb_ptc_sel_o, wb_gpio_sel_o, wb_gpio2_sel_o,wb_uart_sel_o}),
-    .wbs_we_o  ({wb_rom_we_o,  wb_sys_we_o,  wb_spi_flash_we_o,  wb_spi_accel_we_o,  wb_ptc_we_o,  wb_gpio_we_o,  wb_gpio2_we_o, wb_uart_we_o }),
-    .wbs_cyc_o ({wb_rom_cyc_o, wb_sys_cyc_o, wb_spi_flash_cyc_o, wb_spi_accel_cyc_o, wb_ptc_cyc_o, wb_gpio_cyc_o, wb_gpio2_cyc_o, wb_uart_cyc_o}),
-    .wbs_stb_o ({wb_rom_stb_o, wb_sys_stb_o, wb_spi_flash_stb_o, wb_spi_accel_stb_o, wb_ptc_stb_o, wb_gpio_stb_o, wb_gpio2_stb_o, wb_uart_stb_o}),
-    .wbs_cti_o ({wb_rom_cti_o, wb_sys_cti_o, wb_spi_flash_cti_o, wb_spi_accel_cti_o, wb_ptc_cti_o, wb_gpio_cti_o, wb_gpio2_cti_o, wb_uart_cti_o}),
-    .wbs_bte_o ({wb_rom_bte_o, wb_sys_bte_o, wb_spi_flash_bte_o, wb_spi_accel_bte_o, wb_ptc_bte_o, wb_gpio_bte_o, wb_gpio2_bte_o, wb_uart_bte_o}),
-    .wbs_dat_i ({wb_rom_dat_i, wb_sys_dat_i, wb_spi_flash_dat_i, wb_spi_accel_dat_i, wb_ptc_dat_i, wb_gpio_dat_i, wb_gpio2_dat_i, wb_uart_dat_i}),
-    .wbs_ack_i ({wb_rom_ack_i, wb_sys_ack_i, wb_spi_flash_ack_i, wb_spi_accel_ack_i, wb_ptc_ack_i, wb_gpio_ack_i, wb_gpio2_ack_i, wb_uart_ack_i}),
-    .wbs_err_i ({wb_rom_err_i, wb_sys_err_i, wb_spi_flash_err_i, wb_spi_accel_err_i, wb_ptc_err_i, wb_gpio_err_i, wb_gpio2_err_i, wb_uart_err_i}),
-    .wbs_rty_i ({wb_rom_rty_i, wb_sys_rty_i, wb_spi_flash_rty_i, wb_spi_accel_rty_i, wb_ptc_rty_i, wb_gpio_rty_i, wb_gpio2_rty_i, wb_uart_rty_i}));
+    .wbs_adr_o ({wb_rom_adr_o, wb_sys_adr_o, wb_spi_flash_adr_o, wb_spi_accel_adr_o, wb_ptc_adr_o, wb_ptc1_adr_o, wb_ptc2_adr_o, wb_ptc3_adr_o, wb_gpio_adr_o, wb_gpio2_adr_o, wb_uart_adr_o}),
+    .wbs_dat_o ({wb_rom_dat_o, wb_sys_dat_o, wb_spi_flash_dat_o, wb_spi_accel_dat_o, wb_ptc_dat_o, wb_ptc1_dat_o, wb_ptc2_dat_o, wb_ptc3_dat_o, wb_gpio_dat_o, wb_gpio2_dat_o, wb_uart_dat_o}),
+    .wbs_sel_o ({wb_rom_sel_o, wb_sys_sel_o, wb_spi_flash_sel_o, wb_spi_accel_sel_o, wb_ptc_sel_o, wb_ptc1_sel_o, wb_ptc2_sel_o, wb_ptc3_sel_o, wb_gpio_sel_o, wb_gpio2_sel_o,wb_uart_sel_o}),
+    .wbs_we_o  ({wb_rom_we_o,  wb_sys_we_o,  wb_spi_flash_we_o,  wb_spi_accel_we_o,  wb_ptc_we_o,  wb_ptc1_we_o,  wb_ptc2_we_o,  wb_ptc3_we_o,  wb_gpio_we_o,  wb_gpio2_we_o, wb_uart_we_o }),
+    .wbs_cyc_o ({wb_rom_cyc_o, wb_sys_cyc_o, wb_spi_flash_cyc_o, wb_spi_accel_cyc_o, wb_ptc_cyc_o, wb_ptc1_cyc_o, wb_ptc2_cyc_o, wb_ptc3_cyc_o, wb_gpio_cyc_o, wb_gpio2_cyc_o, wb_uart_cyc_o}),
+    .wbs_stb_o ({wb_rom_stb_o, wb_sys_stb_o, wb_spi_flash_stb_o, wb_spi_accel_stb_o, wb_ptc_stb_o, wb_ptc1_stb_o, wb_ptc2_stb_o, wb_ptc3_stb_o, wb_gpio_stb_o, wb_gpio2_stb_o, wb_uart_stb_o}),
+    .wbs_cti_o ({wb_rom_cti_o, wb_sys_cti_o, wb_spi_flash_cti_o, wb_spi_accel_cti_o, wb_ptc_cti_o, wb_ptc1_cti_o, wb_ptc2_cti_o, wb_ptc3_cti_o, wb_gpio_cti_o, wb_gpio2_cti_o, wb_uart_cti_o}),
+    .wbs_bte_o ({wb_rom_bte_o, wb_sys_bte_o, wb_spi_flash_bte_o, wb_spi_accel_bte_o, wb_ptc_bte_o, wb_ptc1_bte_o, wb_ptc2_bte_o, wb_ptc3_bte_o, wb_gpio_bte_o, wb_gpio2_bte_o, wb_uart_bte_o}),
+    .wbs_dat_i ({wb_rom_dat_i, wb_sys_dat_i, wb_spi_flash_dat_i, wb_spi_accel_dat_i, wb_ptc_dat_i, wb_ptc1_dat_i, wb_ptc2_dat_i, wb_ptc3_dat_i, wb_gpio_dat_i, wb_gpio2_dat_i, wb_uart_dat_i}),
+    .wbs_ack_i ({wb_rom_ack_i, wb_sys_ack_i, wb_spi_flash_ack_i, wb_spi_accel_ack_i, wb_ptc_ack_i, wb_ptc1_ack_i, wb_ptc2_ack_i, wb_ptc3_ack_i, wb_gpio_ack_i, wb_gpio2_ack_i, wb_uart_ack_i}),
+    .wbs_err_i ({wb_rom_err_i, wb_sys_err_i, wb_spi_flash_err_i, wb_spi_accel_err_i, wb_ptc_err_i, wb_ptc1_err_i, wb_ptc2_err_i, wb_ptc3_err_i, wb_gpio_err_i, wb_gpio2_err_i, wb_uart_err_i}),
+    .wbs_rty_i ({wb_rom_rty_i, wb_sys_rty_i, wb_spi_flash_rty_i, wb_spi_accel_rty_i, wb_ptc_rty_i, wb_ptc1_rty_i, wb_ptc2_rty_i, wb_ptc3_rty_i, wb_gpio_rty_i, wb_gpio2_rty_i, wb_uart_rty_i}));
 
 endmodule

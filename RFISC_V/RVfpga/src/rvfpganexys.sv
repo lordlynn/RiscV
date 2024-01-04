@@ -55,7 +55,10 @@ module rvfpganexys
     output wire        accel_sclk,
     
     // Button inputs - Added
-    inout wire          i_BTNC, i_BTNU, i_BTNL, i_BTNR, i_BTND
+    inout wire         i_BTNC, i_BTNU, i_BTNL, i_BTNR, i_BTND
+
+    // Added Lab 8 - inouts for RGB LED
+    inout wire         R_o, G_o, B_o
     );
 
    wire [15:0] 	       gpio_out;
@@ -270,7 +273,10 @@ module rvfpganexys
       .i_accel_miso   (i_accel_miso),
       
       // Added for buttons
-      .io_data2        ({i_BTNC, i_BTNU, i_BTNL, i_BTNR, i_BTND, gpio_out2})
+      .io_data2       ({i_BTNC, i_BTNU, i_BTNL, i_BTNR, i_BTND, gpio_out2})
+
+      // Added Lab 8 - Pass connection to RGB LEDs to core
+      .RGB_o          ({R_o, G_o, B_o})
       );
 
    always @(posedge clk_core) begin
