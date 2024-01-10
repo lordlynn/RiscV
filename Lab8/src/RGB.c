@@ -59,18 +59,18 @@ int main(void) {
     WRITE_REG(RPTC_CTRL, 0b0010001);                           // Enable timer and use Single mode
 
     // R
-    WRITE_REG(RPTC1_HCR, 5000);
+    WRITE_REG(RPTC1_HCR, 1000);
     WRITE_REG(RPTC1_LCR, 10000);                               
     WRITE_REG(RPTC1_CTRL, 0b00001001);                           // Enable timer, PWM, and use Single mode
 
     // G
-    WRITE_REG(RPTC2_HCR, 5000);
+    WRITE_REG(RPTC2_HCR, 9000);
     WRITE_REG(RPTC2_LCR, 10000);                               
     WRITE_REG(RPTC2_CTRL, 0b00001001);                           // Enable timer, PWM, and use Single mode
 
     // B
-    WRITE_REG(RPTC3_LCR, 5000);
-    WRITE_REG(RPTC3_HCR, 10000);                               
+    WRITE_REG(RPTC3_HCR, 2000);
+    WRITE_REG(RPTC3_LCR, 10000);                               
     WRITE_REG(RPTC3_CTRL, 0b00001001);                           // Enable timer, PWM, and use Single mode
 
 
@@ -81,11 +81,11 @@ int main(void) {
         WRITE_REG(GPIO_LEDs, state);
         
 
-        while (READ_REG(RPTC1_CNTR) != 50000);
+        while (READ_REG(RPTC_CNTR) != 50000);
         
-        state = READ_REG(RPTC1_CTRL);                            // Read control register
+        state = READ_REG(RPTC_CTRL);                            // Read control register
         state |= 0x40;
-        WRITE_REG(RPTC1_CTRL, state);                            // Reset Counter but keep other values of control register
+        WRITE_REG(RPTC_CTRL, state);                            // Reset Counter but keep other values of control register
 
         time++;
 

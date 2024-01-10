@@ -23,7 +23,7 @@
 #define Select_INT      0x80001018
 
 int SegDisplCount=0;
-
+int count=0;
 extern D_PSP_DATA_SECTION D_PSP_ALIGNED(1024) pspInterruptHandler_t G_Ext_Interrupt_Handlers[8];
 
 
@@ -42,6 +42,19 @@ void GPIO_ISR(void)
 
   /* Stop the generation of the specific external interrupt */
   bspClearExtInterrupt(4);
+}
+
+
+void PTC_ISR(void)
+{
+  volatile unsigned int state;
+
+  M_PSP_WRITE_REGISTER_32(RPTC_CNTR, 0);                              // Reset count register
+  M_PSP_WRITE_REGISTER_32(RPTC_CTRL, 0b00100001);                     // Clear interrupt flag
+  count++;
+
+  /* Stop the generation of the specific external interrupt */
+  bspClearExtInterrupt(3);
 }
 
 
@@ -86,10 +99,10 @@ void ExternalIntLine_Initialization(u32_t uiSourceId, u32_t priority, pspInterru
   /* Clear the gateway */
   pspExtInterruptClearPendingInt(uiSourceId);
 
-  /* Set IRQ4 priority */
+  /* Set IRQ priority */
   pspExtInterruptSetPriority(uiSourceId, priority);
     
-  /* Enable IRQ4 interrupts in the PIC */
+  /* Enable IRQ interrupts in the PIC */
   pspExternalInterruptEnableNumber(uiSourceId);
 
   /* Register ISR */
@@ -110,22 +123,38 @@ void GPIO_Initialization(void)
   M_PSP_WRITE_REGISTER_32(RGPIO_CTRL, 0x1);           /* RGPIO_CTRL */
 }
 
+// Added timer initialization function
+void PTC_Initialization(void)
+{
+  M_PSP_WRITE_REGISTER_32(RPTC_LRC, 50000);                         // Set count limit of 100k. 1/1Mhz * 100k = 1 ms. counter increments ever 2 cycles
+  M_PSP_WRITE_REGISTER_32(RPTC_CTRL, 0b0100001);                    // Single mode, interrupts enabled
+}
+
+
 
 int main(void)
 {
-  int count=0, i;
+  int i;
 
   /* INITIALIZE THE INTERRUPT SYSTEM */
   DefaultInitialization();                            /* Default initialization */
   pspExtInterruptsSetThreshold(5);                    /* Set interrupts threshold to 5 */
 
   /* INITIALIZE INTERRUPT LINE IRQ4 */
-  ExternalIntLine_Initialization(4, 6, GPIO_ISR);     /* Initialize line IRQ4 with a priority of 6. Set GPIO_ISR as the Interrupt Service Routine */
-  M_PSP_WRITE_REGISTER_32(Select_INT, 0x1);           /* Connect the GPIO interrupt to the IRQ4 interrupt line */
+  ExternalIntLine_Initialization(4, 7, GPIO_ISR);       /* Initialize line IRQ4 with a priority of 6. Set GPIO_ISR as the Interrupt Service Routine */
+  // M_PSP_WRITE_REGISTER_32(Select_INT, 0x1);           /* Connect the GPIO interrupt to the IRQ4 interrupt line */
+
+
+  /* ADDED - INITIALIZE INTERRUPT LINE IRQ3 */
+  ExternalIntLine_Initialization(3, 6, PTC_ISR);      /* Initialize line IRQ3 with a priority of 6. Set PTC_ISR as the Interrupt Service Routine */
+  M_PSP_WRITE_REGISTER_32(Select_INT, 0x3);           /* Connect the GPIO and PTC interrupt to the IRQ4 and 3 interrupt line */
 
   /* INITIALIZE THE PERIPHERALS */
   GPIO_Initialization();                              /* Initialize the GPIO */
   M_PSP_WRITE_REGISTER_32(SegEn_ADDR, 0x0);           /* Initialize the 7-Seg Displays */
+
+  // ADDED - calling new init function
+  PTC_Initialization();
 
   /* ENABLE INTERRUPTS */
   pspInterruptsEnable();                              /* Enable all interrupts in mstatus CSR */
@@ -134,10 +163,9 @@ int main(void)
   while (1) {
     /* Increase 7-Seg Displays */
     M_PSP_WRITE_REGISTER_32(SegDig_ADDR, count);
-    count++;
 
     /* Delay */
-    for(i=0;i<50000000;i++);
+    for(i=0;i<5000;i++);
   }
 }
 

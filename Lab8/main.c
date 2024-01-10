@@ -16,9 +16,6 @@
 #define RPTC_CTRL  0x8000120C                                   // Control Register
 
 
-
-
-
 void displayTime(int count);
 int decode(int val);
 
